@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
+<title>Lakeside Villa &amp; Spa — Lakeside Life</title>
+
+
+
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&amp;family=Inter:wght@300;400;500&amp;display=swap" rel="stylesheet"/><style>
+:root {
+  --bg:#11110f;
+  --header:#171714;
+  --ink:#eee9de;
+  --muted:#b9b3a8;
+  --gold:#cdbf9d;
+  --gold2:#e4d8be;
+  --gold3:#d8c9a8;
+  --line:rgba(205,191,157,.18);
+  --pad:clamp(30px,5vw,76px);
+  --serif:"EB Garamond", Georgia, serif;
+  --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --header-h:68px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);padding-top:var(--header-h)}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.site-header{
+  position:fixed;z-index:1000;left:0;right:0;top:0;height:var(--header-h);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 var(--pad);background:var(--header);
+  border-bottom:1px solid rgba(255,255,255,.025);
+}
+.brand-wordmark{display:flex;flex-direction:column;gap:5px;line-height:1}
+.wm-top{font:500 19px/1 var(--serif);letter-spacing:.12em;color:var(--gold2)}
+.wm-bottom{font:400 14px/1 var(--serif);letter-spacing:.18em;color:var(--gold3)}
+.desktop-nav{display:flex;align-items:center;gap:clamp(14px,2vw,31px);font:400 12px/1 var(--sans);letter-spacing:.105em;text-transform:uppercase}
+.desktop-nav a{color:var(--gold);white-space:nowrap}
+.desktop-nav a:hover{color:#eee5d2}
+.desktop-nav .active{color:#eee5d2}
+.language-picker select{
+  border:0;border-left:1px solid rgba(205,191,157,.28);background:transparent;color:var(--gold);
+  font:400 11px/1 var(--sans);letter-spacing:.08em;padding:3px 0 3px 14px;outline:none
+}
+.mobile-menu-native{display:none}
+
+.hero{position:relative;width:100%;overflow:hidden}
+.hero-image{width:100%;height:auto}
+.hero-shade{
+  position:absolute;inset:0;
+  background:linear-gradient(90deg,rgba(17,17,15,.58) 0%,rgba(17,17,15,.30) 25%,rgba(17,17,15,.09) 48%,rgba(17,17,15,0) 66%);
+  pointer-events:none;
+}
+.hero-copy{
+  position:absolute;left:var(--pad);top:50%;transform:translateY(-46%);
+  width:min(630px,43vw)
+}
+.eyebrow{font:500 11px/1.2 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin:0 0 18px}
+.hero h1{
+  font:400 clamp(48px,5.2vw,82px)/.98 var(--serif);letter-spacing:.075em;
+  max-width:700px;margin:0 0 22px;color:#f4efe5;text-wrap:balance
+}
+.hero p{font:400 clamp(15px,1.25vw,18px)/1.55 var(--sans);color:#e4ded3;max-width:580px;margin:0}
+
+.story{max-width:1440px;margin:0 auto;padding:clamp(92px,9vw,148px) var(--pad)}
+.section{
+  display:grid;grid-template-columns:minmax(0,1.6fr) minmax(330px,.92fr);
+  gap:clamp(54px,6.5vw,104px);align-items:center;margin-bottom:clamp(110px,11vw,180px)
+}
+.section:last-child{margin-bottom:0}
+.section .photo{width:100%;height:auto;border-radius:8px}
+.copy{max-width:470px}
+.copy h2{font:400 clamp(38px,3.45vw,57px)/1.03 var(--serif);letter-spacing:.018em;margin:0 0 22px;color:#f0eadf;text-wrap:balance}
+.copy p{font:400 clamp(15px,1.05vw,17px)/1.7 var(--sans);color:var(--muted);margin:0}
+.route-graphic{display:block;width:min(100%,330px);height:auto;margin-top:34px;object-fit:contain}
+.section.tahko{grid-template-columns:minmax(0,1.5fr) minmax(360px,.9fr)}
+.section.swim{margin-top:6px}
+.section.boating{grid-template-columns:minmax(0,1.55fr) minmax(360px,.88fr)}
+.section.fishing{grid-template-columns:minmax(0,1.46fr) minmax(360px,.92fr)}
+.fishing-frame{overflow:hidden;border-radius:8px;background:#0b0b0a}
+.fishing-frame img{width:100%;height:auto;object-fit:cover;object-position:center}
+.fish-species{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 22px;margin-top:30px}
+.fish-species figure{margin:0;min-width:0}
+.fish-species img{width:100%;height:58px;object-fit:contain;object-position:left center}
+.fish-species figcaption{margin-top:7px;font:500 9px/1.2 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.lure-row{display:grid;grid-template-columns:minmax(120px,46%) 1fr;gap:18px;align-items:center;margin-top:28px;padding-top:22px;border-top:1px solid var(--line)}
+.lure-row img{width:100%;height:auto;object-fit:contain}
+.lure-copy{font:500 9px/1.35 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.lure-copy span{display:block;margin-top:7px;font:400 13px/1.45 var(--sans);letter-spacing:0;text-transform:none;color:var(--muted)}
+.section.evening{grid-template-columns:minmax(0,1.6fr) minmax(330px,.9fr)}
+.section.dining{grid-template-columns:minmax(0,1.48fr) minmax(350px,.94fr);margin-top:8px}
+
+.footer{border-top:1px solid var(--line);padding:78px var(--pad) 34px;background:#121210}
+.footer-inner{max-width:1440px;margin:auto;display:grid;grid-template-columns:1fr 1.25fr;gap:80px}
+.footer-brand .brand-wordmark{gap:7px}
+.footer-brand .wm-top{font-size:26px}
+.footer-brand .wm-bottom{font-size:18px}
+.footer-place{margin-top:18px;color:#918c82;font-size:12px;letter-spacing:.08em}
+.footer-cta .eyebrow{margin-bottom:14px}
+.footer-cta h2{font:400 clamp(34px,3vw,48px)/1.02 var(--serif);letter-spacing:.018em;margin:0 0 14px}
+.footer-cta p{color:#aaa398;font-size:14px;line-height:1.6;margin:0 0 24px}
+.enquire-link{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.legal{max-width:1440px;margin:66px auto 0;padding-top:22px;border-top:1px solid rgba(255,255,255,.055);display:flex;justify-content:space-between;gap:24px;color:#7f7a72;font-size:11px}
+.legal-links{display:flex;gap:24px}
+
+@media(max-width:1200px){
+  :root{--header-h:64px;--pad:clamp(28px,4.5vw,56px)}
+  .brand-wordmark{gap:4px}
+  .wm-top{font-size:17px;letter-spacing:.105em}
+  .wm-bottom{font-size:12.5px;letter-spacing:.155em}
+  .desktop-nav{font-size:11px;gap:18px}
+  .hero-copy{width:min(560px,47vw)}
+  .section{grid-template-columns:minmax(0,1.35fr) minmax(310px,.95fr);gap:clamp(40px,5vw,70px)}
+}
+
+@media(max-width:900px){
+  :root{--header-h:64px;--pad:32px}
+  .desktop-nav{display:none}
+  .site-header{height:var(--header-h)}
+  .brand-wordmark{gap:4px}
+  .wm-top{font-size:16px;letter-spacing:.105em}
+  .wm-bottom{font-size:11.5px;letter-spacing:.155em}
+  .hero-copy{left:var(--pad);width:min(520px,60vw)}
+  .hero h1{font-size:clamp(42px,6.4vw,62px);letter-spacing:.065em}
+  .story{padding-top:92px;padding-bottom:110px}
+  .section,.section.tahko,.section.boating,.section.fishing,.section.evening,.section.dining{
+    grid-template-columns:1fr;gap:38px;margin-bottom:116px
+  }
+  .section .photo,.fishing-frame{width:92%}
+  .section:nth-child(even) .photo,.section:nth-child(even) .fishing-frame{margin-left:auto}
+  .copy{max-width:620px}
+  .route-graphic{width:min(72%,380px);margin-top:32px}
+  .footer-inner{grid-template-columns:1fr;gap:52px}
+}
+
+@media(max-width:560px){
+  :root{--header-h:56px;--pad:20px}
+  body{padding-top:var(--header-h)}
+  .site-header{height:56px;padding-left:max(20px,env(safe-area-inset-left));padding-right:max(20px,env(safe-area-inset-right))}
+  .brand-wordmark{gap:3px}
+  .wm-top{font-size:14px;letter-spacing:.095em}
+  .wm-bottom{font-size:10px;letter-spacing:.19em}
+  .mobile-panel{top:56px;left:14px;right:14px;border-radius:10px}
+  .hero{display:flex;flex-direction:column;overflow:visible}
+  .hero-image{order:1;width:100%;height:auto;object-fit:contain}
+  .hero-shade{display:none}
+  .hero-copy{order:2;position:static;transform:none;width:auto;padding:36px 20px 4px}
+  .eyebrow{font-size:10px;margin-bottom:14px}
+  .hero h1{font-size:42px;line-height:1.01;letter-spacing:.055em;margin-bottom:18px}
+  .hero p{font-size:15px;line-height:1.58;color:#c9c2b7}
+  .story{padding:76px 20px 94px}
+  .section,.section.tahko,.section.boating,.section.fishing,.section.evening,.section.dining{
+    display:flex;flex-direction:column;gap:28px;margin-bottom:92px
+  }
+  .section .photo,.section:nth-child(even) .photo,.fishing-frame,.section:nth-child(even) .fishing-frame{
+    width:100%;margin:0;border-radius:10px
+  }
+  .copy{width:100%}
+  .copy h2{font-size:37px;line-height:1.04;margin-bottom:17px}
+  .copy p{font-size:15px;line-height:1.66}
+  .route-graphic{width:94%;max-width:none;margin:26px auto 0}
+  .fishing-frame{aspect-ratio:auto}
+  .fish-species{gap:16px 18px;margin-top:26px}
+  .fish-species img{height:54px}
+  .lure-row{grid-template-columns:42% 1fr;gap:16px;margin-top:24px;padding-top:20px}
+  .footer{padding:60px 20px 28px}
+  .footer-inner{gap:46px}
+  .footer-brand .wm-top{font-size:22px}
+  .footer-brand .wm-bottom{font-size:15px}
+  .footer-cta h2{font-size:36px}
+  .legal{margin-top:52px;flex-direction:column;gap:16px}
+}
+
+.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+.mobile-menu-native{display:none}
+
+@media (max-width:900px){
+  .desktop-nav{display:none !important}
+  .mobile-menu-native{
+    display:block;
+    position:relative;
+    z-index:700;
+    margin-left:auto;
+  }
+  .mobile-menu-native summary{
+    list-style:none;
+    cursor:pointer;
+    user-select:none;
+    -webkit-user-select:none;
+    padding:10px 0 10px 14px;
+    color:#CDBF9D;
+    font:400 11px/1 var(--sans);
+    letter-spacing:.13em;
+    text-transform:uppercase;
+    outline:none;
+  }
+  .mobile-menu-native summary::-webkit-details-marker{display:none}
+  .mobile-menu-native summary::marker{content:""}
+  .menu-label-close{display:none}
+  .mobile-menu-native[open] .menu-label-open{display:none}
+  .mobile-menu-native[open] .menu-label-close{display:inline}
+
+  .mobile-menu-native[open]::before{
+    content:"";
+    position:fixed;
+    inset:56px 0 0 0;
+    background:rgba(0,0,0,.18);
+    z-index:610;
+    pointer-events:none;
+  }
+
+  .mobile-nav-panel{
+    position:fixed;
+    top:64px;
+    left:20px;
+    right:20px;
+    z-index:620;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:16px;
+    max-height:calc(100svh - 84px);
+    overflow:auto;
+    -webkit-overflow-scrolling:touch;
+    padding:20px 18px 22px;
+    background:#181815;
+    border:1px solid rgba(205,191,157,.16);
+    border-radius:12px;
+    box-shadow:0 16px 40px rgba(0,0,0,.30);
+  }
+
+  .mobile-nav-panel a{
+    width:100%;
+    color:#CDBF9D;
+    font:400 10px/1.25 var(--sans);
+    letter-spacing:.13em;
+    text-transform:uppercase;
+    padding:2px 0;
+  }
+
+  .mobile-nav-panel .mobile-language-picker{
+    width:100%;
+    margin:4px 0 0 !important;
+    padding-top:13px;
+    border-top:1px solid rgba(255,255,255,.08);
+  }
+
+  .mobile-nav-panel .mobile-language-picker select{
+    width:100%;
+    border:0 !important;
+    border-left:0 !important;
+    background:#181815;
+    color:#CDBF9D;
+    padding:8px 20px 8px 0 !important;
+    font:400 11px/1 var(--sans) !important;
+    outline:none;
+  }
+}
+@media(max-width:560px){
+  .mobile-nav-panel{top:56px;left:14px;right:14px}
+}
+
+
+
+/* Whole-site footer CTA refinement — Visual Design QA */
+.site-footer h2,
+.footer-cta h2,
+.footer-enquire h2,
+.footer-main h2,
+footer h2{
+  font-size:clamp(38px,3.25vw,44px) !important;
+  line-height:1.06 !important;
+}
+.site-footer .enquire-link,
+.site-footer .footer-enquire-link,
+.footer-cta .enquire-link,
+.footer-enquire .enquire-link,
+footer .enquire-link,
+footer a[href*="enquire" i]{
+  font-size:12px !important;
+  letter-spacing:.12em !important;
+}
+
+@media(max-width:900px){
+  .site-footer h2,
+  .footer-cta h2,
+  .footer-enquire h2,
+  .footer-main h2,
+  footer h2{
+    font-size:clamp(34px,4.6vw,38px) !important;
+  }
+}
+@media(max-width:560px){
+  .site-footer h2,
+  .footer-cta h2,
+  .footer-enquire h2,
+  .footer-main h2,
+  footer h2{
+    font-size:32px !important;
+    line-height:1.08 !important;
+  }
+  .site-footer .enquire-link,
+  .site-footer .footer-enquire-link,
+  .footer-cta .enquire-link,
+  .footer-enquire .enquire-link,
+  footer .enquire-link,
+  footer a[href*="enquire" i]{
+    font-size:11px !important;
+  }
+}
+
+
+/* Whole-site footer CTA refinement v2 — deliberately restrained */
+.site-footer h2,
+.footer-cta h2,
+.footer-enquire h2,
+.footer-main h2,
+footer h2{
+  font-size:30px !important;
+  line-height:1.10 !important;
+  letter-spacing:.02em !important;
+}
+@media(max-width:900px){
+  .site-footer h2,
+  .footer-cta h2,
+  .footer-enquire h2,
+  .footer-main h2,
+  footer h2{
+    font-size:28px !important;
+  }
+}
+@media(max-width:560px){
+  .site-footer h2,
+  .footer-cta h2,
+  .footer-enquire h2,
+  .footer-main h2,
+  footer h2{
+    font-size:26px !important;
+    line-height:1.12 !important;
+  }
+}
+</style>
+</head>
+<body id="top">
+<header class="site-header">
+<a aria-label="Lakeside Villa &amp; Spa home" href="index.html">
+<span class="brand-wordmark">
+<span class="wm-top">LAKESIDE</span>
+<span class="wm-bottom">VILLA &amp; SPA</span>
+</span>
+</a>
+<nav aria-label="Primary navigation" class="desktop-nav">
+<a data-i18n="navVilla" href="the-villa.html">The Villa</a>
+<a class="active" data-i18n="eyHero" href="#top">Lakeside Life</a>
+<a data-i18n="navSpa" href="spa-wellness.html">Spa &amp; Wellness</a>
+<a data-i18n="navLocation" href="location.html">Location</a>
+<a data-i18n="navServices" href="private-services.html">Private Services</a>
+<a data-i18n="navEnquire" href="#enquire">Enquire</a>
+<label aria-label="Language" class="language-picker">
+<span class="sr-only">Language</span>
+<select aria-label="Language" id="languageSelect">
+<option value="en">EN</option><option value="fi">FI</option><option value="sv">SV</option><option value="de">DE</option><option value="fr">FR</option><option value="es">ES</option><option value="nl">NL</option><option value="zh">中文</option>
+</select>
+</label>
+</nav>
+<details class="mobile-menu-native">
+<summary aria-label="Open menu">
+<span class="menu-label-open">MENU</span>
+<span class="menu-label-close">CLOSE</span>
+</summary>
+<nav aria-label="Mobile primary" class="mobile-nav-panel">
+<a data-i18n="navVilla" href="the-villa.html">The Villa</a>
+<a class="active" data-i18n="navLake" href="#top">Lakeside Life</a>
+<a data-i18n="navSpa" href="spa-wellness.html">Spa &amp; Wellness</a>
+<a data-i18n="navLocation" href="location.html">Location</a>
+<a data-i18n="navServices" href="private-services.html">Private Services</a>
+<a class="nav-enquire" data-i18n="navEnquire" href="#enquire">Enquire</a>
+<label aria-label="Language" class="language-picker mobile-language-picker">
+<span class="sr-only">Language</span>
+<select aria-label="Language" id="mobileLanguageSelect">
+<option value="en">EN</option><option value="fi">FI</option><option value="sv">SV</option><option value="de">DE</option><option value="fr">FR</option><option value="es">ES</option><option value="nl">NL</option><option value="zh">中文</option>
+</select></label>
+</nav>
+</details>
+</header>
+<main>
+<section aria-labelledby="hero-title" class="hero">
+<img alt="Private lakeside dock and motorboat at sunset" class="hero-image" src="assets/images/67485244f94bec4d.png"/>
+<div class="hero-shade"></div>
+<div class="hero-copy">
+<div class="eyebrow" data-i18n="eyHero">Lakeside Life</div>
+<h1 data-i18n="heroTitle" id="hero-title">The lake begins at your doorstep</h1>
+<p data-i18n="heroSub">A private dock, quiet water and direct access to the waterways of Finnish Lakeland.</p>
+</div>
+</section>
+<div class="story">
+<section class="section tahko" id="tahko-by-boat">
+<img alt="Tahko lakeside marina and resort life" class="photo" src="assets/images/eb7abc0c381d4b43.jpg"/>
+<div class="copy">
+<div class="eyebrow" data-i18n="eyTahko">Tahko by Boat</div>
+<h2 data-i18n="hTahko">From your dock to Tahko</h2>
+<p data-i18n="pTahko">A short scenic route connects the lake side of the villa to Tahko — approximately 10 minutes by boat from the villa's private dock. Arrive in Tahkolahti — beside the guest marina, restaurants and resort life.</p>
+<img alt="Schematic boat route from Lakeside Villa &amp; Spa to Tahko Centre" class="route-graphic" src="assets/images/b651a5e2a5d9e76b.png"/>
+</div>
+</section>
+<section class="section swim" id="swimming">
+<img alt="Moonlight swimming from the private dock" class="photo" src="assets/images/5548cdbd89ce5c64.png"/>
+<div class="copy">
+<div class="eyebrow" data-i18n="eySwimming">Swimming</div>
+<h2 data-i18n="hSwimming">Moonlight swims from your own dock</h2>
+<p data-i18n="pSwimming">Summer evenings invite slow swims, sauna-to-lake rituals and the kind of quiet moments that make the property feel entirely your own.</p>
+</div>
+</section>
+<section class="section boating" id="boating">
+<img alt="Boating through a historic lock on the waterways from Tahko" class="photo" src="assets/images/d995d58ac0f92bcc.png"/>
+<div class="copy">
+<div class="eyebrow" data-i18n="eyBoating">Boating / Water Routes</div>
+<h2 data-i18n="hBoating">The route opens from Tahko</h2>
+<p data-i18n="pBoating">From Syväri, the route continues through water routes towards Lastukoski and Kuopio — a small-form boating journey from the villa's own lake.</p>
+<img alt="Schematic water route from Tahko to Kuopio" class="route-graphic" src="assets/images/09e43125eee30628.png"/>
+</div>
+</section>
+<section class="section fishing" id="fishing">
+<div class="fishing-frame"><img alt="Fishing on Lake Syväri at sunset" src="assets/images/ff5279c06da8597c.png"/></div>
+<div class="copy">
+<div class="eyebrow" data-i18n="eyFishing">Fishing on Syväri</div>
+<h2 data-i18n="hFishing">From the dock to deeper water</h2>
+<p data-i18n="pFishing">Syväri is known for pike and zander. Leave directly from the dock for quiet evening fishing or a longer day on the lake.</p>
+<div aria-label="Fish of Syväri" class="fish-species">
+<figure><img alt="Pike" src="assets/images/723aa819f1f59c24.png"/><figcaption data-i18n="fishPike">Pike</figcaption></figure>
+<figure><img alt="Zander" src="assets/images/5e87d6841bbd6373.png"/><figcaption data-i18n="fishZander">Zander</figcaption></figure>
+<figure><img alt="Perch" src="assets/images/7cc45e3238b231e6.png"/><figcaption data-i18n="fishPerch">Perch</figcaption></figure>
+<figure><img alt="Trout" src="assets/images/c017faa9303072dc.png"/><figcaption data-i18n="fishTrout">Trout</figcaption></figure>
+</div>
+<div class="lure-row">
+<img alt="Fishing lure" src="assets/images/0c67cc5d205f4495.png"/>
+<div class="lure-copy" data-i18n="lureTitle">Local favourite<span data-i18n="lureSub">A restrained lure reference for the lake.</span></div>
+</div>
+</div>
+</section>
+<section class="section evening" id="evening">
+<img alt="Lakeside Villa &amp; Spa illuminated after sunset" class="photo" src="assets/images/408ab7766ef83de5.jpg"/>
+<div class="copy">
+<div class="eyebrow" data-i18n="eyEvening">Evening on the Lake</div>
+<h2 data-i18n="hEvening">The lake after sunset</h2>
+<p data-i18n="pEvening">Blue hour changes the whole atmosphere. Water, forest and light turn the dock and the villa into a private evening landscape.</p>
+</div>
+</section>
+<section class="section dining" id="dining">
+<img alt="Lakeside dinner on the terrace at dusk" class="photo" src="assets/images/375b38091585455a.jpg"/>
+<div class="copy">
+<div class="eyebrow" data-i18n="eyDining">Lakeside Dining</div>
+<h2 data-i18n="hDining">From the lake to the table</h2>
+<p data-i18n="pDining">The day can move naturally from swimming or boating to the terrace — dinner by the water, with the lake still present beyond the glass.</p>
+</div>
+</section>
+</div>
+</main>
+<footer class="footer" id="enquire">
+<div class="footer-inner">
+<div class="footer-brand">
+<span class="brand-wordmark">
+<span class="wm-top">LAKESIDE</span>
+<span class="wm-bottom">VILLA &amp; SPA</span>
+</span>
+<div class="footer-place" data-i18n="footerPlace">Tahko · Finland</div>
+</div>
+<div class="footer-cta">
+<div class="eyebrow" data-i18n="contactEyebrow">Contact</div>
+<h2 data-i18n="footerHeading">Enquire about Lakeside Villa &amp; Spa</h2>
+<p data-i18n="footerIntro">For private stays or property enquiries.</p>
+<a class="enquire-link" data-i18n="footerEnquire" href="#enquire">Enquire →</a>
+</div>
+</div>
+<div class="legal">
+<span>© Lakeside Villa &amp; Spa</span>
+<div class="legal-links"><a data-i18n="privacy" href="#">Privacy</a><a data-i18n="cookies" href="#">Cookies</a></div>
+</div>
+</footer>
+<script>
+const TLVS_I18N={"en":{"navVilla":"The Villa","navLake":"Lakeside Life","navSpa":"Spa & Wellness","navLocation":"Location","navServices":"Private Services","navEnquire":"Enquire","navTahko":"Tahko by Boat","navSwimming":"Swimming","navBoating":"Boating / Water Routes","navFishing":"Fishing on Syväri","navEvening":"Evening on the Lake","navDining":"Lakeside Dining","eyHero":"Lakeside Life","heroTitle":"The lake begins at your doorstep","heroSub":"A private dock, quiet water and direct access to the waterways of Finnish Lakeland.","eyTahko":"Tahko by Boat","hTahko":"From your dock to Tahko","pTahko":"A short scenic route connects the lake side of the villa to Tahko — approximately 10 minutes by boat from the villa's private dock. Arrive in Tahkolahti — beside the guest marina, restaurants and resort life.","eySwimming":"Swimming","hSwimming":"Moonlight swims from your own dock","pSwimming":"Summer evenings invite slow swims, sauna-to-lake rituals and the kind of quiet moments that make the property feel entirely your own.","eyBoating":"Boating / Water Routes","hBoating":"The route opens from Tahko","pBoating":"From Syväri, the route continues through water routes towards Lastukoski and Kuopio — a small-form boating journey from the villa's own lake.","eyFishing":"Fishing on Syväri","hFishing":"From the dock to deeper water","pFishing":"Syväri is known for pike and zander. Leave directly from the dock for quiet evening fishing or a longer day on the lake.","fishPike":"Pike","fishZander":"Zander","fishPerch":"Perch","fishTrout":"Trout","lureTitle":"Local favourite","lureSub":"A restrained lure reference for the lake.","eyEvening":"Evening on the Lake","hEvening":"The lake after sunset","pEvening":"Blue hour changes the whole atmosphere. Water, forest and light turn the dock and the villa into a private evening landscape.","eyDining":"Lakeside Dining","hDining":"From the lake to the table","pDining":"The day can move naturally from swimming or boating to the terrace — dinner by the water, with the lake still present beyond the glass.","footerPlace":"Tahko · Finland","contactEyebrow":"Contact","footerHeading":"Enquire about Lakeside Villa & Spa","footerIntro":"For private stays or property enquiries.","footerEnquire":"Enquire →","privacy":"Privacy","cookies":"Cookies"},"fi":{"navVilla":"Huvila","navLake":"Elämää järven äärellä","navSpa":"Spa & hyvinvointi","navLocation":"Sijainti","navServices":"Yksityiset palvelut","navEnquire":"Ota yhteyttä","navTahko":"Tahkolle veneellä","navSwimming":"Uiminen","navBoating":"Veneily / vesireitit","navFishing":"Kalastus Syvärillä","navEvening":"Ilta järvellä","navDining":"Ruokailu järven äärellä","eyHero":"Elämää järven äärellä","heroTitle":"Järvi alkaa omalta oveltasi","heroSub":"Oma laituri, rauhallinen vesi ja suora yhteys suomalaisen järvialueen vesireiteille.","eyTahko":"Tahkolle veneellä","hTahko":"Omalta laiturilta Tahkolle","pTahko":"Lyhyt maisemareitti yhdistää huvilan järven puolelta Tahkolle — noin 10 minuuttia veneellä omalta laiturilta. Saavu Tahkolahteen aivan vierasvenesataman, ravintoloiden ja lomakeskuksen palvelujen äärelle.","eySwimming":"Uiminen","hSwimming":"Kuutamouinteja omalta laiturilta","pSwimming":"Kesäillat kutsuvat rauhallisiin uintihetkiin, saunasta järveen -rituaaleihin ja hiljaisiin hetkiin, jolloin koko paikka tuntuu täysin omalta.","eyBoating":"Veneily / vesireitit","hBoating":"Reitti avautuu Tahkolta","pBoating":"Syväriltä vesireitti jatkuu Lastukosken kautta kohti Kuopiota — pienimuotoinen venematka suoraan huvilan omalta järveltä.","eyFishing":"Kalastus Syvärillä","hFishing":"Laiturilta syvemmille vesille","pFishing":"Syväri tunnetaan hauesta ja kuhasta. Omalta laiturilta pääsee suoraan rauhalliseen iltakalastukseen tai pidemmälle päivälle järvelle.","fishPike":"Hauki","fishZander":"Kuha","fishPerch":"Ahven","fishTrout":"Taimen","lureTitle":"Paikallinen suosikki","lureSub":"Hillitty vieheviite järven kalastukseen.","eyEvening":"Ilta järvellä","hEvening":"Järvi auringonlaskun jälkeen","pEvening":"Sininen hetki muuttaa koko tunnelman. Vesi, metsä ja valo tekevät laiturista ja huvilasta yksityisen iltamaiseman.","eyDining":"Ruokailu järven äärellä","hDining":"Järveltä pöytään","pDining":"Päivä voi jatkua luonnollisesti uinnista tai veneilystä terassille — illallinen veden äärellä, järvi yhä läsnä lasin takana.","footerPlace":"Tahko · Suomi","contactEyebrow":"Yhteys","footerHeading":"Tiedustele Lakeside Villa & Spa -kohteesta","footerIntro":"Yksityismajoituksia tai kohdetta koskevia tiedusteluja varten.","footerEnquire":"Ota yhteyttä →","privacy":"Tietosuoja","cookies":"Evästeet"},"sv":{"navVilla":"Villan","navLake":"Livet vid sjön","navSpa":"Spa & wellness","navLocation":"Läge","navServices":"Privata tjänster","navEnquire":"Förfrågan","navTahko":"Tahko med båt","navSwimming":"Bad","navBoating":"Båtliv / vattenleder","navFishing":"Fiske på Syväri","navEvening":"Kväll vid sjön","navDining":"Middag vid sjön","eyHero":"Livet vid sjön","heroTitle":"Sjön börjar vid din dörr","heroSub":"Egen brygga, lugnt vatten och direkt tillgång till vattenlederna i det finska sjölandet.","eyTahko":"Tahko med båt","hTahko":"Från din brygga till Tahko","pTahko":"En kort naturskön båtrutt förbinder villan med Tahko — cirka 10 minuter från den privata bryggan till Tahkolahti, nära gästhamn, restauranger och resortliv.","eySwimming":"Bad","hSwimming":"Månskensbad från din egen brygga","pSwimming":"Sommarkvällar bjuder in till långsamma simturer, bastu-till-sjö-ritualer och stilla stunder som gör platsen helt din egen.","eyBoating":"Båtliv / vattenleder","hBoating":"Rutten öppnar sig från Tahko","pBoating":"Från Syväri fortsätter vattenleden via Lastukoski mot Kuopio — en småskalig båtfärd från villans egen sjö.","eyFishing":"Fiske på Syväri","hFishing":"Från bryggan till djupare vatten","pFishing":"Syväri är känt för gädda och gös. Från bryggan når du direkt lugnt kvällsfiske eller en längre dag på sjön.","fishPike":"Gädda","fishZander":"Gös","fishPerch":"Abborre","fishTrout":"Öring","lureTitle":"Lokal favorit","lureSub":"En diskret betesreferens för sjön.","eyEvening":"Kväll vid sjön","hEvening":"Sjön efter solnedgången","pEvening":"Blå timmen förändrar hela atmosfären. Vatten, skog och ljus gör bryggan och villan till ett privat kvällslandskap.","eyDining":"Middag vid sjön","hDining":"Från sjön till bordet","pDining":"Dagen kan fortsätta naturligt från bad eller båtliv till terrassen — middag vid vattnet med sjön fortfarande närvarande bortom glaset.","footerPlace":"Tahko · Finland","contactEyebrow":"Kontakt","footerHeading":"Förfrågan om Lakeside Villa & Spa","footerIntro":"För privata vistelser eller frågor om fastigheten.","footerEnquire":"Skicka förfrågan →","privacy":"Integritet","cookies":"Cookies"},"de":{"navVilla":"Die Villa","navLake":"Leben am See","navSpa":"Spa & Wellness","navLocation":"Lage","navServices":"Privater Service","navEnquire":"Anfragen","navTahko":"Mit dem Boot nach Tahko","navSwimming":"Schwimmen","navBoating":"Bootfahren / Wasserwege","navFishing":"Angeln auf dem Syväri","navEvening":"Abend am See","navDining":"Essen am See","eyHero":"Leben am See","heroTitle":"Der See beginnt vor Ihrer Tür","heroSub":"Privater Steg, ruhiges Wasser und direkter Zugang zu den Wasserwegen der finnischen Seenplatte.","eyTahko":"Mit dem Boot nach Tahko","hTahko":"Vom eigenen Steg nach Tahko","pTahko":"Eine kurze, landschaftlich reizvolle Route verbindet die Villa mit Tahko — etwa 10 Minuten mit dem Boot vom privaten Steg bis Tahkolahti, direkt bei Gästehafen, Restaurants und Resortleben.","eySwimming":"Schwimmen","hSwimming":"Mondscheinschwimmen vom eigenen Steg","pSwimming":"Sommerabende laden zu ruhigen Schwimmzügen, Sauna-und-See-Ritualen und stillen Momenten ein, in denen sich das Anwesen ganz privat anfühlt.","eyBoating":"Bootfahren / Wasserwege","hBoating":"Die Route öffnet sich ab Tahko","pBoating":"Vom Syväri führt die Wasserroute über Lastukoski weiter Richtung Kuopio — eine entspannte Bootsfahrt vom eigenen See der Villa.","eyFishing":"Angeln auf dem Syväri","hFishing":"Vom Steg ins tiefere Wasser","pFishing":"Der Syväri ist für Hecht und Zander bekannt. Vom Steg geht es direkt zum ruhigen Abendangeln oder zu einem längeren Tag auf dem See.","fishPike":"Hecht","fishZander":"Zander","fishPerch":"Barsch","fishTrout":"Forelle","lureTitle":"Lokaler Favorit","lureSub":"Ein dezenter Köderhinweis für den See.","eyEvening":"Abend am See","hEvening":"Der See nach Sonnenuntergang","pEvening":"Die blaue Stunde verändert die ganze Atmosphäre. Wasser, Wald und Licht verwandeln Steg und Villa in eine private Abendlandschaft.","eyDining":"Essen am See","hDining":"Vom See auf den Tisch","pDining":"Der Tag geht ganz natürlich vom Schwimmen oder Bootfahren auf die Terrasse über — Abendessen am Wasser, der See bleibt hinter dem Glas präsent.","footerPlace":"Tahko · Finnland","contactEyebrow":"Kontakt","footerHeading":"Lakeside Villa & Spa anfragen","footerIntro":"Für private Aufenthalte oder Anfragen zur Immobilie.","footerEnquire":"Anfragen →","privacy":"Datenschutz","cookies":"Cookies"},"fr":{"navVilla":"La Villa","navLake":"Vie au bord du lac","navSpa":"Spa & bien-être","navLocation":"Localisation","navServices":"Services privés","navEnquire":"Nous contacter","navTahko":"Tahko en bateau","navSwimming":"Baignade","navBoating":"Navigation / voies d’eau","navFishing":"Pêche sur le Syväri","navEvening":"Soir au bord du lac","navDining":"Dîner au bord du lac","eyHero":"Vie au bord du lac","heroTitle":"Le lac commence à votre porte","heroSub":"Un ponton privé, des eaux calmes et un accès direct aux voies navigables de la région des lacs finlandais.","eyTahko":"Tahko en bateau","hTahko":"De votre ponton à Tahko","pTahko":"Un court itinéraire panoramique relie la villa à Tahko — environ 10 minutes en bateau depuis le ponton privé jusqu’à Tahkolahti, près du port visiteurs, des restaurants et de la vie de la station.","eySwimming":"Baignade","hSwimming":"Nager au clair de lune depuis votre ponton","pSwimming":"Les soirées d’été invitent aux baignades lentes, aux rituels sauna-lac et à ces instants calmes qui rendent le lieu entièrement vôtre.","eyBoating":"Navigation / voies d’eau","hBoating":"L’itinéraire s’ouvre depuis Tahko","pBoating":"Depuis Syväri, la voie d’eau se poursuit vers Lastukoski et Kuopio — une navigation paisible depuis le lac de la villa.","eyFishing":"Pêche sur le Syväri","hFishing":"Du ponton vers les eaux plus profondes","pFishing":"Syväri est connu pour le brochet et le sandre. Depuis le ponton, partez directement pour une pêche du soir ou une journée plus longue sur le lac.","fishPike":"Brochet","fishZander":"Sandre","fishPerch":"Perche","fishTrout":"Truite","lureTitle":"Favori local","lureSub":"Une référence discrète à un leurre adapté au lac.","eyEvening":"Soir au bord du lac","hEvening":"Le lac après le coucher du soleil","pEvening":"L’heure bleue transforme toute l’atmosphère. L’eau, la forêt et la lumière font du ponton et de la villa un paysage du soir entièrement privé.","eyDining":"Dîner au bord du lac","hDining":"Du lac à la table","pDining":"La journée se prolonge naturellement de la baignade ou du bateau à la terrasse — dîner au bord de l’eau, le lac toujours présent derrière le verre.","footerPlace":"Tahko · Finlande","contactEyebrow":"Contact","footerHeading":"Renseignez-vous sur Lakeside Villa & Spa","footerIntro":"Pour les séjours privés ou les demandes concernant la propriété.","footerEnquire":"Nous contacter →","privacy":"Confidentialité","cookies":"Cookies"},"es":{"navVilla":"La Villa","navLake":"Vida junto al lago","navSpa":"Spa y bienestar","navLocation":"Ubicación","navServices":"Servicios privados","navEnquire":"Consultar","navTahko":"Tahko en barco","navSwimming":"Natación","navBoating":"Navegación / rutas acuáticas","navFishing":"Pesca en Syväri","navEvening":"Tarde junto al lago","navDining":"Cena junto al lago","eyHero":"Vida junto al lago","heroTitle":"El lago comienza en tu puerta","heroSub":"Muelle privado, aguas tranquilas y acceso directo a las rutas navegables de la región de los lagos de Finlandia.","eyTahko":"Tahko en barco","hTahko":"De tu muelle a Tahko","pTahko":"Una breve ruta panorámica conecta la villa con Tahko — unos 10 minutos en barco desde el muelle privado hasta Tahkolahti, junto al puerto de visitantes, restaurantes y vida del resort.","eySwimming":"Natación","hSwimming":"Baños a la luz de la luna desde tu propio muelle","pSwimming":"Las tardes de verano invitan a nadar con calma, pasar de la sauna al lago y disfrutar de momentos silenciosos que hacen que la propiedad se sienta completamente tuya.","eyBoating":"Navegación / rutas acuáticas","hBoating":"La ruta se abre desde Tahko","pBoating":"Desde Syväri, la ruta acuática continúa hacia Lastukoski y Kuopio — una travesía tranquila desde el propio lago de la villa.","eyFishing":"Pesca en Syväri","hFishing":"Del muelle a aguas más profundas","pFishing":"Syväri es conocido por el lucio y la lucioperca. Desde el muelle se puede salir directamente a pescar al atardecer o pasar un día más largo en el lago.","fishPike":"Lucio","fishZander":"Lucioperca","fishPerch":"Perca","fishTrout":"Trucha","lureTitle":"Favorito local","lureSub":"Una referencia discreta a un señuelo para el lago.","eyEvening":"Tarde junto al lago","hEvening":"El lago después del atardecer","pEvening":"La hora azul transforma toda la atmósfera. Agua, bosque y luz convierten el muelle y la villa en un paisaje privado al anochecer.","eyDining":"Cena junto al lago","hDining":"Del lago a la mesa","pDining":"El día fluye naturalmente de la natación o el paseo en barco a la terraza — cena junto al agua, con el lago aún presente tras el cristal.","footerPlace":"Tahko · Finlandia","contactEyebrow":"Contacto","footerHeading":"Solicita información sobre Lakeside Villa & Spa","footerIntro":"Para estancias privadas o consultas sobre la propiedad.","footerEnquire":"Solicitar información →","privacy":"Privacidad","cookies":"Cookies"},"nl":{"navVilla":"De Villa","navLake":"Leven aan het meer","navSpa":"Spa & wellness","navLocation":"Locatie","navServices":"Privéservices","navEnquire":"Informeer","navTahko":"Met de boot naar Tahko","navSwimming":"Zwemmen","navBoating":"Varen / waterwegen","navFishing":"Vissen op Syväri","navEvening":"Avond aan het meer","navDining":"Dineren aan het meer","eyHero":"Leven aan het meer","heroTitle":"Het meer begint bij uw deur","heroSub":"Een eigen steiger, rustig water en directe toegang tot de waterwegen van het Finse merengebied.","eyTahko":"Met de boot naar Tahko","hTahko":"Van uw steiger naar Tahko","pTahko":"Een korte schilderachtige route verbindt de villa met Tahko — ongeveer 10 minuten varen vanaf de privésteiger naar Tahkolahti, naast de passantenhaven, restaurants en het resortleven.","eySwimming":"Zwemmen","hSwimming":"Zwemmen bij maanlicht vanaf uw eigen steiger","pSwimming":"Zomeravonden nodigen uit tot rustig zwemmen, sauna-naar-meer-rituelen en stille momenten waarin het landgoed helemaal van u voelt.","eyBoating":"Varen / waterwegen","hBoating":"De route opent zich vanuit Tahko","pBoating":"Vanaf Syväri loopt de waterroute via Lastukoski richting Kuopio — een ontspannen tocht vanaf het eigen meer van de villa.","eyFishing":"Vissen op Syväri","hFishing":"Van de steiger naar dieper water","pFishing":"Syväri staat bekend om snoek en snoekbaars. Vanaf de steiger vertrekt u direct voor rustig avondvissen of een langere dag op het meer.","fishPike":"Snoek","fishZander":"Snoekbaars","fishPerch":"Baars","fishTrout":"Forel","lureTitle":"Lokale favoriet","lureSub":"Een ingetogen kunstaasreferentie voor het meer.","eyEvening":"Avond aan het meer","hEvening":"Het meer na zonsondergang","pEvening":"Het blauwe uur verandert de hele sfeer. Water, bos en licht maken van de steiger en de villa een privé avondlandschap.","eyDining":"Dineren aan het meer","hDining":"Van het meer naar de tafel","pDining":"De dag gaat vanzelf over van zwemmen of varen naar het terras — dineren aan het water, met het meer nog steeds zichtbaar achter het glas.","footerPlace":"Tahko · Finland","contactEyebrow":"Contact","footerHeading":"Informeer naar Lakeside Villa & Spa","footerIntro":"Voor privéverblijven of vragen over de woning.","footerEnquire":"Informeer →","privacy":"Privacy","cookies":"Cookies"},"zh":{"navVilla":"别墅","navLake":"湖畔生活","navSpa":"水疗与康养","navLocation":"位置","navServices":"私人服务","navEnquire":"咨询","navTahko":"乘船前往塔赫科","navSwimming":"游泳","navBoating":"泛舟 / 水路","navFishing":"Syväri 湖垂钓","navEvening":"湖畔夜色","navDining":"湖畔晚餐","eyHero":"湖畔生活","heroTitle":"湖，就从门前开始","heroSub":"私人码头、宁静湖面，并可直接进入芬兰湖区的水上航道。","eyTahko":"乘船前往塔赫科","hTahko":"从私人码头直达塔赫科","pTahko":"一段简短而优美的水上路线将别墅与塔赫科连接起来——从私人码头乘船约 10 分钟即可抵达 Tahkolahti，旁边就是访客码头、餐厅和度假区生活。","eySwimming":"游泳","hSwimming":"从自己的码头开始月光夜泳","pSwimming":"夏日夜晚适合慢慢游泳、体验从桑拿入湖的仪式感，以及那些让整座宅邸仿佛只属于您的宁静时刻。","eyBoating":"泛舟 / 水路","hBoating":"从塔赫科启程","pBoating":"从 Syväri 出发，水路继续经 Lastukoski 向 Kuopio 延伸——从别墅所在湖面开启一段轻松的湖区航行。","eyFishing":"Syväri 湖垂钓","hFishing":"从码头驶向更深水域","pFishing":"Syväri 以梭子鱼和梭鲈闻名。可从码头直接出发，享受安静的傍晚垂钓或更完整的一日湖上时光。","fishPike":"梭子鱼","fishZander":"梭鲈","fishPerch":"河鲈","fishTrout":"鳟鱼","lureTitle":"当地常用","lureSub":"一个低调的湖区拟饵参考。","eyEvening":"湖畔夜色","hEvening":"日落后的湖面","pEvening":"蓝调时刻改变了整个氛围。湖水、森林与灯光让码头和别墅化作私密的夜景。","eyDining":"湖畔晚餐","hDining":"从湖面到餐桌","pDining":"一天可以自然地从游泳或泛舟延续到露台——在水边用餐，透过玻璃仍能感受到湖景。","footerPlace":"塔赫科 · 芬兰","contactEyebrow":"联系","footerHeading":"咨询 Lakeside Villa & Spa","footerIntro":"适用于私人住宿或房产相关咨询。","footerEnquire":"咨询 →","privacy":"隐私","cookies":"Cookie"}};
+
+function applyLanguage(lang){
+  const dict=TLVS_I18N[lang]||TLVS_I18N.en;
+  document.documentElement.lang=lang==='zh'?'zh-CN':lang;
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const k=el.dataset.i18n;
+    if(dict[k]!=null) el.textContent=dict[k];
+  });
+  try{localStorage.setItem('tlvs-lang',lang);}catch(e){}
+  const sel=document.getElementById('languageSelect'); if(sel) sel.value=lang;
+  const mobileSel=document.getElementById('mobileLanguageSelect'); if(mobileSel) mobileSel.value=lang;
+}
+
+const langSelect=document.getElementById('languageSelect');
+const mobileLangSelect=document.getElementById('mobileLanguageSelect');
+const mobileMenuDetails=document.querySelector('.mobile-menu-native');
+
+function closeNativeMobileMenu(){
+  if(mobileMenuDetails) mobileMenuDetails.removeAttribute('open');
+}
+
+langSelect?.addEventListener('change',e=>applyLanguage(e.target.value));
+mobileLangSelect?.addEventListener('change',e=>{
+  applyLanguage(e.target.value);
+  closeNativeMobileMenu();
+});
+document.querySelectorAll('.mobile-nav-panel a').forEach(a=>{
+  a.addEventListener('click',closeNativeMobileMenu);
+});
+
+const stored=(()=>{try{return localStorage.getItem('tlvs-lang')}catch(e){return null}})();
+const browser=(navigator.language||'en').toLowerCase().split('-')[0];
+applyLanguage(stored || (TLVS_I18N[browser]?browser:'en'));
+</script>
+</body>
+</html>

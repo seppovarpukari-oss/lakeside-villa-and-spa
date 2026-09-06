@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Lakeside Villa &amp; Spa — Tahko, Finland</title>
+
+
+
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&amp;family=Inter:wght@300;400;500&amp;display=swap" rel="stylesheet"/><style>
+:root {
+ --bg:#11120f; --bg-soft:#151611; --ink:#f2eee5; --muted:#c9c4b9; --gold:#a98b57;
+ --sans:"Inter","DejaVu Sans",Arial,sans-serif;
+ --display:"EB Garamond",Georgia,serif;
+ --pad:clamp(28px,4.2vw,82px);
+ --max:1760px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:300;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.site-header{position:absolute;z-index:20;left:0;right:0;top:0;padding:22px var(--pad);display:flex;align-items:center;justify-content:space-between;gap:30px;color:#f5f0e7}
+.brand{font-family:var(--display);font-size:clamp(13px,1.1vw,18px);letter-spacing:.035em;white-space:nowrap}
+.nav{display:flex;align-items:center;gap:clamp(16px,2.1vw,34px);font-size:clamp(8px,.62vw,11px);font-weight:400;letter-spacing:.15em;text-transform:uppercase}
+.nav a{opacity:.88;white-space:nowrap}
+.nav a:hover{opacity:1}
+.menu-button{display:none;background:transparent;border:0;color:var(--ink);padding:8px;font-size:12px;letter-spacing:.13em;text-transform:uppercase}
+.hero{position:relative;height:min(900px,72vw);min-height:690px;background-image:url('assets/images/e591d26847ff373b.png');background-size:cover;background-position:center 48%;overflow:hidden}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(12,13,10,.22) 0%,rgba(12,13,10,.08) 35%,rgba(12,13,10,0) 63%);pointer-events:none}
+.hero-copy{position:absolute;z-index:3;left:var(--pad);top:clamp(150px,19vw,270px);max-width:min(720px,48vw)}
+.hero-kicker{font-family:var(--display);font-size:clamp(28px,3.05vw,56px);line-height:1.06;font-weight:400;letter-spacing:.075em;text-shadow:0 2px 12px rgba(0,0,0,.28)}
+.hero-promise{margin-top:18px;font-family:var(--display);font-size:clamp(17px,1.55vw,28px);line-height:1.25;color:#f4efe6}
+.hero-sub{margin-top:12px;font-size:clamp(12px,.85vw,16px);line-height:1.55;color:#f3eee6;letter-spacing:.01em}
+.location-signature{position:absolute;z-index:3;left:var(--pad);bottom:clamp(36px,5vw,76px);display:flex;align-items:flex-end;gap:18px;color:var(--gold);display:flex;flex-direction:column;align-items:flex-start}
+.finland{width:54px;height:118px;overflow:visible;flex:none}
+.finland polyline{fill:none;stroke:currentColor;stroke-width:2.1;stroke-linejoin:miter;stroke-linecap:square}
+.finland circle{fill:currentColor}
+.sig-text{font-size:clamp(9px,.62vw,12px);font-weight:500;letter-spacing:.09em;white-space:nowrap;padding-bottom:8px}
+main{padding:clamp(95px,8vw,145px) var(--pad) clamp(80px,8vw,140px)}
+.editorial{max-width:var(--max);margin:0 auto clamp(120px,9.7vw,190px);display:grid;grid-template-columns:minmax(0,2.05fr) minmax(300px,.94fr);gap:clamp(54px,5.2vw,100px);align-items:center}
+.editorial .media{width:100%;min-width:0}
+.editorial img{display:block;width:100%;height:auto;object-fit:contain}
+.copy{align-self:center;padding-right:clamp(0px,2vw,34px)}
+.eyebrow{font-size:clamp(8px,.62vw,11px);font-weight:500;letter-spacing:.19em;color:var(--gold);text-transform:uppercase;margin-bottom:18px}
+h2{font-family:var(--display);font-size:clamp(30px,2.55vw,48px);font-weight:400;line-height:1.08;letter-spacing:.002em;margin:0 0 22px;color:var(--ink);max-width:490px}
+p{font-size:clamp(13px,.9vw,16px);line-height:1.7;letter-spacing:.006em;color:var(--muted);margin:0;max-width:520px}
+.cta{display:inline-block;margin-top:28px;font-size:10px;font-weight:500;letter-spacing:.18em;color:var(--ink);text-transform:uppercase;border-bottom:1px solid rgba(169,139,87,.62);padding-bottom:6px}
+.section-character{align-items:center}
+.section-character .media{max-width:900px}
+.site-footer{border-top:1px solid rgba(255,255,255,.05);padding:50px var(--pad) 62px;display:flex;justify-content:space-between;align-items:flex-end;gap:30px;color:#d9d4c9}
+.footer-brand{font-family:var(--display);font-size:17px;letter-spacing:.03em}
+.footer-place{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-top:8px}
+.footer-right{font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:#8f8b82}
+@media(max-width:1200px) and (min-width:901px){
+ :root{--pad:40px}
+ .site-header{padding-top:18px}
+ .nav{gap:18px;font-size:8px}
+ .hero{height:76vw;max-height:860px;min-height:650px}
+ .editorial{grid-template-columns:minmax(0,1.75fr) minmax(280px,.9fr);gap:48px;margin-bottom:125px}
+ h2{font-size:34px}
+}
+@media(max-width:900px){
+ :root{--pad:clamp(26px,6vw,52px)}
+ .site-header{position:absolute;padding-top:max(20px,env(safe-area-inset-top));align-items:flex-start}
+ .nav{display:none;position:absolute;top:72px;right:var(--pad);left:var(--pad);background:rgba(16,17,14,.96);border:1px solid rgba(169,139,87,.22);padding:22px;flex-direction:column;align-items:flex-start;gap:18px;font-size:10px}
+ .nav.open{display:flex}
+ .menu-button{display:block}
+ .hero{height:100svh;min-height:700px;max-height:980px;background-position:54% center}
+ .hero:after{background:linear-gradient(90deg,rgba(10,11,9,.45) 0%,rgba(10,11,9,.12) 62%,rgba(10,11,9,0) 100%)}
+ .hero-copy{top:auto;bottom:190px;max-width:70vw}
+ .hero-kicker{font-size:clamp(30px,6vw,45px);font-weight:400;letter-spacing:.065em}
+ .hero-promise{font-size:clamp(18px,3.4vw,25px);margin-top:14px}
+ .hero-sub{font-size:13px;max-width:470px}
+ .location-signature{bottom:52px;gap:14px}
+ .finland{width:42px;height:92px}
+ .sig-text{font-size:8px;letter-spacing:.07em;padding-bottom:5px}
+ main{padding-top:92px}
+ .editorial{grid-template-columns:1fr;gap:32px;margin-bottom:112px;max-width:780px}
+ .copy{padding:0 2px;max-width:650px}
+ .eyebrow{margin-bottom:14px}
+ h2{font-size:clamp(30px,5.2vw,42px);margin-bottom:18px;max-width:620px}
+ p{font-size:15px;line-height:1.68;max-width:620px}
+ .cta{margin-top:24px}
+ .section-character .media{max-width:100%}
+}
+@media(max-width:560px){
+ :root{--pad:22px}
+ .site-header{padding-left:20px;padding-right:20px}
+ .brand{font-size:12px;max-width:220px;white-space:normal;line-height:1.2}
+ /* Mobile Hero v2: show the complete 4:3 source image instead of a portrait cover crop. */
+ .hero{height:auto;min-height:0;max-height:none;padding-top:75vw;background-size:100% auto;background-position:center top;background-repeat:no-repeat;background-color:var(--bg);overflow:visible}
+ .hero:after{inset:0 0 auto 0;height:75vw;background:linear-gradient(180deg,rgba(10,11,9,.34) 0%,rgba(10,11,9,.08) 24%,rgba(10,11,9,0) 50%);pointer-events:none}
+ .hero-copy{position:relative;left:auto;right:auto;top:auto;bottom:auto;max-width:none;padding:30px 22px 0}
+ .hero-kicker{font-size:clamp(24px,6.8vw,29px);line-height:1.08;max-width:350px;text-shadow:none;font-weight:400;letter-spacing:.055em}
+ .hero-promise{font-size:clamp(15px,4.4vw,18px);line-height:1.28;max-width:330px;margin-top:12px}
+ .hero-sub{font-size:12.5px;line-height:1.55;max-width:310px;margin-top:10px}
+ .location-signature{position:relative;left:auto;right:auto;bottom:auto;padding:26px 22px 42px;gap:11px;align-items:center}
+ .finland{width:34px;height:74px}
+ .sig-text{font-size:7.4px;letter-spacing:.055em;white-space:normal;line-height:1.45;max-width:240px;padding-bottom:0}
+ main{padding:54px 22px 90px}
+ .editorial{gap:24px;margin-bottom:84px}
+ .eyebrow{font-size:8px;letter-spacing:.17em;margin-bottom:11px}
+ h2{font-size:clamp(26px,7.4vw,32px);line-height:1.1;margin-bottom:14px}
+ p{font-size:14px;line-height:1.62}
+ .cta{font-size:9px;margin-top:22px}
+ .site-footer{padding:42px 22px 48px;display:block}
+ .footer-brand{font-size:16px}
+ .footer-right{margin-top:28px}
+}
+@media print{.menu-button{display:none!important} .nav{display:flex!important}}
+
+    .nav-enquire{margin-left:10px;}
+
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.language-picker{position:relative;display:flex;align-items:center;margin-left:2px}
+.language-picker select{appearance:none;-webkit-appearance:none;background:transparent;color:#CDBF9D;border:0;border-left:1px solid rgba(205,191,157,.28);padding:5px 18px 5px 15px;font:500 11px/1 var(--sans);letter-spacing:.105em;cursor:pointer;outline:none}
+.language-picker:after{content:'⌄';position:absolute;right:2px;top:50%;transform:translateY(-57%);font-size:11px;color:#CDBF9D;pointer-events:none}
+.language-picker select option{background:#191a16;color:#eee5d2}
+@media(max-width:1200px){.language-picker{margin-top:3px}.language-picker select{font-size:10px;padding:7px 20px 7px 0;border-left:0}}
+
+
+/* Whole-site footer CTA refinement — Visual Design QA */
+.site-footer h2,
+.footer-cta h2,
+.footer-enquire h2,
+.footer-main h2,
+footer h2{
+  font-size:clamp(38px,3.25vw,44px) !important;
+  line-height:1.06 !important;
+}
+.site-footer .enquire-link,
+.site-footer .footer-enquire-link,
+.footer-cta .enquire-link,
+.footer-enquire .enquire-link,
+footer .enquire-link,
+footer a[href*="enquire" i]{
+  font-size:12px !important;
+  letter-spacing:.12em !important;
+}
+
+@media(max-width:900px){
+  .site-footer h2,
+  .footer-cta h2,
+  .footer-enquire h2,
+  .footer-main h2,
+  footer h2{
+    font-size:clamp(34px,4.6vw,38px) !important;
+  }
+}
+@media(max-width:560px){
+  .site-footer h2,
+  .footer-cta h2,
+  .footer-enquire h2,
+  .footer-main h2,
+  footer h2{
+    font-size:32px !important;
+    line-height:1.08 !important;
+  }
+  .site-footer .enquire-link,
+  .site-footer .footer-enquire-link,
+  .footer-cta .enquire-link,
+  .footer-enquire .enquire-link,
+  footer .enquire-link,
+  footer a[href*="enquire" i]{
+    font-size:11px !important;
+  }
+}
+
+
+/* Whole-site footer CTA refinement v2 — deliberately restrained */
+.site-footer h2,
+.footer-cta h2,
+.footer-enquire h2,
+.footer-main h2,
+footer h2{
+  font-size:30px !important;
+  line-height:1.10 !important;
+  letter-spacing:.02em !important;
+}
+@media(max-width:900px){
+  .site-footer h2,
+  .footer-cta h2,
+  .footer-enquire h2,
+  .footer-main h2,
+  footer h2{
+    font-size:28px !important;
+  }
+}
+@media(max-width:560px){
+  .site-footer h2,
+  .footer-cta h2,
+  .footer-enquire h2,
+  .footer-main h2,
+  footer h2{
+    font-size:26px !important;
+    line-height:1.12 !important;
+  }
+}
+</style>
+<style id="tlvs-v5-caption-style">
+  .tlvs-map-caption{
+    display:block !important;
+    width:100% !important;
+    margin-top:10px !important;
+    white-space:nowrap;
+  }
+</style>
+<style id="tlvs-v6-map-signature-centering">
+  .location-signature,
+  .hero-signature,
+  .map-signature,
+  .finland-signature,
+  .finland-map-signature,
+  .location-map-signature {
+    align-items:center !important;
+    text-align:center !important;
+  }
+  .tlvs-map-caption {
+    text-align:center !important;
+    width:auto !important;
+    align-self:center !important;
+  }
+</style>
+<style id="tlvs-v7-subtle-image-corners">
+  /* Editorial content images only */
+  main img,
+  .section img,
+  .content img,
+  .editorial img {
+    border-radius:8px;
+  }
+
+  /* Keep hero / full-bleed visual language architectural and sharp */
+  .hero img,
+  .hero-image,
+  .hero-media img,
+  header img,
+  .location-signature img,
+  .hero-signature img,
+  .map-signature img,
+  svg {
+    border-radius:0 !important;
+  }
+
+  @media (max-width:640px) {
+    main img,
+    .section img,
+    .content img,
+    .editorial img {
+      border-radius:10px;
+    }
+
+    .hero img,
+    .hero-image,
+    .hero-media img,
+    header img,
+    .location-signature img,
+    .hero-signature img,
+    .map-signature img {
+      border-radius:0 !important;
+    }
+  }
+</style>
+<style id="tlvs-v8-mobile-signature-left">
+  @media (max-width:640px) {
+    .location-signature,
+    .hero-signature,
+    .map-signature,
+    .finland-signature,
+    .finland-map-signature,
+    .location-map-signature {
+      align-items:center !important;
+      text-align:center !important;
+      width:max-content !important;
+      max-width:100% !important;
+      margin-left:0 !important;
+      margin-right:auto !important;
+    }
+
+    .tlvs-map-caption {
+      text-align:center !important;
+      align-self:center !important;
+      width:auto !important;
+    }
+  }
+</style>
+<style id="tlvs-v9-sticky-header">
+  /* Keep navigation available throughout the long editorial page on all viewports. */
+  .site-header{
+    position:fixed !important;
+    top:0;
+    left:0;
+    right:0;
+    z-index:100;
+    background:transparent;
+    transition:background-color .24s ease, border-color .24s ease, backdrop-filter .24s ease;
+    border-bottom:1px solid transparent;
+  }
+
+  .site-header.is-scrolled,
+  .site-header.menu-open{
+    background:rgba(24,24,21,.94);
+    border-bottom-color:rgba(255,255,255,.06);
+    -webkit-backdrop-filter:blur(10px);
+    backdrop-filter:blur(10px);
+  }
+
+  @media (max-width:900px){
+    .site-header{position:fixed !important;}
+  }
+</style>
+<style id="tlvs-v11-charcoal-header-always">
+  .site-header{
+    background:rgba(24,24,21,.94) !important;
+    border-bottom:1px solid rgba(255,255,255,.06) !important;
+    -webkit-backdrop-filter:blur(10px);
+    backdrop-filter:blur(10px);
+  }
+</style>
+<style id="tlvs-v12-mobile-header-trimmed">
+  @media (max-width:900px){
+    .site-header{
+      position:sticky !important;
+      top:0 !important;
+      left:0;
+      right:0;
+      padding:12px var(--pad) !important;
+      min-height:56px !important;
+      align-items:center !important;
+      justify-content:space-between !important;
+      z-index:120 !important;
+    }
+
+    .brand,
+    .menu-button{
+      line-height:1 !important;
+    }
+
+    .nav{
+      top:calc(100% + 8px) !important;
+    }
+  }
+</style>
+<style id="tlvs-v13-iphone-top-gap-fix">
+  @media (max-width:900px){
+    html, body{
+      margin:0 !important;
+      padding-left:0 !important;
+      padding-right:0 !important;
+    }
+
+    body{
+      padding-top:56px !important;
+    }
+
+    .site-header{
+      position:fixed !important;
+      top:0 !important;
+      left:0 !important;
+      right:0 !important;
+      height:56px !important;
+      min-height:56px !important;
+      padding:0 20px !important;
+      margin:0 !important;
+      display:flex !important;
+      align-items:center !important;
+      justify-content:space-between !important;
+      background:#181815 !important;
+      border-bottom:1px solid rgba(255,255,255,.06) !important;
+      z-index:200 !important;
+      -webkit-backdrop-filter:none !important;
+      backdrop-filter:none !important;
+    }
+
+    .brand,
+    .menu-button{
+      margin:0 !important;
+      line-height:1 !important;
+    }
+
+    .menu-button{
+      padding:8px 0 !important;
+    }
+
+    .nav{
+      position:fixed !important;
+      top:56px !important;
+      left:20px !important;
+      right:20px !important;
+    }
+  }
+</style>
+<style id="tlvs-v14-header-refinement">
+  /* Desktop masthead refinement */
+  .brand{
+    font-family:var(--display);
+    font-weight:500;
+    letter-spacing:.018em;
+  }
+  .brand-desktop{display:inline;}
+  .brand-mobile{display:none;}
+
+  @media (min-width:1201px){
+    .brand{
+      font-size:clamp(17px,1.18vw,21px) !important;
+      line-height:1 !important;
+    }
+    .nav{
+      font-size:clamp(11px,.72vw,13px) !important;
+      font-weight:400 !important;
+      letter-spacing:.12em !important;
+    }
+  }
+
+  /* iPad / tablet: header is its own charcoal band, hero starts below it. */
+  @media (min-width:901px) and (max-width:1200px){
+    body{
+      padding-top:64px !important;
+    }
+
+    .site-header{
+      position:fixed !important;
+      top:0 !important;
+      left:0 !important;
+      right:0 !important;
+      height:64px !important;
+      min-height:64px !important;
+      padding:0 var(--pad) !important;
+      margin:0 !important;
+      align-items:center !important;
+      background:#181815 !important;
+      border-bottom:1px solid rgba(255,255,255,.06) !important;
+      -webkit-backdrop-filter:none !important;
+      backdrop-filter:none !important;
+      z-index:200 !important;
+    }
+
+    .brand{
+      font-size:18px !important;
+      line-height:1 !important;
+    }
+
+    .nav{
+      font-size:11px !important;
+      letter-spacing:.12em !important;
+      gap:clamp(15px,1.7vw,24px) !important;
+    }
+
+    .hero{
+      margin-top:0 !important;
+    }
+  }
+
+  /* Keep the already-approved mobile brand appearance. */
+  @media (max-width:900px){
+    .brand-desktop{display:none;}
+    .brand-mobile{display:inline;}
+  }
+</style>
+<style id="tlvs-v15-desktop-header-refinement">
+  /* Desktop: opaque header occupies its own band; hero begins below it. */
+  @media (min-width:1201px){
+    body{
+      padding-top:68px !important;
+    }
+
+    .site-header{
+      position:fixed !important;
+      top:0 !important;
+      left:0 !important;
+      right:0 !important;
+      height:68px !important;
+      min-height:68px !important;
+      padding:0 var(--pad) !important;
+      margin:0 !important;
+      display:flex !important;
+      align-items:center !important;
+      justify-content:space-between !important;
+      background:#181815 !important;
+      border-bottom:1px solid rgba(255,255,255,.055) !important;
+      -webkit-backdrop-filter:none !important;
+      backdrop-filter:none !important;
+      z-index:200 !important;
+    }
+
+    .hero{
+      margin-top:0 !important;
+    }
+
+    /* Quiet wordmark: less tracking, lighter presence, more breathing room. */
+    .brand{
+      font-family:var(--display) !important;
+      font-size:18px !important;
+      font-weight:400 !important;
+      line-height:1 !important;
+      letter-spacing:0 !important;
+      white-space:nowrap !important;
+      margin-right:48px !important;
+    }
+
+    /* Navigation remains neutral sans, but clearly readable. */
+    .nav{
+      font-family:var(--sans) !important;
+      font-size:12px !important;
+      font-weight:450 !important;
+      line-height:1 !important;
+      letter-spacing:.105em !important;
+      gap:clamp(22px,1.8vw,32px) !important;
+    }
+  }
+</style>
+<style id="tlvs-v16-champagne-nav">
+  /* Desktop only: restrained champagne navigation; brand stays off-white. */
+  @media (min-width:1201px){
+    .brand{
+      color:#F1EEE7 !important;
+    }
+    .nav a{
+      color:#CDBF9D !important;
+      transition:color .18s ease, opacity .18s ease;
+    }
+    .nav a:hover,
+    .nav a:focus-visible{
+      color:#EEE5D2 !important;
+    }
+  }
+</style>
+<style id="tlvs-v17-wordmark02">
+  /* Desktop wordmark version 02:
+     two-line, sign-inspired, refined rather than logo-heavy. */
+  @media (min-width:1201px){
+    .brand{
+      display:inline-flex !important;
+      align-items:center !important;
+      color:#F1EEE7 !important;
+      margin-right:52px !important;
+    }
+
+    .brand-desktop.brand-wordmark{
+      display:inline-flex !important;
+      flex-direction:column !important;
+      align-items:flex-start !important;
+      justify-content:center !important;
+      gap:2px !important;
+      line-height:1 !important;
+      white-space:nowrap !important;
+    }
+
+    .brand-desktop .wm-top{
+      display:block !important;
+      font-family:var(--display) !important;
+      font-weight:500 !important;
+      font-size:19px !important;
+      letter-spacing:.12em !important;
+      text-transform:uppercase !important;
+    }
+
+    .brand-desktop .wm-bottom{
+      display:block !important;
+      font-family:var(--display) !important;
+      font-weight:400 !important;
+      font-size:14px !important;
+      letter-spacing:.18em !important;
+      text-transform:uppercase !important;
+      opacity:.96 !important;
+    }
+  }
+
+  /* Keep tablets and mobiles on the approved simple brand treatment for now. */
+  @media (max-width:1200px){
+    .brand-wordmark{display:none !important;}
+  }
+</style>
+<style id="tlvs-v18-wordmark-tuning">
+  @media (min-width:1201px){
+    .brand{
+      color:#DED2B6 !important;
+    }
+
+    .brand-desktop.brand-wordmark{
+      gap:5px !important;
+    }
+
+    .brand-desktop .wm-top{
+      color:#E4D8BE !important;
+    }
+
+    .brand-desktop .wm-bottom{
+      color:#D8C9A8 !important;
+    }
+  }
+</style>
+<style id="tlvs-v19-wordmark-all-responsive">
+  /* Use the approved two-line wordmark across desktop, iPad and mobile.
+     Scale it down progressively without changing the locked desktop treatment. */
+
+  @media (max-width:1200px){
+    .brand-mobile{
+      display:none !important;
+    }
+
+    .brand-wordmark{
+      display:inline-flex !important;
+      flex-direction:column !important;
+      align-items:flex-start !important;
+      justify-content:center !important;
+      gap:4px !important;
+      line-height:1 !important;
+      white-space:nowrap !important;
+    }
+
+    .brand-wordmark .wm-top{
+      display:block !important;
+      font-family:var(--display) !important;
+      font-weight:500 !important;
+      letter-spacing:.105em !important;
+      text-transform:uppercase !important;
+      color:#E4D8BE !important;
+    }
+
+    .brand-wordmark .wm-bottom{
+      display:block !important;
+      font-family:var(--display) !important;
+      font-weight:400 !important;
+      letter-spacing:.155em !important;
+      text-transform:uppercase !important;
+      color:#D8C9A8 !important;
+    }
+  }
+
+  /* iPad landscape / large tablet */
+  @media (min-width:901px) and (max-width:1200px){
+    .brand-wordmark .wm-top{
+      font-size:17px !important;
+    }
+    .brand-wordmark .wm-bottom{
+      font-size:12.5px !important;
+    }
+  }
+
+  /* iPad portrait and larger phones */
+  @media (min-width:561px) and (max-width:900px){
+    .brand{
+      padding:0 !important;
+    }
+    .brand-wordmark .wm-top{
+      font-size:16px !important;
+    }
+    .brand-wordmark .wm-bottom{
+      font-size:11.5px !important;
+    }
+  }
+
+  /* Phones */
+  @media (max-width:560px){
+    .brand{
+      padding:0 !important;
+      margin:0 !important;
+    }
+    .brand-wordmark{
+      gap:3px !important;
+    }
+    .brand-wordmark .wm-top{
+      font-size:14px !important;
+      letter-spacing:.095em !important;
+    }
+    .brand-wordmark .wm-bottom{
+      font-size:10px !important;
+      letter-spacing:.14em !important;
+    }
+  }
+</style>
+<style id="tlvs-v20-mobile-wordmark-balance">
+  /* iPhone/mobile only: widen VILLA & SPA optically to balance LAKESIDE.
+     Desktop and iPad treatments remain unchanged. */
+  @media (max-width:560px){
+    .brand-wordmark .wm-bottom{
+      letter-spacing:.19em !important;
+    }
+  }
+</style>
+<style id="tlvs-v23-rhythm-refinement">
+  /* v23 rhythm test: content, imagery, typography and hero remain unchanged.
+     Only spacing and image/text proportions vary to avoid a uniform long-scroll cadence. */
+  @media (min-width:1201px){
+    .section-outdoor{margin-bottom:clamp(150px,11.5vw,220px);}
+    .section-lounge{grid-template-columns:minmax(0,1.78fr) minmax(320px,1fr);margin-bottom:clamp(100px,7.8vw,150px);}
+    .section-dinner{grid-template-columns:minmax(0,2.18fr) minmax(290px,.86fr);margin-bottom:clamp(138px,10.6vw,205px);}
+    .section-character{grid-template-columns:minmax(0,1.62fr) minmax(320px,1.03fr);margin-bottom:clamp(105px,8.2vw,158px);}
+    .section-villa{margin-bottom:clamp(155px,11.8vw,225px);}
+    .section-spa{grid-template-columns:minmax(0,1.82fr) minmax(320px,.98fr);margin-bottom:clamp(108px,8.1vw,155px);}
+    .section-lake{grid-template-columns:minmax(0,2.2fr) minmax(285px,.84fr);margin-bottom:clamp(145px,10.8vw,208px);}
+    .section-location{grid-template-columns:minmax(0,1.72fr) minmax(325px,1.02fr);margin-bottom:clamp(102px,7.7vw,148px);}
+    .section-services{margin-bottom:clamp(118px,8.9vw,170px);}
+    .section-lounge .media,.section-character .media,.section-location .media{max-width:92%;}
+    .section-lounge .copy,.section-character .copy,.section-location .copy{padding-left:clamp(8px,1.3vw,24px);}
+  }
+  @media (min-width:901px) and (max-width:1200px){
+    .section-outdoor,.section-villa,.section-lake{margin-bottom:145px;}
+    .section-lounge,.section-character,.section-spa,.section-location{margin-bottom:108px;}
+    .section-dinner{margin-bottom:132px;}
+  }
+  @media (max-width:900px){
+    /* Responsive rhythm stays intentionally quieter: vary vertical pauses only. */
+    .section-outdoor,.section-villa,.section-lake{margin-bottom:124px;}
+    .section-lounge,.section-character,.section-spa,.section-location{margin-bottom:94px;}
+    .section-dinner{margin-bottom:108px;}
+  }
+  @media (max-width:560px){
+    .section-outdoor,.section-villa,.section-lake{margin-bottom:96px;}
+    .section-lounge,.section-character,.section-spa,.section-location{margin-bottom:72px;}
+    .section-dinner{margin-bottom:84px;}
+    .section-services{margin-bottom:74px;}
+  }
+</style>
+<style id="tlvs-v24-quiet-luxury-footer">
+  /* v24 footer refinement only. Header, hero, content and v23 rhythm remain unchanged. */
+  .site-footer{
+    display:block !important;
+    border-top:1px solid rgba(255,255,255,.055) !important;
+    background:#151612;
+    padding:clamp(84px,8vw,148px) var(--pad) clamp(34px,3.2vw,56px) !important;
+    color:#d9d4c9;
+  }
+  .footer-shell{max-width:var(--max);margin:0 auto;}
+  .footer-main{
+    display:grid;
+    grid-template-columns:minmax(250px,.72fr) minmax(520px,1.28fr);
+    gap:clamp(72px,9vw,170px);
+    align-items:start;
+  }
+  .footer-signature{padding-top:2px;}
+  .footer-wordmark{
+    display:inline-flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:7px;
+    line-height:1;
+    white-space:nowrap;
+  }
+  .footer-wm-top{
+    display:block;
+    font-family:var(--display);
+    font-weight:500;
+    font-size:25px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:#E4D8BE;
+  }
+  .footer-wm-bottom{
+    display:block;
+    font-family:var(--display);
+    font-weight:400;
+    font-size:17px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:#D8C9A8;
+  }
+  .site-footer .footer-place{
+    margin-top:24px;
+    font-size:9px;
+    font-weight:500;
+    letter-spacing:.17em;
+    text-transform:uppercase;
+    color:#A98B57;
+  }
+  .footer-enquiry{max-width:760px;}
+  .footer-eyebrow{margin-bottom:16px;}
+  .footer-heading{
+    font-size:clamp(34px,2.65vw,50px);
+    max-width:680px;
+    margin-bottom:18px;
+  }
+  .footer-intro{max-width:640px;font-size:14px;line-height:1.72;}
+  .enquiry-form{margin-top:44px;}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,60px);}
+  .field{display:block;}
+  .field-label{
+    display:block;
+    margin-bottom:10px;
+    font-size:9px;
+    font-weight:500;
+    letter-spacing:.17em;
+    text-transform:uppercase;
+    color:#A98B57;
+  }
+  .field input,
+  .field textarea{
+    width:100%;
+    border:0;
+    border-bottom:1px solid rgba(232,224,207,.24);
+    border-radius:0;
+    background:transparent;
+    color:#F2EEE5;
+    padding:5px 0 12px;
+    font-family:var(--sans);
+    font-size:14px;
+    font-weight:300;
+    line-height:1.5;
+    outline:none;
+    transition:border-color .18s ease;
+  }
+  .field textarea{resize:vertical;min-height:82px;}
+  .field input:focus,
+  .field textarea:focus{border-bottom-color:rgba(205,191,157,.72);}
+  .interest-fieldset{border:0;margin:34px 0 32px;padding:0;}
+  .interest-options{display:flex;gap:34px;flex-wrap:wrap;}
+  .interest-option{
+    display:inline-flex;align-items:center;gap:10px;cursor:pointer;
+    font-size:12px;letter-spacing:.035em;color:#D7D1C6;
+  }
+  .interest-option input{
+    appearance:none;-webkit-appearance:none;width:12px;height:12px;margin:0;
+    border:1px solid rgba(205,191,157,.64);border-radius:50%;background:transparent;position:relative;
+  }
+  .interest-option input:checked:after{
+    content:"";position:absolute;inset:3px;border-radius:50%;background:#D8C9A8;
+  }
+  .message-field{margin-top:0;}
+  .footer-submit{
+    margin-top:30px;
+    padding:0 0 7px;
+    border:0;
+    border-bottom:1px solid rgba(169,139,87,.65);
+    border-radius:0;
+    background:transparent;
+    color:#EEE5D2;
+    font-family:var(--sans);
+    font-size:10px;
+    font-weight:500;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    cursor:pointer;
+  }
+  .footer-submit span{margin-left:8px;color:#CDBF9D;}
+  .footer-legal{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:30px;
+    margin-top:clamp(78px,8vw,140px);
+    padding-top:24px;
+    border-top:1px solid rgba(255,255,255,.05);
+    font-size:8px;
+    font-weight:400;
+    letter-spacing:.13em;
+    text-transform:uppercase;
+    color:#858178;
+  }
+  .footer-legal-links{display:flex;gap:24px;}
+  .footer-legal a{transition:color .18s ease;}
+  .footer-legal a:hover,.footer-legal a:focus-visible{color:#CDBF9D;}
+
+  @media (min-width:901px) and (max-width:1200px){
+    .footer-main{grid-template-columns:minmax(210px,.65fr) minmax(450px,1.35fr);gap:60px;}
+    .footer-wm-top{font-size:22px;}
+    .footer-wm-bottom{font-size:15px;}
+  }
+
+  @media (max-width:900px){
+    .site-footer{padding-top:82px !important;}
+    .footer-main{grid-template-columns:1fr;gap:70px;}
+    .footer-signature{padding-top:0;}
+    .footer-enquiry{max-width:680px;}
+    .footer-heading{font-size:clamp(32px,6vw,44px);}
+  }
+
+  @media (max-width:560px){
+    .site-footer{padding:68px 22px 34px !important;}
+    .footer-main{gap:56px;}
+    .footer-wordmark{gap:5px;}
+    .footer-wm-top{font-size:18px;letter-spacing:.105em;}
+    .footer-wm-bottom{font-size:12.5px;letter-spacing:.19em;}
+    .site-footer .footer-place{margin-top:18px;font-size:8px;}
+    .footer-heading{font-size:30px;line-height:1.08;margin-bottom:15px;}
+    .footer-intro{font-size:13.5px;line-height:1.65;}
+    .enquiry-form{margin-top:36px;}
+    .form-row{grid-template-columns:1fr;gap:26px;}
+    .interest-fieldset{margin:30px 0;}
+    .interest-options{display:grid;gap:16px;}
+    .field input,.field textarea{font-size:14px;}
+    .footer-submit{margin-top:26px;}
+    .footer-legal{display:block;margin-top:72px;padding-top:20px;line-height:1.65;}
+    .footer-legal-links{margin-top:14px;gap:20px;}
+  }
+</style>
+<style>
+.footer-enquiry-linkonly .footer-intro{max-width:34rem;}
+.footer-enquire-link{display:inline-flex;align-items:center;gap:.55em;text-decoration:none;width:auto;}
+</style>
+<style id="tlvs-v29-native-mobile-menu">
+  .mobile-menu-native{display:none}
+
+  @media (max-width:900px){
+    .menu-button{display:none !important}
+    .desktop-nav{display:none !important}
+
+    .mobile-menu-native{
+      display:block;
+      position:relative;
+      z-index:700;
+      margin-left:auto;
+    }
+
+    .mobile-menu-native summary{
+      list-style:none;
+      cursor:pointer;
+      user-select:none;
+      -webkit-user-select:none;
+      padding:10px 0 10px 14px;
+      color:#CDBF9D;
+      font:400 11px/1 var(--sans);
+      letter-spacing:.13em;
+      text-transform:uppercase;
+      outline:none;
+    }
+    .mobile-menu-native summary::-webkit-details-marker{display:none}
+    .mobile-menu-native summary::marker{content:""}
+
+    .menu-label-close{display:none}
+    .mobile-menu-native[open] .menu-label-open{display:none}
+    .mobile-menu-native[open] .menu-label-close{display:inline}
+
+    .mobile-menu-native[open]::before{
+      content:"";
+      position:fixed;
+      inset:56px 0 0 0;
+      background:rgba(0,0,0,.18);
+      z-index:610;
+      pointer-events:none;
+    }
+
+    .mobile-nav-panel{
+      position:fixed;
+      top:64px;
+      left:20px;
+      right:20px;
+      z-index:620;
+      display:flex;
+      flex-direction:column;
+      align-items:flex-start;
+      gap:16px;
+      max-height:calc(100svh - 84px);
+      overflow:auto;
+      -webkit-overflow-scrolling:touch;
+      padding:20px 18px 22px;
+      background:#181815;
+      border:1px solid rgba(205,191,157,.16);
+      border-radius:12px;
+      box-shadow:0 16px 40px rgba(0,0,0,.30);
+    }
+
+    .mobile-nav-panel a{
+      width:100%;
+      color:#CDBF9D;
+      font:400 10px/1.25 var(--sans);
+      letter-spacing:.13em;
+      text-transform:uppercase;
+      padding:2px 0;
+    }
+
+    .mobile-nav-panel .mobile-language-picker{
+      width:100%;
+      margin:4px 0 0 !important;
+      padding-top:13px;
+      border-top:1px solid rgba(255,255,255,.08);
+    }
+
+    .mobile-nav-panel .mobile-language-picker select{
+      width:100%;
+      border-left:0 !important;
+      padding:8px 20px 8px 0 !important;
+      font-size:11px !important;
+    }
+  }
+</style>
+</head>
+<body>
+<header class="site-header">
+<a aria-label="Lakeside Villa &amp; Spa" class="brand" href="index.html">
+<span aria-hidden="true" class="brand-desktop brand-wordmark">
+<span class="wm-top">LAKESIDE</span>
+<span class="wm-bottom">VILLA &amp; SPA</span>
+</span>
+<span class="brand-mobile">LAKESIDE VILLA &amp; SPA</span>
+</a>
+<nav aria-label="Primary" class="nav desktop-nav" id="nav">
+<a data-i18n="navVilla" href="the-villa.html">The Villa</a><a data-i18n="navLake" href="lakeside-life.html">Lakeside Life</a><a data-i18n="navSpa" href="spa-wellness.html">Spa &amp; Wellness</a><a data-i18n="navLocation" href="location.html">Location</a><a data-i18n="navServices" href="private-services.html">Private Services</a>
+<a class="nav-enquire" data-i18n="navEnquire" href="#enquire">Enquire</a>
+<label aria-label="Language" class="language-picker">
+<span class="sr-only">Language</span>
+<select aria-label="Language" id="languageSelect">
+<option value="en">EN</option><option value="fi">FI</option><option value="sv">SV</option><option value="de">DE</option><option value="fr">FR</option><option value="es">ES</option><option value="nl">NL</option><option value="zh">中文</option>
+</select>
+</label>
+</nav>
+<details class="mobile-menu-native">
+<summary aria-label="Open menu">
+<span class="menu-label-open">MENU</span>
+<span class="menu-label-close">CLOSE</span>
+</summary>
+<nav aria-label="Mobile primary" class="mobile-nav-panel">
+<a data-i18n="navVilla" href="the-villa.html">The Villa</a>
+<a data-i18n="navLake" href="lakeside-life.html">Lakeside Life</a>
+<a data-i18n="navSpa" href="spa-wellness.html">Spa &amp; Wellness</a>
+<a data-i18n="navLocation" href="location.html">Location</a>
+<a data-i18n="navServices" href="private-services.html">Private Services</a>
+<a class="nav-enquire" data-i18n="navEnquire" href="#enquire">Enquire</a>
+<label aria-label="Language" class="language-picker mobile-language-picker">
+<span class="sr-only">Language</span>
+<select aria-label="Language" id="mobileLanguageSelect">
+<option value="en">EN</option><option value="fi">FI</option><option value="sv">SV</option><option value="de">DE</option><option value="fr">FR</option><option value="es">ES</option><option value="nl">NL</option><option value="zh">中文</option>
+</select>
+</label>
+</nav>
+</details>
+</header>
+<section class="hero" id="top">
+<div class="hero-copy">
+<div class="hero-kicker" data-i18n="heroTitle">Lakeside Villa &amp; Spa</div>
+<div class="hero-promise" data-i18n="heroPromise">Four seasons of Finnish Lakeland</div>
+<div class="hero-sub" data-i18n="heroSub">A private lakeside villa in Tahko, Finland.</div>
+</div>
+<div aria-label="Tahko Finland Nordics EU" class="location-signature">
+<svg aria-hidden="true" class="finland" viewbox="0 0 91 205"><polyline points="66.15,21.84 64.94,35.75 77.69,48.99 70.00,63.97 79.69,86.59 74.08,103.62 81.58,118.41 78.17,131.36 90.50,144.97 87.37,155.10 79.63,166.58 61.81,191.94 61.81,191.94 46.70,193.52 32.06,200.81 18.52,205.00 13.70,194.16 5.63,187.64 7.49,168.07 3.44,150.14 7.41,138.57 14.96,126.09 34.01,104.54 39.56,100.39 38.70,91.99 27.12,82.60 24.31,74.87 24.09,44.27 11.10,30.74 0.00,21.02 4.99,15.77 14.24,26.28 25.11,25.29 34.05,30.09 41.99,21.30 46.07,6.73 59.00,0.00 69.68,7.90 66.15,21.84" transform="translate(0,-0)"></polyline><circle cx="61.5622" cy="136.3945" r="3.4"></circle></svg>
+<div class="sig-text"><span class="tlvs-map-caption" data-i18n="mapCaption">TAHKO · FINLAND · NORDICS · EU</span></div>
+</div>
+</section>
+<main>
+<section class="editorial section-outdoor" id="outdoor">
+<div class="media"><img alt="" src="assets/images/d50d15ed7846a2c5.png"/></div>
+<div class="copy">
+<div class="eyebrow" data-i18n="eyOutdoor">OUTDOOR LIVING</div>
+<h2 data-i18n="hOutdoor">Layers of lakeside living</h2>
+<p data-i18n="pOutdoor">Terraces step naturally towards the water, creating distinct places for dining, lounging and quiet moments by the lake.</p>
+</div>
+</section><section class="editorial section-lounge" id="lounge">
+<div class="media"><img alt="" src="assets/images/d01209aadabbb61a.jpg"/></div>
+<div class="copy">
+<div class="eyebrow" data-i18n="eyLounge">OUTDOOR LOUNGE</div>
+<h2 data-i18n="hLounge">An evening room by the lake</h2>
+<p data-i18n="pLounge">A room without walls - warm light, fire and quiet evenings beside the water.</p>
+</div>
+</section><section class="editorial section-dinner" id="dinner">
+<div class="media"><img alt="" src="assets/images/b40fd32ac447bc48.png"/></div>
+<div class="copy">
+<div class="eyebrow" data-i18n="eyDinner">LAKESIDE DINNER</div>
+<h2 data-i18n="hDinner">From the terrace to the table</h2>
+<p data-i18n="pDinner">Long dinners by the lake, prepared and enjoyed where the terrace meets the landscape.</p>
+</div>
+</section><section class="editorial section-character" id="character">
+<div class="media"><img alt="" src="assets/images/28754355e5847ef1.png"/></div>
+<div class="copy">
+<div class="eyebrow" data-i18n="eyCharacter">CHARACTER</div>
+<h2 data-i18n="hCharacter">Fire, stone &amp; stories</h2>
+<p data-i18n="pCharacter">Fire, stone and collected details give the villa a character that is felt rather than explained.</p>
+</div>
+</section><section class="editorial section-villa" id="villa">
+<div class="media"><img alt="" src="assets/images/2808bfd1208823fb.jpg"/></div>
+<div class="copy">
+<div class="eyebrow" data-i18n="eyVilla">THE VILLA</div>
+<h2 data-i18n="hVilla">One estate, open to the lake</h2>
+<p data-i18n="pVilla">Living, dining and private rooms are connected by light, views and the changing lake outside.</p>
+<a class="cta" data-i18n="ctaVilla" href="the-villa.html">EXPLORE THE VILLA &gt;</a>
+</div>
+</section><section class="editorial section-spa" id="spa">
+<div class="media"><img alt="" src="assets/images/32fad850771599c9.jpg"/></div>
+<div class="copy">
+<div class="eyebrow" data-i18n="eySpa">SPA &amp; WELLNESS</div>
+<h2 data-i18n="hSpa">Private wellness, year-round</h2>
+<p data-i18n="pSpa">Pool, sauna and heat form a private wellness world within the villa.</p>
+<a class="cta" data-i18n="ctaSpa" href="spa-wellness.html">SPA &amp; WELLNESS &gt;</a>
+</div>
+</section><section class="editorial section-lake" id="lakeside-life">
+<div class="media"><img alt="" src="assets/images/67485244f94bec4d.png"/></div>
+<div class="copy">
+<div class="eyebrow" data-i18n="eyLake">LAKESIDE LIFE</div>
+<h2 data-i18n="hLake">The lake begins at your doorstep</h2>
+<p data-i18n="pLake">Your own dock opens directly to swimming, boating and the waterways of Finnish Lakeland.</p>
+<a class="cta" data-i18n="ctaExplore" href="lakeside-life.html">EXPLORE &gt;</a>
+</div>
+</section><section class="editorial section-location" id="location">
+<div class="media"><img alt="" src="assets/images/0b83dea3d97437c3.png"/></div>
+<div class="copy">
+<div class="eyebrow" data-i18n="eyLocation">LOCATION</div>
+<h2 data-i18n="hLocation">Private, yet connected to Tahko</h2>
+<p data-i18n="pLocation">A private lakeside setting within reach of Tahko, Kuopio and the wider Finnish Lakeland.</p>
+<a class="cta" data-i18n="ctaLocation" href="location.html">LOCATION &gt;</a>
+</div>
+</section><section class="editorial section-services" id="services">
+<div class="media"><img alt="" src="assets/images/a02c19124263567b.png"/></div>
+<div class="copy">
+<div class="eyebrow" data-i18n="eyServices">PRIVATE SERVICES</div>
+<h2 data-i18n="hServices">Arrival without friction</h2>
+<p data-i18n="pServices">Preparation, housekeeping and local support can make every arrival feel effortless.</p>
+<a class="cta" data-i18n="ctaServices" href="private-services.html">PRIVATE SERVICES &gt;</a>
+</div>
+</section>
+</main>
+<footer class="site-footer" id="contact">
+<div class="footer-shell">
+<div class="footer-main">
+<div class="footer-signature">
+<div aria-label="Lakeside Villa &amp; Spa" class="footer-wordmark">
+<span class="footer-wm-top">LAKESIDE</span>
+<span class="footer-wm-bottom">VILLA &amp; SPA</span>
+</div>
+<div class="footer-place" data-i18n="footerPlace">Tahko · Finland</div>
+</div>
+<div class="footer-enquiry footer-enquiry-linkonly">
+<div class="eyebrow footer-eyebrow" data-i18n="contactEyebrow">CONTACT</div>
+<h2 class="footer-heading" data-i18n="footerHeading">Enquire about Lakeside Villa &amp; Spa</h2>
+<p class="footer-intro" data-i18n="footerIntro">For private stays or property enquiries.</p>
+<a class="footer-submit footer-enquire-link" href="#enquiry"><span data-i18n="footerEnquire">ENQUIRE</span> <span aria-hidden="true">→</span></a>
+</div>
+</div>
+<div class="footer-legal">
+<div>© Lakeside Villa &amp; Spa</div>
+<div class="footer-legal-links"><a data-i18n="privacy" href="#privacy">Privacy</a><a data-i18n="cookies" href="#cookies">Cookies</a></div>
+</div>
+</div>
+</footer>
+<script>
+const TLVS_I18N = {"en":{"navVilla":"The Villa","navLake":"Lakeside Life","navSpa":"Spa & Wellness","navLocation":"Location","navServices":"Private Services","navEnquire":"Enquire","heroTitle":"Lakeside Villa & Spa","heroPromise":"Four seasons of Finnish Lakeland","heroSub":"A private lakeside villa in Tahko, Finland.","mapCaption":"TAHKO · FINLAND · NORDICS · EU","eyOutdoor":"OUTDOOR LIVING","hOutdoor":"Layers of lakeside living","pOutdoor":"Terraces step naturally towards the water, creating distinct places for dining, lounging and quiet moments by the lake.","eyLounge":"OUTDOOR LOUNGE","hLounge":"An evening room by the lake","pLounge":"A room without walls - warm light, fire and quiet evenings beside the water.","eyDinner":"LAKESIDE DINNER","hDinner":"From the terrace to the table","pDinner":"Long dinners by the lake, prepared and enjoyed where the terrace meets the landscape.","eyCharacter":"CHARACTER","hCharacter":"Fire, stone & stories","pCharacter":"Fire, stone and collected details give the villa a character that is felt rather than explained.","eyVilla":"THE VILLA","hVilla":"One estate, open to the lake","pVilla":"Living, dining and private rooms are connected by light, views and the changing lake outside.","eySpa":"SPA & WELLNESS","hSpa":"Private wellness, year-round","pSpa":"Pool, sauna and heat form a private wellness world within the villa.","eyLake":"LAKESIDE LIFE","hLake":"The lake begins at your doorstep","pLake":"Your own dock opens directly to swimming, boating and the waterways of Finnish Lakeland.","eyLocation":"LOCATION","hLocation":"Private, yet connected to Tahko","pLocation":"A private lakeside setting within reach of Tahko, Kuopio and the wider Finnish Lakeland.","eyServices":"PRIVATE SERVICES","hServices":"Arrival without friction","pServices":"Preparation, housekeeping and local support can make every arrival feel effortless.","ctaVilla":"EXPLORE THE VILLA >","ctaSpa":"SPA & WELLNESS >","ctaExplore":"EXPLORE >","ctaLocation":"LOCATION >","ctaServices":"PRIVATE SERVICES >","footerPlace":"Tahko · Finland","contactEyebrow":"CONTACT","footerHeading":"Enquire about Lakeside Villa & Spa","footerIntro":"For private stays or property enquiries.","footerEnquire":"ENQUIRE","privacy":"Privacy","cookies":"Cookies"},"fi":{"navVilla":"Huvila","navLake":"Elämää järven äärellä","navSpa":"Spa & hyvinvointi","navLocation":"Sijainti","navServices":"Yksityiset palvelut","navEnquire":"Ota yhteyttä","heroTitle":"Lakeside Villa & Spa","heroPromise":"Suomalaisen järviluonnon neljä vuodenaikaa","heroSub":"Yksityinen järvihuvila Tahkolla, Suomessa.","mapCaption":"TAHKO · SUOMI · POHJOISMAAT · EU","eyOutdoor":"ULKOELÄMÄ","hOutdoor":"Järvielämää useassa tasossa","pOutdoor":"Terassit laskeutuvat luontevasti kohti vettä ja luovat omat paikkansa ruokailulle, rentoutumiselle ja hiljaisille hetkille järven äärellä.","eyLounge":"ULKOLOUNGE","hLounge":"Iltahuone järven äärellä","pLounge":"Huone ilman seiniä – lämmintä valoa, tulta ja rauhallisia iltoja veden äärellä.","eyDinner":"LAKESIDE DINNER","hDinner":"Terassilta pöytään","pDinner":"Pitkiä illallisia järven äärellä, valmistettuna ja nautittuna siellä missä terassi kohtaa maiseman.","eyCharacter":"TUNNELMA","hCharacter":"Tulta, kiveä ja tarinoita","pCharacter":"Tuli, kivi ja harkitut yksityiskohdat antavat huvilalle luonteen, joka ennemmin tunnetaan kuin selitetään.","eyVilla":"HUVILA","hVilla":"Yksi kokonaisuus, avoinna järvelle","pVilla":"Oleskelu-, ruokailu- ja yksityiset tilat yhdistyvät valon, näkymien ja alati muuttuvan järven kautta.","eySpa":"SPA & HYVINVOINTI","hSpa":"Yksityistä hyvinvointia ympäri vuoden","pSpa":"Allas, sauna ja lämpö muodostavat huvilan sisään oman yksityisen hyvinvointimaailmansa.","eyLake":"ELÄMÄÄ JÄRVELLÄ","hLake":"Järvi alkaa kotiovelta","pLake":"Oma laituri avaa suoran yhteyden uimiseen, veneilyyn ja suomalaisen järvialueen vesireiteille.","eyLocation":"SIJAINTI","hLocation":"Yksityinen, mutta yhteydessä Tahkoon","pLocation":"Rauhallinen järvenrantapaikka lähellä Tahkoa, Kuopiota ja laajempaa suomalaista järvialuetta.","eyServices":"YKSITYISET PALVELUT","hServices":"Saapuminen ilman kitkaa","pServices":"Valmistelu, siivous ja paikallinen apu tekevät jokaisesta saapumisesta vaivattoman.","ctaVilla":"TUTUSTU HUVILAAN >","ctaSpa":"SPA & HYVINVOINTI >","ctaExplore":"TUTUSTU >","ctaLocation":"SIJAINTI >","ctaServices":"YKSITYISET PALVELUT >","footerPlace":"Tahko · Suomi","contactEyebrow":"Yhteys","footerHeading":"Tiedustele Lakeside Villa & Spa -kohteesta","footerIntro":"Yksityismajoituksia tai kohdetta koskevia tiedusteluja varten.","footerEnquire":"Ota yhteyttä →","privacy":"Tietosuoja","cookies":"Evästeet"},"sv":{"navVilla":"Villan","navLake":"Livet vid sjön","navSpa":"Spa & wellness","navLocation":"Läge","navServices":"Privata tjänster","navEnquire":"Förfrågan","heroTitle":"Lakeside Villa & Spa","heroPromise":"Fyra årstider i det finska sjölandskapet","heroSub":"En privat villa vid sjön i Tahko, Finland.","mapCaption":"TAHKO · FINLAND · NORDEN · EU","eyOutdoor":"UTELIV","hOutdoor":"Livet vid sjön i flera nivåer","pOutdoor":"Terrasserna leder naturligt ner mot vattnet och skapar egna platser för måltider, avkoppling och stilla stunder vid sjön.","eyLounge":"UTOMHUSLOUNGE","hLounge":"Ett kvällsrum vid sjön","pLounge":"Ett rum utan väggar – varmt ljus, eld och stilla kvällar vid vattnet.","eyDinner":"MIDDAG VID SJÖN","hDinner":"Från terrassen till bordet","pDinner":"Långa middagar vid sjön, tillagade och avnjutna där terrassen möter landskapet.","eyCharacter":"KARAKTÄR","hCharacter":"Eld, sten & berättelser","pCharacter":"Eld, sten och utvalda detaljer ger villan en karaktär som känns snarare än förklaras.","eyVilla":"VILLAN","hVilla":"En egendom, öppen mot sjön","pVilla":"Sällskapsrum, matplatser och privata rum binds samman av ljus, vyer och den skiftande sjön utanför.","eySpa":"SPA & WELLNESS","hSpa":"Privat välbefinnande året runt","pSpa":"Pool, bastu och värme skapar en privat wellnessvärld inne i villan.","eyLake":"LIVET VID SJÖN","hLake":"Sjön börjar vid din dörr","pLake":"Den egna bryggan ger direkt tillgång till bad, båtliv och det finska sjölandskapets vattenvägar.","eyLocation":"LÄGE","hLocation":"Privat, men nära Tahko","pLocation":"Ett privat läge vid sjön med närhet till Tahko, Kuopio och det större finska sjölandskapet.","eyServices":"PRIVATA TJÄNSTER","hServices":"En ankomst utan friktion","pServices":"Förberedelser, städning och lokal service gör varje ankomst enkel.","ctaVilla":"UPPTÄCK VILLAN >","ctaSpa":"SPA & WELLNESS >","ctaExplore":"UPPTÄCK >","ctaLocation":"LÄGE >","ctaServices":"PRIVATA TJÄNSTER >","footerPlace":"Tahko · Finland","contactEyebrow":"Kontakt","footerHeading":"Förfrågan om Lakeside Villa & Spa","footerIntro":"För privata vistelser eller frågor om fastigheten.","footerEnquire":"Skicka förfrågan →","privacy":"Integritet","cookies":"Cookies"},"de":{"navVilla":"Die Villa","navLake":"Leben am See","navSpa":"Spa & Wellness","navLocation":"Lage","navServices":"Privater Service","navEnquire":"Anfragen","heroTitle":"Lakeside Villa & Spa","heroPromise":"Vier Jahreszeiten in der finnischen Seenlandschaft","heroSub":"Eine private Villa am See in Tahko, Finnland.","mapCaption":"TAHKO · FINNLAND · NORDISCHE LÄNDER · EU","eyOutdoor":"LEBEN IM FREIEN","hOutdoor":"Leben am See auf mehreren Ebenen","pOutdoor":"Die Terrassen führen natürlich zum Wasser und schaffen eigene Bereiche zum Essen, Entspannen und für stille Momente am See.","eyLounge":"OUTDOOR LOUNGE","hLounge":"Ein Abendzimmer am See","pLounge":"Ein Raum ohne Wände – warmes Licht, Feuer und ruhige Abende direkt am Wasser.","eyDinner":"DINNER AM SEE","hDinner":"Von der Terrasse auf den Tisch","pDinner":"Lange Abendessen am See, zubereitet und genossen dort, wo die Terrasse in die Landschaft übergeht.","eyCharacter":"CHARAKTER","hCharacter":"Feuer, Stein & Geschichten","pCharacter":"Feuer, Stein und ausgewählte Details verleihen der Villa einen Charakter, den man eher spürt als erklärt.","eyVilla":"DIE VILLA","hVilla":"Ein Anwesen, offen zum See","pVilla":"Wohn-, Ess- und Privaträume sind durch Licht, Ausblicke und den sich wandelnden See miteinander verbunden.","eySpa":"SPA & WELLNESS","hSpa":"Private Wellness das ganze Jahr","pSpa":"Pool, Sauna und Wärme bilden eine private Wellnesswelt innerhalb der Villa.","eyLake":"LEBEN AM SEE","hLake":"Der See beginnt vor Ihrer Tür","pLake":"Der eigene Steg führt direkt zum Schwimmen, Bootfahren und zu den Wasserwegen der finnischen Seenlandschaft.","eyLocation":"LAGE","hLocation":"Privat und dennoch mit Tahko verbunden","pLocation":"Eine private Lage am See in Reichweite von Tahko, Kuopio und der weiteren finnischen Seenlandschaft.","eyServices":"PRIVATE SERVICES","hServices":"Ankommen ohne Aufwand","pServices":"Vorbereitung, Housekeeping und lokale Unterstützung machen jede Ankunft mühelos.","ctaVilla":"DIE VILLA ENTDECKEN >","ctaSpa":"SPA & WELLNESS >","ctaExplore":"ENTDECKEN >","ctaLocation":"LAGE >","ctaServices":"PRIVATE SERVICES >","footerPlace":"Tahko · Finnland","contactEyebrow":"Kontakt","footerHeading":"Lakeside Villa & Spa anfragen","footerIntro":"Für private Aufenthalte oder Anfragen zur Immobilie.","footerEnquire":"Anfragen →","privacy":"Datenschutz","cookies":"Cookies"},"fr":{"navVilla":"La Villa","navLake":"Vie au bord du lac","navSpa":"Spa & bien-être","navLocation":"Localisation","navServices":"Services privés","navEnquire":"Nous contacter","heroTitle":"Lakeside Villa & Spa","heroPromise":"Quatre saisons au cœur de la Finlande des lacs","heroSub":"Une villa privée au bord du lac à Tahko, en Finlande.","mapCaption":"TAHKO · FINLANDE · PAYS NORDIQUES · UE","eyOutdoor":"VIE EN PLEIN AIR","hOutdoor":"La vie au bord du lac, en plusieurs niveaux","pOutdoor":"Les terrasses descendent naturellement vers l’eau et créent des espaces distincts pour dîner, se détendre et profiter du calme au bord du lac.","eyLounge":"LOUNGE EXTÉRIEUR","hLounge":"Un salon du soir au bord du lac","pLounge":"Une pièce sans murs – lumière chaleureuse, feu et soirées paisibles au bord de l’eau.","eyDinner":"DÎNER AU BORD DU LAC","hDinner":"De la terrasse à la table","pDinner":"De longs dîners au bord du lac, préparés et savourés là où la terrasse rencontre le paysage.","eyCharacter":"CARACTÈRE","hCharacter":"Feu, pierre & histoires","pCharacter":"Le feu, la pierre et des détails choisis donnent à la villa un caractère qui se ressent plus qu’il ne s’explique.","eyVilla":"LA VILLA","hVilla":"Un domaine ouvert sur le lac","pVilla":"Les espaces de vie, de repas et les pièces privées sont reliés par la lumière, les vues et le lac changeant.","eySpa":"SPA & BIEN-ÊTRE","hSpa":"Bien-être privé toute l’année","pSpa":"Piscine, sauna et chaleur composent un univers de bien-être privé au sein de la villa.","eyLake":"VIE AU BORD DU LAC","hLake":"Le lac commence à votre porte","pLake":"Votre ponton privé donne directement accès à la baignade, au bateau et aux voies d’eau de la Finlande des lacs.","eyLocation":"SITUATION","hLocation":"Privée, tout en restant proche de Tahko","pLocation":"Un cadre privé au bord du lac, à proximité de Tahko, Kuopio et de la Finlande des lacs.","eyServices":"SERVICES PRIVÉS","hServices":"Une arrivée sans effort","pServices":"Préparation, entretien et assistance locale rendent chaque arrivée fluide.","ctaVilla":"DÉCOUVRIR LA VILLA >","ctaSpa":"SPA & BIEN-ÊTRE >","ctaExplore":"DÉCOUVRIR >","ctaLocation":"SITUATION >","ctaServices":"SERVICES PRIVÉS >","footerPlace":"Tahko · Finlande","contactEyebrow":"Contact","footerHeading":"Renseignez-vous sur Lakeside Villa & Spa","footerIntro":"Pour les séjours privés ou les demandes concernant la propriété.","footerEnquire":"Nous contacter →","privacy":"Confidentialité","cookies":"Cookies"},"es":{"navVilla":"La Villa","navLake":"Vida junto al lago","navSpa":"Spa y bienestar","navLocation":"Ubicación","navServices":"Servicios privados","navEnquire":"Consultar","heroTitle":"Lakeside Villa & Spa","heroPromise":"Las cuatro estaciones de la región de los lagos de Finlandia","heroSub":"Una villa privada junto al lago en Tahko, Finlandia.","mapCaption":"TAHKO · FINLANDIA · PAÍSES NÓRDICOS · UE","eyOutdoor":"VIDA AL AIRE LIBRE","hOutdoor":"Vida junto al lago en distintos niveles","pOutdoor":"Las terrazas descienden de forma natural hacia el agua y crean espacios para comer, descansar y disfrutar de momentos tranquilos junto al lago.","eyLounge":"LOUNGE EXTERIOR","hLounge":"Una sala de atardecer junto al lago","pLounge":"Una estancia sin paredes: luz cálida, fuego y noches tranquilas junto al agua.","eyDinner":"CENA JUNTO AL LAGO","hDinner":"De la terraza a la mesa","pDinner":"Largas cenas junto al lago, preparadas y disfrutadas donde la terraza se encuentra con el paisaje.","eyCharacter":"CARÁCTER","hCharacter":"Fuego, piedra e historias","pCharacter":"El fuego, la piedra y los detalles escogidos dan a la villa un carácter que se siente más de lo que se explica.","eyVilla":"LA VILLA","hVilla":"Una finca abierta al lago","pVilla":"Las zonas de estar, comedor y habitaciones privadas se conectan mediante la luz, las vistas y el lago cambiante.","eySpa":"SPA & BIENESTAR","hSpa":"Bienestar privado todo el año","pSpa":"Piscina, sauna y calor crean un mundo de bienestar privado dentro de la villa.","eyLake":"VIDA JUNTO AL LAGO","hLake":"El lago empieza en tu puerta","pLake":"Tu propio embarcadero ofrece acceso directo al baño, la navegación y las rutas acuáticas de la región de los lagos de Finlandia.","eyLocation":"UBICACIÓN","hLocation":"Privada, pero conectada con Tahko","pLocation":"Un entorno privado junto al lago, cerca de Tahko, Kuopio y la región de los lagos de Finlandia.","eyServices":"SERVICIOS PRIVADOS","hServices":"Llegar sin esfuerzo","pServices":"La preparación, la limpieza y la asistencia local hacen que cada llegada sea sencilla.","ctaVilla":"DESCUBRIR LA VILLA >","ctaSpa":"SPA & BIENESTAR >","ctaExplore":"DESCUBRIR >","ctaLocation":"UBICACIÓN >","ctaServices":"SERVICIOS PRIVADOS >","footerPlace":"Tahko · Finlandia","contactEyebrow":"Contacto","footerHeading":"Solicita información sobre Lakeside Villa & Spa","footerIntro":"Para estancias privadas o consultas sobre la propiedad.","footerEnquire":"Solicitar información →","privacy":"Privacidad","cookies":"Cookies"},"nl":{"navVilla":"De Villa","navLake":"Leven aan het meer","navSpa":"Spa & wellness","navLocation":"Locatie","navServices":"Privéservices","navEnquire":"Informeer","heroTitle":"Lakeside Villa & Spa","heroPromise":"Vier seizoenen in het Finse merengebied","heroSub":"Een privévilla aan het meer in Tahko, Finland.","mapCaption":"TAHKO · FINLAND · NOORDEN · EU","eyOutdoor":"BUITENLEVEN","hOutdoor":"Leven aan het meer op meerdere niveaus","pOutdoor":"De terrassen lopen natuurlijk af naar het water en creëren aparte plekken om te dineren, te ontspannen en te genieten van stille momenten aan het meer.","eyLounge":"OUTDOOR LOUNGE","hLounge":"Een avondkamer aan het meer","pLounge":"Een kamer zonder muren – warm licht, vuur en rustige avonden aan het water.","eyDinner":"DINER AAN HET MEER","hDinner":"Van terras naar tafel","pDinner":"Lange diners aan het meer, bereid en genoten waar het terras overgaat in het landschap.","eyCharacter":"KARAKTER","hCharacter":"Vuur, steen & verhalen","pCharacter":"Vuur, steen en zorgvuldig gekozen details geven de villa een karakter dat eerder wordt gevoeld dan uitgelegd.","eyVilla":"DE VILLA","hVilla":"Eén landgoed, open naar het meer","pVilla":"Woon-, eet- en privéruimtes worden verbonden door licht, uitzicht en het steeds veranderende meer.","eySpa":"SPA & WELLNESS","hSpa":"Privéwellness, het hele jaar door","pSpa":"Zwembad, sauna en warmte vormen een eigen wellnesswereld binnen de villa.","eyLake":"LEVEN AAN HET MEER","hLake":"Het meer begint voor de deur","pLake":"De eigen steiger geeft direct toegang tot zwemmen, varen en de waterwegen van het Finse merengebied.","eyLocation":"LOCATIE","hLocation":"Privé, maar verbonden met Tahko","pLocation":"Een privéligging aan het meer binnen bereik van Tahko, Kuopio en het bredere Finse merengebied.","eyServices":"PRIVATE SERVICES","hServices":"Aankomen zonder gedoe","pServices":"Voorbereiding, housekeeping en lokale ondersteuning maken elke aankomst moeiteloos.","ctaVilla":"ONTDEK DE VILLA >","ctaSpa":"SPA & WELLNESS >","ctaExplore":"ONTDEK >","ctaLocation":"LOCATIE >","ctaServices":"PRIVATE SERVICES >","footerPlace":"Tahko · Finland","contactEyebrow":"Contact","footerHeading":"Informeer naar Lakeside Villa & Spa","footerIntro":"Voor privéverblijven of vragen over de woning.","footerEnquire":"Informeer →","privacy":"Privacy","cookies":"Cookies"},"zh":{"navVilla":"别墅","navLake":"湖畔生活","navSpa":"水疗与康养","navLocation":"位置","navServices":"私人服务","navEnquire":"咨询","heroTitle":"Lakeside Villa & Spa","heroPromise":"芬兰湖区的四季之美","heroSub":"位于芬兰塔赫科的私人湖畔别墅。","mapCaption":"塔赫科 · 芬兰 · 北欧 · 欧盟","eyOutdoor":"户外生活","hOutdoor":"层层展开的湖畔生活","pOutdoor":"露台自然延伸至湖边，为用餐、休憩和静静享受湖景创造不同空间。","eyLounge":"户外休闲","hLounge":"湖边的暮色客厅","pLounge":"没有墙的房间——温暖的灯光、火焰，以及水边宁静的夜晚。","eyDinner":"湖畔晚宴","hDinner":"从露台到餐桌","pDinner":"在露台与景观交汇之处，准备并享用悠长的湖畔晚宴。","eyCharacter":"格调","hCharacter":"火焰、石材与故事","pCharacter":"火焰、石材与精心挑选的细节，赋予别墅一种无需解释便能感受到的气质。","eyVilla":"别墅","hVilla":"一处宅邸，向湖而开","pVilla":"起居、用餐与私人空间由光线、景观以及窗外不断变化的湖色相连。","eySpa":"水疗与康养","hSpa":"全年私享康养","pSpa":"泳池、桑拿与温暖氛围，在别墅内部构成专属的康养世界。","eyLake":"湖畔生活","hLake":"湖，从门前开始","pLake":"私人码头可直接通往游泳、泛舟以及芬兰湖区的水上航道。","eyLocation":"位置","hLocation":"私密，却与塔赫科相连","pLocation":"私密的湖畔环境，同时便捷连接塔赫科、库奥皮奥及更广阔的芬兰湖区。","eyServices":"私人服务","hServices":"从容抵达","pServices":"入住前准备、清洁与本地支持，让每一次抵达都轻松自然。","ctaVilla":"探索别墅 >","ctaSpa":"水疗与康养 >","ctaExplore":"探索 >","ctaLocation":"查看位置 >","ctaServices":"私人服务 >","footerPlace":"塔赫科 · 芬兰","contactEyebrow":"联系","footerHeading":"咨询 Lakeside Villa & Spa","footerIntro":"适用于私人住宿或房产相关咨询。","footerEnquire":"咨询 →","privacy":"隐私","cookies":"Cookie"}};
+function applyLanguage(lang){
+ const dict=TLVS_I18N[lang]||TLVS_I18N.en;
+ document.documentElement.lang=lang==='zh'?'zh-CN':lang;
+ document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.dataset.i18n;if(dict[k]!=null) el.textContent=dict[k];});
+ try{ localStorage.setItem('tlvs-lang',lang); }catch(e){}
+ const sel=document.getElementById('languageSelect'); if(sel) sel.value=lang;
+ const mobileSel=document.getElementById('mobileLanguageSelect'); if(mobileSel) mobileSel.value=lang;
+}
+const langSelect=document.getElementById('languageSelect');
+const mobileLangSelect=document.getElementById('mobileLanguageSelect');
+const mobileMenuDetails=document.querySelector('.mobile-menu-native');
+
+function closeNativeMobileMenu(){
+  if(mobileMenuDetails) mobileMenuDetails.removeAttribute('open');
+}
+
+langSelect?.addEventListener('change',e=>applyLanguage(e.target.value));
+mobileLangSelect?.addEventListener('change',e=>{
+  applyLanguage(e.target.value);
+  closeNativeMobileMenu();
+});
+const stored=(()=>{try{return localStorage.getItem('tlvs-lang')}catch(e){return null}})();
+const browser=(navigator.language||'en').toLowerCase().split('-')[0];
+applyLanguage(stored || (TLVS_I18N[browser]?browser:'en'));
+</script>
+<script>
+document.querySelectorAll('.mobile-nav-panel a').forEach(a=>{
+  a.addEventListener('click',()=>{
+    const d=document.querySelector('.mobile-menu-native');
+    if(d) d.removeAttribute('open');
+  });
+});
+</script>
+</body></html>
