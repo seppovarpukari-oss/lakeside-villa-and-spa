@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
+<title>Lakeside Villa & Spa — Enquire</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&amp;family=Inter:wght@300;400;500&amp;display=swap" rel="stylesheet"/><style>
+:root{--bg:#11110f;--header:#171714;--ink:#eee9de;--muted:#b9b3a8;--gold:#cdbf9d;--gold2:#e4d8be;--gold3:#d8c9a8;--line:rgba(205,191,157,.18);--pad:clamp(30px,5vw,76px);--serif:"EB Garamond",Georgia,"Times New Roman",serif;--sans:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;--header-h:68px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;background:var(--bg)}body{margin:0;padding-top:var(--header-h);background:var(--bg);color:var(--ink);font-family:var(--sans)}a{color:inherit;text-decoration:none}img{display:block}.site-header{position:fixed;top:0;left:0;right:0;height:var(--header-h);z-index:1000;background:var(--header);display:flex;align-items:center;justify-content:space-between;padding:0 var(--pad);border-bottom:1px solid rgba(255,255,255,.025)}
+.brand-wordmark{display:inline-flex;flex-direction:column;gap:5px;line-height:1;white-space:nowrap}.wm-top{font:500 19px/1 var(--serif);letter-spacing:.12em;color:var(--gold2)}.wm-bottom{font:400 14px/1 var(--serif);letter-spacing:.18em;color:var(--gold3)}
+.desktop-nav{display:flex;align-items:center;gap:clamp(17px,1.8vw,30px);font:400 12px/1 var(--sans);letter-spacing:.105em;text-transform:uppercase;color:var(--gold)}.desktop-nav a{opacity:.92;white-space:nowrap}.desktop-nav a:hover,.desktop-nav a.active{color:#eee5d2}.language-picker{display:inline-flex;align-items:center}.language-picker select{appearance:none;-webkit-appearance:none;border:0;border-left:1px solid rgba(205,191,157,.20);background:transparent;color:var(--gold);padding:3px 18px 3px 15px;font:400 11px/1 var(--sans);letter-spacing:.10em;outline:none}
+.hero{position:relative;width:100%;overflow:hidden}.hero-image{width:100%;height:auto}.hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(17,17,15,.56) 0%,rgba(17,17,15,.31) 27%,rgba(17,17,15,.07) 49%,rgba(17,17,15,0) 67%)}.hero-copy{position:absolute;left:var(--pad);top:50%;transform:translateY(-46%);width:min(680px,48vw)}.eyebrow{font:500 11px/1.2 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin:0 0 18px}.hero h1{font:400 clamp(48px,5.2vw,82px)/.98 var(--serif);letter-spacing:.075em;max-width:760px;margin:0 0 22px;color:#f4efe5;text-wrap:balance}.hero p{font:400 clamp(15px,1.25vw,18px)/1.55 var(--sans);color:#e4ded3;max-width:620px;margin:0}
+.story{max-width:1440px;margin:0 auto;padding:clamp(84px,8vw,126px) var(--pad)}.feature{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(330px,.92fr);gap:clamp(54px,6.5vw,104px);align-items:center;margin-bottom:clamp(96px,9vw,142px)}.feature img{width:100%;height:auto;border-radius:8px}.copy{max-width:475px}.copy h2,.section-title h2{font:400 clamp(38px,3.45vw,57px)/1.03 var(--serif);letter-spacing:.018em;margin:0 0 22px;color:#f0eadf;text-wrap:balance}.copy p,.section-title p,.card p,.how p{font:400 clamp(15px,1.05vw,17px)/1.7 var(--sans);color:var(--muted);margin:0}.meta{margin-top:22px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);line-height:1.7}
+.section-block{margin-bottom:clamp(100px,9vw,144px)}.section-title{max-width:820px;margin-bottom:42px}.around-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.card{min-width:0}.card img{width:100%;height:auto;border-radius:8px;margin-bottom:22px}.card .eyebrow{margin-bottom:10px}.card h3{font:400 clamp(26px,2vw,34px)/1.06 var(--serif);margin:0 0 14px;color:#eee8dd}.card .distance{margin-top:16px;font-size:12px;letter-spacing:.08em;color:var(--gold)}
+.aurora-section{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(300px,.55fr);gap:clamp(44px,6vw,96px);align-items:center}.aurora-media img{display:block;width:100%;height:auto;border-radius:8px}.aurora-copy{max-width:520px}.aurora-copy .eyebrow{margin-bottom:14px}.aurora-copy h2{font:400 clamp(38px,4.2vw,64px)/1.02 var(--serif);letter-spacing:.02em;color:#eee8dd;margin:0 0 24px}.aurora-copy p{max-width:46ch}@media(max-width:900px){.aurora-section{grid-template-columns:1fr;gap:30px}.aurora-copy{max-width:720px}}@media(max-width:560px){.aurora-media img{border-radius:10px}.aurora-copy h2{font-size:clamp(34px,10vw,48px)}}.glance{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:56px 0}.glance-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}.stat{padding:24px 26px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}.stat:nth-child(4n){border-right:0}.stat:nth-last-child(-n+4){border-bottom:0}.stat strong{display:block;font:400 31px/1 var(--serif);color:#f0eadf;margin-bottom:9px}.stat span{display:block;font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}.stat small{font-size:13px;line-height:1.45;color:var(--muted)}
+.how{display:grid;grid-template-columns:minmax(0,.96fr) minmax(320px,.74fr);gap:clamp(56px,8vw,120px);align-items:center}.routes{margin-top:30px}.route{display:grid;grid-template-columns:95px 1fr;gap:18px;padding:17px 0;border-top:1px solid var(--line)}.route:last-child{border-bottom:1px solid var(--line)}.route b{font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--gold)}.route strong{display:block;font-size:15px;font-weight:500;color:#e5dfd5;margin-bottom:4px}.route span{font-size:13px;color:var(--muted)}.map-wrap{text-align:center}.map-wrap img{width:min(220px,58%);height:auto;margin:0 auto 24px}.signature{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold)}
+.footer{border-top:1px solid var(--line);padding:78px var(--pad) 34px;background:#121210}.footer-inner{max-width:1440px;margin:auto;display:grid;grid-template-columns:1fr 1.25fr;gap:80px}.footer-brand .brand-wordmark{gap:7px}.footer-brand .wm-top{font-size:26px}.footer-brand .wm-bottom{font-size:18px}.footer-place{margin-top:18px;color:#918c82;font-size:12px;letter-spacing:.08em}.footer-cta .eyebrow{margin-bottom:14px}.footer-cta h2{font:400 clamp(34px,3vw,48px)/1.02 var(--serif);letter-spacing:.018em;margin:0 0 14px}.footer-cta p{color:#aaa398;font-size:14px;line-height:1.6;margin:0 0 24px}.enquire-link{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}.legal{max-width:1440px;margin:66px auto 0;padding-top:22px;border-top:1px solid rgba(255,255,255,.055);display:flex;justify-content:space-between;gap:24px;color:#7f7a72;font-size:11px}.legal-links{display:flex;gap:24px}
+.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}.mobile-menu-native{display:none}
+@media(max-width:1200px){:root{--header-h:64px;--pad:clamp(28px,4.5vw,56px)}.brand-wordmark{gap:4px}.wm-top{font-size:17px;letter-spacing:.105em}.wm-bottom{font-size:12.5px;letter-spacing:.155em}.desktop-nav{font-size:11px;gap:18px}.hero-copy{width:min(590px,50vw)}.feature{grid-template-columns:minmax(0,1.35fr) minmax(310px,.95fr);gap:clamp(40px,5vw,70px)}.around-grid{grid-template-columns:repeat(2,1fr);gap:48px 24px}}
+@media(max-width:900px){:root{--header-h:64px;--pad:32px}.desktop-nav{display:none}.brand-wordmark{gap:4px}.wm-top{font-size:16px;letter-spacing:.105em}.wm-bottom{font-size:11.5px;letter-spacing:.155em}.hero-copy{left:var(--pad);width:min(540px,63vw)}.hero h1{font-size:clamp(42px,6.4vw,62px);letter-spacing:.065em}.story{padding-top:86px;padding-bottom:108px}.feature{grid-template-columns:1fr;gap:36px;margin-bottom:104px}.feature img{width:92%}.copy{max-width:620px}.glance-grid{grid-template-columns:repeat(2,1fr)}.stat:nth-child(4n){border-right:1px solid var(--line)}.stat:nth-child(2n){border-right:0}.stat:nth-last-child(-n+4){border-bottom:1px solid var(--line)}.stat:nth-last-child(-n+2){border-bottom:0}.how{grid-template-columns:1fr;gap:58px}.footer-inner{grid-template-columns:1fr;gap:52px}}
+@media(max-width:560px){:root{--header-h:56px;--pad:20px}body{padding-top:56px}.site-header{height:56px;padding-left:max(20px,env(safe-area-inset-left));padding-right:max(20px,env(safe-area-inset-right))}.brand-wordmark{gap:3px}.wm-top{font-size:14px;letter-spacing:.095em}.wm-bottom{font-size:10px;letter-spacing:.19em}.hero{display:flex;flex-direction:column;overflow:visible}.hero-image{order:1;width:100%;height:auto;object-fit:contain}.hero-shade{display:none}.hero-copy{order:2;position:static;transform:none;width:auto;padding:36px 20px 4px}.eyebrow{font-size:10px;margin-bottom:14px}.hero h1{font-size:42px;line-height:1.01;letter-spacing:.055em;margin-bottom:18px}.hero p{font-size:15px;line-height:1.58;color:#c9c2b7}.story{padding:72px 20px 92px}.feature{display:flex;flex-direction:column;gap:28px;margin-bottom:84px}.feature img{width:100%;border-radius:10px}.copy{width:100%}.copy h2,.section-title h2{font-size:37px;line-height:1.04;margin-bottom:17px}.copy p,.section-title p,.card p{font-size:15px;line-height:1.66}.around-grid{grid-template-columns:1fr;gap:56px}.card img{border-radius:10px}.glance{padding:38px 0}.glance-grid{grid-template-columns:1fr 1fr}.stat{padding:20px 14px}.stat strong{font-size:27px}.stat span{font-size:9px}.stat small{font-size:12px}.how{gap:46px}.route{grid-template-columns:80px 1fr}.map-wrap img{width:150px}.footer{padding:60px 20px 28px}.footer-inner{gap:46px}.footer-brand .wm-top{font-size:22px}.footer-brand .wm-bottom{font-size:15px}.footer-cta h2{font-size:36px}.legal{margin-top:52px;flex-direction:column;gap:16px}}
+@media(max-width:900px){.desktop-nav{display:none!important}.mobile-menu-native{display:block;position:relative;z-index:700;margin-left:auto}.mobile-menu-native summary{list-style:none;cursor:pointer;user-select:none;-webkit-user-select:none;padding:10px 0 10px 14px;color:#CDBF9D;font:400 11px/1 var(--sans);letter-spacing:.13em;text-transform:uppercase;outline:none}.mobile-menu-native summary::-webkit-details-marker{display:none}.menu-label-close{display:none}.mobile-menu-native[open] .menu-label-open{display:none}.mobile-menu-native[open] .menu-label-close{display:inline}.mobile-menu-native[open]::before{content:"";position:fixed;inset:56px 0 0;background:rgba(0,0,0,.18);z-index:610;pointer-events:none}.mobile-nav-panel{position:fixed;top:64px;left:20px;right:20px;z-index:620;display:flex;flex-direction:column;align-items:flex-start;gap:16px;max-height:calc(100svh - 84px);overflow:auto;-webkit-overflow-scrolling:touch;padding:20px 18px 22px;background:#181815;border:1px solid rgba(205,191,157,.16);border-radius:12px;box-shadow:0 16px 40px rgba(0,0,0,.30)}.mobile-nav-panel a{width:100%;color:#CDBF9D;font:400 10px/1.25 var(--sans);letter-spacing:.13em;text-transform:uppercase;padding:2px 0}.mobile-nav-panel a.active{color:#eee5d2}.mobile-nav-panel .mobile-language-picker{width:100%;margin:4px 0 0!important;padding-top:13px;border-top:1px solid rgba(255,255,255,.08)}.mobile-nav-panel .mobile-language-picker select{width:100%;border:0!important;background:#181815;color:#CDBF9D;padding:8px 20px 8px 0!important;font:400 11px/1 var(--sans)!important;outline:none}}
+@media(max-width:560px){.mobile-nav-panel{top:56px;left:14px;right:14px}}
+
+
+/* Private Services v1 — deterministic responsive treatment */
+.ps-hero{position:relative;min-height:min(73vw,820px);max-height:900px;background:#0d0c0a;overflow:hidden}
+.ps-hero img{width:100%;height:100%;min-height:min(73vw,820px);object-fit:cover;object-position:center 47%}
+.ps-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(12,11,9,.72) 0%,rgba(12,11,9,.48) 30%,rgba(12,11,9,.13) 54%,rgba(12,11,9,0) 72%)}
+.ps-hero-copy{position:absolute;z-index:2;left:var(--pad);top:50%;transform:translateY(-45%);max-width:790px;width:min(60vw,790px)}
+.ps-hero-copy h1{font:400 clamp(48px,5.2vw,82px)/.98 var(--serif);letter-spacing:.055em;margin:0 0 24px;color:#f4efe5;text-wrap:balance}
+.ps-hero-copy p{font:400 clamp(15px,1.25vw,18px)/1.55 var(--sans);color:#e5dfd4;max-width:620px;margin:0}
+
+.ps-story{max-width:1440px;margin:0 auto;padding:clamp(86px,8vw,132px) var(--pad)}
+.ps-intro{max-width:980px;margin:0 0 clamp(94px,9vw,150px)}
+.ps-intro h2{font:400 clamp(38px,3.7vw,60px)/1.04 var(--serif);letter-spacing:.02em;color:#f0eadf;margin:0 0 30px;max-width:900px}
+.ps-intro p{font:400 clamp(15px,1.05vw,17px)/1.75 var(--sans);color:var(--muted);max-width:880px;margin:0}
+
+.ps-service{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(360px,.86fr);gap:clamp(56px,7vw,118px);align-items:center;margin-bottom:clamp(104px,10vw,164px)}
+.ps-service.reverse{grid-template-columns:minmax(360px,.86fr) minmax(0,1.08fr)}
+.ps-service.reverse .ps-media{order:2}.ps-service.reverse .ps-copy{order:1}
+.ps-media img{width:100%;height:auto;border-radius:8px}
+.ps-copy{max-width:540px}
+.ps-index{font:500 11px/1.25 var(--sans);letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:15px}
+.ps-copy h2{font:400 clamp(37px,3.45vw,57px)/1.03 var(--serif);letter-spacing:.018em;color:#f0eadf;margin:0 0 23px;text-wrap:balance}
+.ps-copy>p{font:400 clamp(15px,1.05vw,17px)/1.72 var(--sans);color:var(--muted);margin:0}
+.ps-list{list-style:none;padding:0;margin:25px 0 0;border-top:1px solid var(--line)}
+.ps-list li{padding:10px 0;border-bottom:1px solid var(--line);font:500 10.5px/1.4 var(--sans);letter-spacing:.105em;text-transform:uppercase;color:var(--gold)}
+
+.ps-extra{display:grid;grid-template-columns:minmax(0,1fr) minmax(340px,.82fr);gap:clamp(45px,6vw,92px);align-items:center;background:#171612;padding:clamp(38px,5vw,74px);margin-bottom:clamp(112px,10vw,166px)}
+.ps-extra img{width:100%;height:auto;border-radius:8px}
+.ps-extra .ps-copy{max-width:600px}
+.ps-extra .ask{font:400 clamp(26px,2.4vw,38px)/1.15 var(--serif);color:#e8e0d2;margin:28px 0 0;padding-bottom:18px;border-bottom:1px solid rgba(205,191,157,.55);max-width:430px}
+
+.ps-close{position:relative;min-height:370px;overflow:hidden}
+.ps-close img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 51%}
+.ps-close::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,11,9,.70),rgba(11,11,9,.28) 54%,rgba(11,11,9,.10))}
+.ps-close-copy{position:relative;z-index:2;max-width:1440px;margin:0 auto;padding:clamp(76px,7vw,112px) var(--pad)}
+.ps-close-copy h2{font:400 clamp(42px,4vw,64px)/1.02 var(--serif);letter-spacing:.025em;color:#f1ebdf;margin:0 0 18px}
+.ps-close-copy p{font:400 clamp(15px,1.1vw,17px)/1.6 var(--sans);color:#e2dbcf;max-width:700px;margin:0}
+
+@media(max-width:1200px){
+  .ps-service,.ps-service.reverse{gap:52px}
+}
+@media(max-width:900px){
+  .ps-hero{min-height:72vh;max-height:none}
+  .ps-hero img{min-height:72vh;object-position:61% 50%}
+  .ps-hero-copy{width:min(76vw,680px);top:auto;bottom:10vw;transform:none}
+  .ps-service,.ps-service.reverse,.ps-extra{grid-template-columns:1fr;gap:34px}
+  .ps-service.reverse .ps-media,.ps-service.reverse .ps-copy{order:initial}
+  .ps-copy{max-width:740px}
+  .ps-extra{padding:42px}
+}
+@media(max-width:560px){
+  .ps-hero{min-height:69vh}
+  .ps-hero img{min-height:69vh;object-position:66% 50%}
+  .ps-hero::after{background:linear-gradient(0deg,rgba(12,11,9,.78) 0%,rgba(12,11,9,.52) 36%,rgba(12,11,9,.10) 70%)}
+  .ps-hero-copy{left:24px;right:24px;width:auto;bottom:38px}
+  .ps-hero-copy h1{font-size:clamp(42px,12vw,58px);letter-spacing:.045em}
+  .ps-story{padding-left:24px;padding-right:24px}
+  .ps-service{margin-bottom:94px}
+  .ps-media img{border-radius:10px}
+  .ps-extra{margin-left:-4px;margin-right:-4px;padding:30px 24px}
+  .ps-extra img{border-radius:10px}
+  .ps-close{min-height:430px}
+  .ps-close-copy{padding-left:24px;padding-right:24px;padding-top:82px}
+}
+
+
+@media(max-width:560px){
+  .ps-hero{
+    min-height:auto;
+    max-height:none;
+    background:#0d0c0a;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+  }
+  .ps-hero img{
+    width:100%;
+    height:auto;
+    min-height:0;
+    object-fit:contain;
+    object-position:center center;
+    display:block;
+  }
+  .ps-hero::after{
+    background:linear-gradient(0deg,rgba(12,11,9,.70) 0%,rgba(12,11,9,.26) 36%,rgba(12,11,9,0) 68%);
+    pointer-events:none;
+  }
+  .ps-hero-copy{
+    left:24px;
+    right:24px;
+    width:auto;
+    bottom:28px;
+  }
+}
+
+
+@media(max-width:560px){
+  .ps-hero{
+    display:flex;
+    flex-direction:column;
+    min-height:0;
+    max-height:none;
+    overflow:visible;
+    background:#0d0c0a;
+  }
+  .ps-hero img{
+    position:relative;
+    inset:auto;
+    order:1;
+    width:100%;
+    height:auto;
+    min-height:0;
+    object-fit:contain;
+    object-position:center center;
+    display:block;
+  }
+  .ps-hero::after{
+    display:none;
+  }
+  .ps-hero-copy{
+    position:relative;
+    order:2;
+    left:auto;
+    right:auto;
+    bottom:auto;
+    top:auto;
+    width:auto;
+    max-width:none;
+    padding:30px 24px 34px;
+    background:#0d0c0a;
+  }
+  .ps-hero-copy h1{
+    font-size:36px;
+    line-height:1.04;
+    letter-spacing:.055em;
+    margin-top:9px;
+  }
+  .ps-hero-copy p{
+    max-width:34em;
+    margin-top:15px;
+  }
+}
+
+
+@media(max-width:560px){
+  .ps-close{
+    min-height:0;
+    height:auto;
+    max-height:none;
+    overflow:visible;
+    display:flex;
+    flex-direction:column;
+    background:#0d0c0a;
+  }
+  .ps-close img{
+    position:relative;
+    inset:auto;
+    order:1;
+    width:100%;
+    height:auto;
+    min-height:0;
+    max-height:none;
+    object-fit:contain;
+    object-position:center center;
+    display:block;
+  }
+  .ps-close::after{
+    display:none;
+  }
+  .ps-close-copy{
+    position:relative;
+    order:2;
+    z-index:2;
+    max-width:none;
+    margin:0;
+    padding:30px 24px 36px;
+    background:#0d0c0a;
+  }
+  .ps-close-copy h2{
+    font-size:36px;
+    line-height:1.04;
+    letter-spacing:.055em;
+  }
+}
+
+
+/* Whole-site footer CTA refinement — Visual Design QA */
+.site-footer h2,
+.footer-cta h2,
+.footer-enquire h2,
+.footer-main h2,
+footer h2{
+  font-size:clamp(38px,3.25vw,44px) !important;
+  line-height:1.06 !important;
+}
+.site-footer .enquire-link,
+.site-footer .footer-enquire-link,
+.footer-cta .enquire-link,
+.footer-enquire .enquire-link,
+footer .enquire-link,
+footer a[href*="enquire" i]{
+  font-size:12px !important;
+  letter-spacing:.12em !important;
+}
+
+@media(max-width:900px){
+  .site-footer h2,
+  .footer-cta h2,
+  .footer-enquire h2,
+  .footer-main h2,
+  footer h2{
+    font-size:clamp(34px,4.6vw,38px) !important;
+  }
+}
+@media(max-width:560px){
+  .site-footer h2,
+  .footer-cta h2,
+  .footer-enquire h2,
+  .footer-main h2,
+  footer h2{
+    font-size:32px !important;
+    line-height:1.08 !important;
+  }
+  .site-footer .enquire-link,
+  .site-footer .footer-enquire-link,
+  .footer-cta .enquire-link,
+  .footer-enquire .enquire-link,
+  footer .enquire-link,
+  footer a[href*="enquire" i]{
+    font-size:11px !important;
+  }
+}
+
+
+/* Whole-site footer CTA refinement v2 — deliberately restrained */
+.site-footer h2,
+.footer-cta h2,
+.footer-enquire h2,
+.footer-main h2,
+footer h2{
+  font-size:30px !important;
+  line-height:1.10 !important;
+  letter-spacing:.02em !important;
+}
+@media(max-width:900px){
+  .site-footer h2,
+  .footer-cta h2,
+  .footer-enquire h2,
+  .footer-main h2,
+  footer h2{
+    font-size:28px !important;
+  }
+}
+@media(max-width:560px){
+  .site-footer h2,
+  .footer-cta h2,
+  .footer-enquire h2,
+  .footer-main h2,
+  footer h2{
+    font-size:26px !important;
+    line-height:1.12 !important;
+  }
+}
+</style>
+
+<style id="tlvs-enquire-page">
+  body{background:#11120f;color:#eee9dd}
+  .enquire-main{min-height:calc(100vh - 190px);padding:clamp(126px,12vw,178px) var(--pad) clamp(112px,11vw,166px);background:radial-gradient(circle at 78% 12%,rgba(169,139,87,.08),transparent 38%),#11120f}
+  .enquire-shell{max-width:980px;margin:0 auto}
+  .enquire-intro{max-width:760px}
+  .enquire-intro .eyebrow{margin-bottom:18px}
+  .enquire-intro h1{font-family:var(--display);font-weight:400;font-size:clamp(48px,6vw,78px);line-height:.98;letter-spacing:.01em;margin:0 0 30px;color:#f1eadc}
+  .enquire-intro p{font-size:clamp(14px,1.15vw,17px);line-height:1.75;color:#b7b0a3;max-width:650px;margin:0}
+  .direct-email{margin-top:52px;padding-top:34px;border-top:1px solid rgba(169,139,87,.42);max-width:760px}
+  .direct-email strong{display:block;font-size:10px;letter-spacing:.17em;text-transform:uppercase;color:#a98b57;margin-bottom:16px;font-weight:500}
+  .direct-email a{display:inline-block;font-family:var(--display);font-size:clamp(23px,2.5vw,34px);line-height:1.25;color:#e8dfcf;text-decoration:none;border-bottom:1px solid rgba(169,139,87,.58);padding-bottom:4px;transition:color .2s,border-color .2s}
+  .direct-email a:hover,.direct-email a:focus-visible{color:#f5efe2;border-color:#cdbf9d;outline:none}
+  .email-hint{font-size:12px;line-height:1.65;color:#8f8a80;margin-top:16px;max-width:560px}
+  .enquire-footer{border-top:1px solid rgba(255,255,255,.06);padding:40px var(--pad) 46px;display:flex;justify-content:space-between;align-items:flex-end;gap:30px;color:#d9d4c9}
+  .enquire-footer .legal-links{display:flex;gap:20px;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#8f8b82}
+  .enquire-footer .legal-links a{color:inherit;text-decoration:none}
+  @media(max-width:560px){
+    .enquire-main{padding:98px 22px 86px}
+    .enquire-intro h1{font-size:42px;line-height:1.02;margin-bottom:22px}
+    .enquire-intro p{font-size:15px;line-height:1.68}
+    .direct-email{margin-top:42px;padding-top:28px}
+    .direct-email a{font-size:22px;word-break:break-word}
+    .email-hint{font-size:12px}
+    .enquire-footer{padding:34px 22px 40px;align-items:flex-start;flex-direction:column}
+  }
+</style>
+</head>
+<body>
+<header class="site-header"><a aria-label="Lakeside Villa &amp; Spa home" href="index.html"><span class="brand-wordmark"><span class="wm-top">LAKESIDE</span><span class="wm-bottom">VILLA &amp; SPA</span></span></a>
+<nav class="desktop-nav"><a data-i18n="navVilla" href="the-villa.html">The Villa</a><a data-i18n="navLake" href="lakeside-life.html">Lakeside Life</a><a data-i18n="navSpa" href="spa-wellness.html">Spa &amp; Wellness</a><a data-i18n="navLocation" href="location.html">Location</a><a data-i18n="navServices" href="private-services.html">Private Services</a><a class="active" data-i18n="navEnquire" href="#top">Enquire</a><label class="language-picker"><span class="sr-only">Language</span><select id="languageSelect"><option value="en">EN</option><option value="fi">FI</option><option value="sv">SV</option><option value="de">DE</option><option value="fr">FR</option><option value="es">ES</option><option value="nl">NL</option><option value="zh">中文</option></select></label></nav>
+<details class="mobile-menu-native"><summary><span class="menu-label-open">MENU</span><span class="menu-label-close">CLOSE</span></summary><nav class="mobile-nav-panel"><a data-i18n="navVilla" href="the-villa.html">The Villa</a><a data-i18n="navLake" href="lakeside-life.html">Lakeside Life</a><a data-i18n="navSpa" href="spa-wellness.html">Spa &amp; Wellness</a><a data-i18n="navLocation" href="location.html">Location</a><a data-i18n="navServices" href="private-services.html">Private Services</a><a class="active" data-i18n="navEnquire" href="#top">Enquire</a><label class="language-picker mobile-language-picker"><span class="sr-only">Language</span><select id="mobileLanguageSelect"><option value="en">EN</option><option value="fi">FI</option><option value="sv">SV</option><option value="de">DE</option><option value="fr">FR</option><option value="es">ES</option><option value="nl">NL</option><option value="zh">中文</option></select></label></nav></details></header>
+<main class="enquire-main" id="top">
+  <div class="enquire-shell">
+    <section class="enquire-intro">
+      <div class="eyebrow" data-i18n="eyebrow">Enquire</div>
+      <h1 data-i18n="title">Let’s talk</h1>
+      <p data-i18n="intro">For stays, private events, services, corporate enquiries or property-related discussions, please contact us directly.</p>
+      <div class="direct-email">
+        <strong data-i18n="emailLead">Email us</strong>
+        <a href="mailto:info@lakesidevillaandspa.com">info@lakesidevillaandspa.com</a>
+        <div class="email-hint" data-i18n="emailHint">Tap the address to open your email app.</div>
+      </div>
+    </section>
+  </div>
+</main>
+<footer class="enquire-footer"><div><span class="brand-wordmark"><span class="wm-top">LAKESIDE</span><span class="wm-bottom">VILLA &amp; SPA</span></span><div class="footer-place" data-i18n="footerPlace">Tahko · Finland</div></div><div class="legal-links"><a data-i18n="privacy" href="#">Privacy</a><a data-i18n="cookies" href="#">Cookies</a></div></footer>
+<script>
+const TLVS_I18N={"en":{"navVilla":"The Villa","navLake":"Lakeside Life","navSpa":"Spa & Wellness","navLocation":"Location","navServices":"Private Services","navEnquire":"Enquire","eyebrow":"Enquire","title":"Let’s talk","intro":"For stays, private events, services, corporate enquiries or property-related discussions, please contact us directly.","emailLead":"Email us","emailHint":"Tap the address to open your email app.","footerPlace":"Tahko · Finland","privacy":"Privacy","cookies":"Cookies"},"fi":{"navVilla":"Huvila","navLake":"Elämää järven äärellä","navSpa":"Spa & hyvinvointi","navLocation":"Sijainti","navServices":"Yksityiset palvelut","navEnquire":"Ota yhteyttä","eyebrow":"Yhteydenotto","title":"Ollaan yhteydessä","intro":"Majoitusta, yksityistilaisuuksia, palveluja, yrityskyselyitä tai kiinteistöön liittyviä keskusteluja varten ota meihin suoraan yhteyttä.","emailLead":"Lähetä sähköpostia","emailHint":"Avaa sähköpostisovellus napauttamalla osoitetta.","footerPlace":"Tahko · Suomi","privacy":"Tietosuoja","cookies":"Evästeet"},"sv":{"navVilla":"Villan","navLake":"Livet vid sjön","navSpa":"Spa & wellness","navLocation":"Läge","navServices":"Privata tjänster","navEnquire":"Förfrågan","eyebrow":"Förfrågan","title":"Låt oss höras","intro":"För vistelser, privata evenemang, tjänster, företagsförfrågningar eller samtal om fastigheten, kontakta oss direkt.","emailLead":"Mejla oss","emailHint":"Tryck på adressen för att öppna din e-postapp.","footerPlace":"Tahko · Finland","privacy":"Integritet","cookies":"Cookies"},"de":{"navVilla":"Die Villa","navLake":"Leben am See","navSpa":"Spa & Wellness","navLocation":"Lage","navServices":"Privater Service","navEnquire":"Anfragen","eyebrow":"Anfrage","title":"Sprechen wir miteinander","intro":"Für Aufenthalte, private Veranstaltungen, Services, Firmenanfragen oder Gespräche rund um die Immobilie kontaktieren Sie uns bitte direkt.","emailLead":"E-Mail senden","emailHint":"Tippen Sie auf die Adresse, um Ihr E-Mail-Programm zu öffnen.","footerPlace":"Tahko · Finnland","privacy":"Datenschutz","cookies":"Cookies"},"fr":{"navVilla":"La Villa","navLake":"Vie au bord du lac","navSpa":"Spa & bien-être","navLocation":"Localisation","navServices":"Services privés","navEnquire":"Nous contacter","eyebrow":"Contact","title":"Échangeons","intro":"Pour un séjour, un événement privé, des services, une demande d’entreprise ou une discussion liée à la propriété, contactez-nous directement.","emailLead":"Écrivez-nous","emailHint":"Touchez l’adresse pour ouvrir votre application de messagerie.","footerPlace":"Tahko · Finlande","privacy":"Confidentialité","cookies":"Cookies"},"es":{"navVilla":"La Villa","navLake":"Vida junto al lago","navSpa":"Spa y bienestar","navLocation":"Ubicación","navServices":"Servicios privados","navEnquire":"Consultar","eyebrow":"Contacto","title":"Hablemos","intro":"Para estancias, eventos privados, servicios, consultas corporativas o conversaciones relacionadas con la propiedad, contáctanos directamente.","emailLead":"Escríbenos","emailHint":"Toca la dirección para abrir tu aplicación de correo.","footerPlace":"Tahko · Finlandia","privacy":"Privacidad","cookies":"Cookies"},"nl":{"navVilla":"De Villa","navLake":"Leven aan het meer","navSpa":"Spa & wellness","navLocation":"Locatie","navServices":"Privéservices","navEnquire":"Informeer","eyebrow":"Contact","title":"Neem contact op","intro":"Voor verblijven, privé-evenementen, services, zakelijke aanvragen of gesprekken over het vastgoed kunt u rechtstreeks contact met ons opnemen.","emailLead":"E-mail ons","emailHint":"Tik op het adres om uw e-mailapp te openen.","footerPlace":"Tahko · Finland","privacy":"Privacy","cookies":"Cookies"},"zh":{"navVilla":"别墅","navLake":"湖畔生活","navSpa":"水疗与康养","navLocation":"位置","navServices":"私人服务","navEnquire":"咨询","eyebrow":"联系","title":"欢迎与我们联系","intro":"如需咨询住宿、私人活动、服务、企业需求或房产相关事宜，请直接与我们联系。","emailLead":"发送邮件","emailHint":"点击邮箱地址即可打开您的邮件应用。","footerPlace":"塔赫科 · 芬兰","privacy":"隐私","cookies":"Cookie"}};
+let currentLang='en';
+function dict(){return TLVS_I18N[currentLang]||TLVS_I18N.en;}
+function applyLanguage(lang){
+  currentLang=TLVS_I18N[lang]?lang:'en';
+  const d=dict();
+  document.documentElement.lang=currentLang==='zh'?'zh-CN':currentLang;
+  document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.dataset.i18n;if(d[k]!=null) el.textContent=d[k];});
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el=>{const k=el.dataset.i18nPlaceholder;if(d[k]!=null) el.placeholder=d[k];});
+  try{localStorage.setItem('tlvs-lang',currentLang)}catch(e){}
+  const s=document.getElementById('languageSelect'); if(s) s.value=currentLang;
+  const ms=document.getElementById('mobileLanguageSelect'); if(ms) ms.value=currentLang;
+}
+document.getElementById('languageSelect')?.addEventListener('change',e=>applyLanguage(e.target.value));
+document.getElementById('mobileLanguageSelect')?.addEventListener('change',e=>{applyLanguage(e.target.value);document.querySelector('.mobile-menu-native')?.removeAttribute('open');});
+document.querySelectorAll('.mobile-nav-panel a').forEach(a=>a.addEventListener('click',()=>document.querySelector('.mobile-menu-native')?.removeAttribute('open')));
+const stored=(()=>{try{return localStorage.getItem('tlvs-lang')}catch(e){return null}})();
+const browser=(navigator.language||'en').toLowerCase().split('-')[0];
+applyLanguage(stored || (TLVS_I18N[browser]?browser:'en'));
+
+</script>
+</body></html>
