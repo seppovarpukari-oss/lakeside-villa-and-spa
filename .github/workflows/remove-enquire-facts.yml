@@ -1,0 +1,92 @@
+name: Remove Enquire stay essentials
+
+on:
+  push:
+    branches:
+      - chatgpt/tahko-kuopio-route-production
+
+permissions:
+  contents: write
+
+jobs:
+  remove-enquire-facts:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: chatgpt/tahko-kuopio-route-production
+          fetch-depth: 0
+
+      - name: Remove broker-specific fact section and dedicated CSS
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          paths = [
+              Path('enquire.html'),
+              Path('fi/enquire.html'),
+              Path('sv/enquire.html'),
+              Path('no/enquire.html'),
+              Path('da/enquire.html'),
+              Path('de/enquire.html'),
+              Path('fr/enquire.html'),
+              Path('es/enquire.html'),
+              Path('nl/enquire.html'),
+              Path('et/enquire.html'),
+              Path('it/enquire.html'),
+              Path('zh-cn/enquire.html'),
+          ]
+
+          css_start_marker = '/* P-0098 visible fact layer. Localized page copy is provided per crawlable language URL. */'
+          css_end_marker = '@media(max-width:560px){.p0098-facts{padding:48px 20px}.p0098-grid{grid-template-columns:1fr}.p0098-item{min-height:0;padding:19px 18px}.p0098-facts h2{font-size:36px}}'
+          section_start_marker = '<section class="p0098-facts" id="stay-essentials"'
+          email_marker = 'mailto:info@lakesidevillaandspa.com'
+
+          for path in paths:
+              text = path.read_text(encoding='utf-8')
+              original = text
+
+              if text.count(css_start_marker) != 1:
+                  raise SystemExit(f'{path}: expected exactly one dedicated P-0098 CSS block start, found {text.count(css_start_marker)}')
+              css_start = text.index(css_start_marker)
+              css_end = text.index(css_end_marker, css_start) + len(css_end_marker)
+              while css_end < len(text) and text[css_end] in '\r\n':
+                  css_end += 1
+              text = text[:css_start] + text[css_end:]
+
+              if text.count(section_start_marker) != 1:
+                  raise SystemExit(f'{path}: expected exactly one stay-essentials section, found {text.count(section_start_marker)}')
+              section_start = text.index(section_start_marker)
+              section_end = text.index('</section>', section_start) + len('</section>')
+              while section_end < len(text) and text[section_end] in '\r\n':
+                  section_end += 1
+              text = text[:section_start] + text[section_end:]
+
+              for token in ('p0098-facts', 'p0098-grid', 'p0098-item', 'p0098-head', 'p0098-kicker', 'stay-essentials'):
+                  if token in text:
+                      raise SystemExit(f'{path}: dedicated fact-layer token remains after removal: {token}')
+
+              if original.count(email_marker) != text.count(email_marker) or email_marker not in text:
+                  raise SystemExit(f'{path}: direct email link changed unexpectedly')
+              if 'direct-email' not in text:
+                  raise SystemExit(f'{path}: direct-email section missing after edit')
+
+              path.write_text(text, encoding='utf-8')
+          PY
+
+          git diff --check
+          git diff --stat
+          grep -R "stay-essentials\|p0098-facts\|p0098-grid\|p0098-item" -- */enquire.html enquire.html && exit 1 || true
+          grep -R "mailto:info@lakesidevillaandspa.com" -- */enquire.html enquire.html >/dev/null
+
+      - name: Commit and push Enquire cleanup
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add enquire.html fi/enquire.html sv/enquire.html no/enquire.html da/enquire.html de/enquire.html fr/enquire.html es/enquire.html nl/enquire.html et/enquire.html it/enquire.html zh-cn/enquire.html
+          git diff --cached --quiet && exit 0
+          git commit -m "Remove broker-specific stay essentials from Enquire pages"
+          git push origin HEAD:chatgpt/tahko-kuopio-route-production
