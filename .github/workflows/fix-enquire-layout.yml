@@ -1,0 +1,73 @@
+name: Fix Enquire single-column layout
+
+on:
+  push:
+    branches:
+      - chatgpt/tahko-kuopio-route-production
+
+permissions:
+  contents: write
+
+jobs:
+  fix-enquire-layout:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: chatgpt/tahko-kuopio-route-production
+          fetch-depth: 0
+
+      - name: Make Enquire content single-column on all languages
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          paths = [
+              Path('enquire.html'),
+              Path('fi/enquire.html'),
+              Path('sv/enquire.html'),
+              Path('no/enquire.html'),
+              Path('da/enquire.html'),
+              Path('de/enquire.html'),
+              Path('fr/enquire.html'),
+              Path('es/enquire.html'),
+              Path('nl/enquire.html'),
+              Path('et/enquire.html'),
+              Path('it/enquire.html'),
+              Path('zh-cn/enquire.html'),
+          ]
+
+          old_shell = '.enquire-shell{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:minmax(0,.78fr) minmax(520px,1.22fr);gap:clamp(70px,8vw,130px);align-items:start}'
+          new_shell = '.enquire-shell{max-width:1180px;margin:0 auto;display:block}'
+          old_intro = '.enquire-intro{position:sticky;top:150px;max-width:430px}'
+          new_intro = '.enquire-intro{position:static;max-width:760px}'
+
+          for path in paths:
+              text = path.read_text(encoding='utf-8')
+              if text.count(old_shell) != 1:
+                  raise SystemExit(f'{path}: expected one desktop shell rule, found {text.count(old_shell)}')
+              if text.count(old_intro) != 1:
+                  raise SystemExit(f'{path}: expected one desktop intro rule, found {text.count(old_intro)}')
+              before_email = text.count('mailto:info@lakesidevillaandspa.com')
+              text = text.replace(old_shell, new_shell, 1).replace(old_intro, new_intro, 1)
+              if text.count('mailto:info@lakesidevillaandspa.com') != before_email or before_email == 0:
+                  raise SystemExit(f'{path}: contact email changed unexpectedly')
+              if 'stay-essentials' in text or 'p0098-facts' in text:
+                  raise SystemExit(f'{path}: removed fact section unexpectedly reappeared')
+              path.write_text(text, encoding='utf-8')
+          PY
+
+          git diff --check
+          git diff --stat
+
+      - name: Commit and push layout fix
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add enquire.html fi/enquire.html sv/enquire.html no/enquire.html da/enquire.html de/enquire.html fr/enquire.html es/enquire.html nl/enquire.html et/enquire.html it/enquire.html zh-cn/enquire.html
+          git diff --cached --quiet && exit 0
+          git commit -m "Fix Enquire single-column layout across languages"
+          git push origin HEAD:chatgpt/tahko-kuopio-route-production
