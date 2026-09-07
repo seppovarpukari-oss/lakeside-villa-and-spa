@@ -22,6 +22,7 @@ jobs:
         shell: bash
         run: |
           python - <<'PY'
+          import re
           from pathlib import Path
 
           paths = [
@@ -39,9 +40,8 @@ jobs:
               Path('zh-cn/enquire.html'),
           ]
 
-          css_start_marker = '/* P-0098 visible fact layer. Localized page copy is provided per crawlable language URL. */'
+          css_start_marker = '.p0098-facts{max-width:1440px;margin:0 auto;padding:clamp(58px,6vw,88px) var(--pad);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}'
           css_end_marker = '@media(max-width:560px){.p0098-facts{padding:48px 20px}.p0098-grid{grid-template-columns:1fr}.p0098-item{min-height:0;padding:19px 18px}.p0098-facts h2{font-size:36px}}'
-          section_start_marker = '<section class="p0098-facts" id="stay-essentials"'
           email_marker = 'mailto:info@lakesidevillaandspa.com'
 
           for path in paths:
@@ -49,17 +49,21 @@ jobs:
               original = text
 
               if text.count(css_start_marker) != 1:
-                  raise SystemExit(f'{path}: expected exactly one dedicated P-0098 CSS block start, found {text.count(css_start_marker)}')
-              css_start = text.index(css_start_marker)
-              css_end = text.index(css_end_marker, css_start) + len(css_end_marker)
+                  raise SystemExit(f'{path}: expected exactly one dedicated fact CSS start, found {text.count(css_start_marker)}')
+              css_rule_start = text.index(css_start_marker)
+              css_start = text.rfind('/*', 0, css_rule_start)
+              if css_start == -1 or 'P-0098' not in text[css_start:css_rule_start]:
+                  css_start = css_rule_start
+              css_end = text.index(css_end_marker, css_rule_start) + len(css_end_marker)
               while css_end < len(text) and text[css_end] in '\r\n':
                   css_end += 1
               text = text[:css_start] + text[css_end:]
 
-              if text.count(section_start_marker) != 1:
-                  raise SystemExit(f'{path}: expected exactly one stay-essentials section, found {text.count(section_start_marker)}')
-              section_start = text.index(section_start_marker)
-              section_end = text.index('</section>', section_start) + len('</section>')
+              matches = list(re.finditer(r'<section\b[^>]*\bid="stay-essentials"[^>]*>', text))
+              if len(matches) != 1:
+                  raise SystemExit(f'{path}: expected exactly one stay-essentials section, found {len(matches)}')
+              section_start = matches[0].start()
+              section_end = text.index('</section>', matches[0].end()) + len('</section>')
               while section_end < len(text) and text[section_end] in '\r\n':
                   section_end += 1
               text = text[:section_start] + text[section_end:]
@@ -70,16 +74,21 @@ jobs:
 
               if original.count(email_marker) != text.count(email_marker) or email_marker not in text:
                   raise SystemExit(f'{path}: direct email link changed unexpectedly')
-              if 'direct-email' not in text:
-                  raise SystemExit(f'{path}: direct-email section missing after edit')
+              if original.count('direct-email') != text.count('direct-email'):
+                  raise SystemExit(f'{path}: direct-email structure changed unexpectedly')
 
               path.write_text(text, encoding='utf-8')
           PY
 
           git diff --check
           git diff --stat
-          grep -R "stay-essentials\|p0098-facts\|p0098-grid\|p0098-item" -- */enquire.html enquire.html && exit 1 || true
-          grep -R "mailto:info@lakesidevillaandspa.com" -- */enquire.html enquire.html >/dev/null
+          if grep -R -E "stay-essentials|p0098-facts|p0098-grid|p0098-item|p0098-head|p0098-kicker" -- */enquire.html enquire.html; then
+            echo "Dedicated fact-layer code still remains" >&2
+            exit 1
+          fi
+          for f in enquire.html fi/enquire.html sv/enquire.html no/enquire.html da/enquire.html de/enquire.html fr/enquire.html es/enquire.html nl/enquire.html et/enquire.html it/enquire.html zh-cn/enquire.html; do
+            grep -q "mailto:info@lakesidevillaandspa.com" "$f" || { echo "$f: email missing" >&2; exit 1; }
+          done
 
       - name: Commit and push Enquire cleanup
         shell: bash
