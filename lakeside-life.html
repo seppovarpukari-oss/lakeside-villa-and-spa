@@ -357,6 +357,22 @@ footer h2{
     line-height:1.12 !important;
   }
 }
+
+/* P-0098 — visible English fact layer. Temporary current-language handling:
+   fact blocks are shown in English only until crawlable 12-language pages replace the old same-URL switcher. */
+.p0098-facts{max-width:1440px;margin:0 auto;padding:clamp(58px,6vw,88px) var(--pad);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.p0098-facts .p0098-head{max-width:760px;margin:0 0 34px}
+.p0098-facts .p0098-kicker{font:500 10px/1.2 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin:0 0 12px}
+.p0098-facts h2{font:400 clamp(34px,3.2vw,52px)/1.04 var(--serif);letter-spacing:.018em;color:#f0eadf;margin:0 0 14px}
+.p0098-facts .p0098-intro{font:400 clamp(14px,1vw,16px)/1.65 var(--sans);color:var(--muted);margin:0;max-width:66ch}
+.p0098-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.p0098-item{padding:22px 22px 24px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);min-height:112px}
+.p0098-item strong{display:block;font:400 clamp(23px,2vw,31px)/1.08 var(--serif);color:#f0eadf;margin:0 0 8px}
+.p0098-item span{display:block;font:500 9px/1.35 var(--sans);letter-spacing:.13em;text-transform:uppercase;color:var(--gold);margin-bottom:7px}
+.p0098-item small{display:block;font:400 12px/1.45 var(--sans);color:var(--muted)}
+html:not([lang="en"]) .p0098-facts{display:none}
+@media(max-width:900px){.p0098-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.p0098-facts{padding:48px 20px}.p0098-grid{grid-template-columns:1fr}.p0098-item{min-height:0;padding:19px 18px}.p0098-facts h2{font-size:36px}}
 </style>
 </head>
 <body id="top">
@@ -411,6 +427,16 @@ footer h2{
 <p data-i18n="heroSub">A private dock, quiet water and direct access to the waterways of Finnish Lakeland.</p>
 </div>
 </section>
+<section class="p0098-facts" id="lakeside-facts" aria-labelledby="p0098-lake-title">
+  <div class="p0098-head"><div class="p0098-kicker">Lakeside facts</div><h2 id="p0098-lake-title">The lake begins here</h2></div>
+  <div class="p0098-grid">
+    <div class="p0098-item"><strong>Approx. 52 m</strong><span>Private shoreline</span><small>On Lake Syväri</small></div>
+    <div class="p0098-item"><strong>Private dock</strong><span>Lakeside</span><small>Large and illuminated</small></div>
+    <div class="p0098-item"><strong>Direct swimming</strong><span>Water access</span><small>From the property</small></div>
+    <div class="p0098-item"><strong>Illuminated route</strong><span>Villa to dock</span><small>Easy access after dark</small></div>
+  </div>
+</section>
+
 <div class="story">
 <section class="section tahko" id="tahko-by-boat">
 <img alt="Tahko lakeside marina and resort life" class="photo" src="assets/images/eb7abc0c381d4b43.jpg"/>
