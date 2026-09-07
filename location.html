@@ -96,6 +96,38 @@ footer h2{
     line-height:1.12 !important;
   }
 }
+
+/* P0 layout hotfix 2026-09-07 — balance 7 At-a-glance cards without filler content */
+@media(min-width:901px){
+  .glance-grid{grid-template-columns:repeat(8,1fr)}
+  .glance-grid .stat{grid-column:span 2}
+  .glance-grid .stat:nth-last-child(3){grid-column:2 / span 2;border-left:1px solid var(--line)}
+  .glance-grid .stat:nth-last-child(2){grid-column:4 / span 2}
+  .glance-grid .stat:last-child{grid-column:6 / span 2}
+  .glance-grid .stat:nth-child(4){border-right:0}
+  .glance-grid .stat:nth-last-child(-n+3){border-bottom:0}
+}
+@media(min-width:561px) and (max-width:900px){
+  .glance-grid{grid-template-columns:repeat(2,1fr)}
+  .glance-grid .stat:last-child{
+    grid-column:1 / -1;
+    width:50%;
+    justify-self:center;
+    border-left:1px solid var(--line);
+    border-right:1px solid var(--line);
+    border-bottom:0;
+  }
+  .glance-grid .stat:nth-last-child(2){border-bottom:0}
+}
+@media(max-width:560px){
+  .glance-grid{grid-template-columns:1fr}
+  .glance-grid .stat{
+    border-right:0 !important;
+    border-bottom:1px solid var(--line) !important;
+  }
+  .glance-grid .stat:last-child{border-bottom:0 !important}
+}
+
 </style></head><body id="top">
 <header class="site-header"><a aria-label="Lakeside Villa &amp; Spa home" href="index.html"><span class="brand-wordmark"><span class="wm-top">LAKESIDE</span><span class="wm-bottom">VILLA &amp; SPA</span></span></a>
 <nav class="desktop-nav"><a data-i18n="navVilla" href="the-villa.html">The Villa</a><a data-i18n="navLake" href="lakeside-life.html">Lakeside Life</a><a data-i18n="navSpa" href="spa-wellness.html">Spa &amp; Wellness</a><a class="active" data-i18n="navLocation" href="#top">Location</a><a data-i18n="navServices" href="private-services.html">Private Services</a><a data-i18n="navEnquire" href="enquire.html">Enquire</a><label class="language-picker"><span class="sr-only">Language</span><select id="languageSelect"><option value="en">EN</option><option value="fi">FI</option><option value="sv">SV</option><option value="de">DE</option><option value="fr">FR</option><option value="es">ES</option><option value="nl">NL</option><option value="zh">中文</option></select></label></nav>
