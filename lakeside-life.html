@@ -104,7 +104,8 @@ img{display:block;max-width:100%}
 .copy h2{font:400 clamp(38px,3.45vw,57px)/1.03 var(--serif);letter-spacing:.018em;margin:0 0 22px;color:#f0eadf;text-wrap:balance}
 .copy p{font:400 clamp(15px,1.05vw,17px)/1.7 var(--sans);color:var(--muted);margin:0}
 .route-graphic{display:block;width:min(100%,330px);height:auto;margin-top:34px;object-fit:contain}
-.section.tahko{grid-template-columns:minmax(0,1.5fr) minmax(360px,.9fr)}
+.section.tahko .route-graphic{width:min(70%,231px)}
+.section.tahko{grid-template-columns:minmax(0,1.5fr) minmax(360px,.9fr);align-items:start}
 .section.swim{margin-top:6px}
 .section.boating{grid-template-columns:minmax(0,1.55fr) minmax(360px,.88fr)}
 .section.fishing{grid-template-columns:minmax(0,1.46fr) minmax(360px,.92fr)}
@@ -161,6 +162,7 @@ img{display:block;max-width:100%}
   .section:nth-child(even) .photo,.section:nth-child(even) .fishing-frame{margin-left:auto}
   .copy{max-width:620px}
   .route-graphic{width:min(72%,380px);margin-top:32px}
+  .section.tahko .route-graphic{width:min(50.4%,266px)}
   .footer-inner{grid-template-columns:1fr;gap:52px}
 }
 
@@ -190,6 +192,7 @@ img{display:block;max-width:100%}
   .copy h2{font-size:37px;line-height:1.04;margin-bottom:17px}
   .copy p{font-size:15px;line-height:1.66}
   .route-graphic{width:94%;max-width:none;margin:26px auto 0}
+  .section.tahko .route-graphic{width:65.8%}
   .fishing-frame{aspect-ratio:auto}
   .fish-species{gap:16px 18px;margin-top:26px}
   .fish-species img{height:54px}
