@@ -44,12 +44,12 @@
 html{scroll-behavior:smooth;background:var(--bg)}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:300;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
-.site-header{position:absolute;z-index:20;left:0;right:0;top:0;padding:22px var(--pad);display:flex;align-items:center;justify-content:space-between;gap:30px;color:#f5f0e7}
-.brand{font-family:var(--display);font-size:clamp(13px,1.1vw,18px);letter-spacing:.035em;white-space:nowrap}
-.nav{display:flex;align-items:center;gap:clamp(16px,2.1vw,34px);font-size:clamp(8px,.62vw,11px);font-weight:400;letter-spacing:.15em;text-transform:uppercase}
-.nav a{opacity:.88;white-space:nowrap}
-.nav a:hover{opacity:1}
-.menu-button{display:none;background:transparent;border:0;color:var(--ink);padding:8px;font-size:12px;letter-spacing:.13em;text-transform:uppercase}
+
+
+
+
+
+
 .hero{position:relative;height:min(900px,72vw);min-height:690px;background-image:url('../assets/images/e591d26847ff373b.png');background-image:image-set(url('../assets/images/e591d26847ff373b.webp') type('image/webp'),url('../assets/images/e591d26847ff373b.png') type('image/png'));background-size:cover;background-position:center 48%;overflow:hidden}
 .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(12,13,10,.22) 0%,rgba(12,13,10,.08) 35%,rgba(12,13,10,0) 63%);pointer-events:none}
 .hero-copy{position:absolute;z-index:3;left:var(--pad);top:clamp(150px,19vw,270px);max-width:min(720px,48vw)}
@@ -78,18 +78,18 @@ p{font-size:clamp(13px,.9vw,16px);line-height:1.7;letter-spacing:.006em;color:va
 .footer-right{font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:#8f8b82}
 @media(max-width:1200px) and (min-width:901px){
  :root{--pad:40px}
- .site-header{padding-top:18px}
- .nav{gap:18px;font-size:8px}
+
+
  .hero{height:76vw;max-height:860px;min-height:650px}
  .editorial{grid-template-columns:minmax(0,1.75fr) minmax(280px,.9fr);gap:48px;margin-bottom:125px}
  h2{font-size:34px}
 }
 @media(max-width:900px){
  :root{--pad:clamp(26px,6vw,52px)}
- .site-header{position:absolute;padding-top:max(20px,env(safe-area-inset-top));align-items:flex-start}
- .nav{display:none;position:absolute;top:72px;right:var(--pad);left:var(--pad);background:rgba(16,17,14,.96);border:1px solid rgba(169,139,87,.22);padding:22px;flex-direction:column;align-items:flex-start;gap:18px;font-size:10px}
- .nav.open{display:flex}
- .menu-button{display:block}
+
+
+
+
  .hero{height:100svh;min-height:700px;max-height:980px;background-position:54% center}
  .hero:after{background:linear-gradient(90deg,rgba(10,11,9,.45) 0%,rgba(10,11,9,.12) 62%,rgba(10,11,9,0) 100%)}
  .hero-copy{top:auto;bottom:190px;max-width:70vw}
@@ -110,8 +110,8 @@ p{font-size:clamp(13px,.9vw,16px);line-height:1.7;letter-spacing:.006em;color:va
 }
 @media(max-width:560px){
  :root{--pad:22px}
- .site-header{padding-left:20px;padding-right:20px}
- .brand{font-size:12px;max-width:220px;white-space:normal;line-height:1.2}
+
+
  /* Mobile Hero v2: show the complete 4:3 source image instead of a portrait cover crop. */
  .hero{height:auto;min-height:0;max-height:none;padding-top:75vw;background-size:100% auto;background-position:center top;background-repeat:no-repeat;background-color:var(--bg);overflow:visible}
  .hero:after{inset:0 0 auto 0;height:75vw;background:linear-gradient(180deg,rgba(10,11,9,.34) 0%,rgba(10,11,9,.08) 24%,rgba(10,11,9,0) 50%);pointer-events:none}
@@ -132,16 +132,16 @@ p{font-size:clamp(13px,.9vw,16px);line-height:1.7;letter-spacing:.006em;color:va
  .footer-brand{font-size:16px}
  .footer-right{margin-top:28px}
 }
-@media print{.menu-button{display:none!important} .nav{display:flex!important}}
 
-    .nav-enquire{margin-left:10px;}
+
+
 
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-.language-picker{position:relative;display:flex;align-items:center;margin-left:2px}
-.language-picker select{appearance:none;-webkit-appearance:none;background:transparent;color:#CDBF9D;border:0;border-left:1px solid rgba(205,191,157,.28);padding:5px 18px 5px 15px;font:500 11px/1 var(--sans);letter-spacing:.105em;cursor:pointer;outline:none}
-.language-picker:after{content:'⌄';position:absolute;right:2px;top:50%;transform:translateY(-57%);font-size:11px;color:#CDBF9D;pointer-events:none}
-.language-picker select option{background:#191a16;color:#eee5d2}
-@media(max-width:1200px){.language-picker{margin-top:3px}.language-picker select{font-size:10px;padding:7px 20px 7px 0;border-left:0}}
+
+
+
+
+
 
 
 /* Whole-site footer CTA refinement — Visual Design QA */
@@ -238,22 +238,18 @@ footer h2{
 @media(max-width:560px){.p0098-facts{padding:48px 20px}.p0098-grid{grid-template-columns:1fr}.p0098-item{min-height:0;padding:19px 18px}.p0098-facts h2{font-size:36px}}
 
 /* 12-language crawlable URL architecture foundation */
-.tlvs-language-picker{position:relative;display:flex;align-items:center;margin-left:2px}
-.tlvs-language-picker>summary{list-style:none;cursor:pointer;color:#CDBF9D;border-left:1px solid rgba(205,191,157,.28);padding:5px 16px 5px 15px;font:500 11px/1 var(--sans);letter-spacing:.105em}
-.tlvs-language-picker>summary::-webkit-details-marker{display:none}
-.language-picker.tlvs-language-picker:after{content:none;display:none}
-.tlvs-language-picker>summary::marker{content:""}
-.tlvs-language-picker>summary:after{content:'⌄';margin-left:7px;font-size:11px}
-.tlvs-language-menu{position:absolute;right:0;top:calc(100% + 10px);z-index:80;min-width:190px;padding:8px;background:#191a16;border:1px solid rgba(205,191,157,.22);box-shadow:0 12px 30px rgba(0,0,0,.35)}
-.tlvs-language-menu a{display:flex!important;justify-content:space-between;gap:18px;padding:8px 9px!important;border:0!important;color:#eee5d2!important;text-decoration:none!important;font:500 11px/1.2 var(--sans)!important;letter-spacing:.05em!important}
-.tlvs-language-menu a:hover,.tlvs-language-menu a[aria-current="page"]{background:rgba(205,191,157,.09);color:#CDBF9D!important}
-.tlvs-lang-short{min-width:34px;color:#CDBF9D}
-.tlvs-lang-name{white-space:nowrap}
-@media(max-width:1200px){
-  .mobile-nav-panel .tlvs-language-picker{display:block;margin-top:8px}
-  .mobile-nav-panel .tlvs-language-picker>summary{border-left:0;padding:9px 0}
-  .mobile-nav-panel .tlvs-language-menu{position:static;min-width:0;margin-top:6px;box-shadow:none}
-}
+
+
+
+
+
+
+
+
+
+
+
+
 
 </style>
 <style id="tlvs-v5-caption-style">
@@ -280,126 +276,6 @@ footer h2{
     align-self:center !important;
   }
 </style>
-<style id="tlvs-v7-subtle-image-corners">
-  /* Editorial content images only */
-  main img,
-  .section img,
-  .content img,
-  .editorial img {
-    border-radius:8px;
-  }
-
-  /* Keep hero / full-bleed visual language architectural and sharp */
-  .hero img,
-  .hero-image,
-  .hero-media img,
-  header img,
-  .location-signature img,
-  .hero-signature img,
-  .map-signature img,
-  svg {
-    border-radius:0 !important;
-  }
-
-  @media (max-width:640px) {
-    main img,
-    .section img,
-    .content img,
-    .editorial img {
-      border-radius:10px;
-    }
-
-    .hero img,
-    .hero-image,
-    .hero-media img,
-    header img,
-    .location-signature img,
-    .hero-signature img,
-    .map-signature img {
-      border-radius:0 !important;
-    }
-  }
-</style>
-<style id="tlvs-v8-mobile-signature-left">
-  @media (max-width:640px) {
-    .location-signature,
-    .hero-signature,
-    .map-signature,
-    .finland-signature,
-    .finland-map-signature,
-    .location-map-signature {
-      align-items:center !important;
-      text-align:center !important;
-      width:max-content !important;
-      max-width:100% !important;
-      margin-left:0 !important;
-      margin-right:auto !important;
-    }
-
-    .tlvs-map-caption {
-      text-align:center !important;
-      align-self:center !important;
-      width:auto !important;
-    }
-  }
-</style>
-<style id="tlvs-v9-sticky-header">
-  /* Keep navigation available throughout the long editorial page on all viewports. */
-  .site-header{
-    position:fixed !important;
-    top:0;
-    left:0;
-    right:0;
-    z-index:100;
-    background:transparent;
-    transition:background-color .24s ease, border-color .24s ease, backdrop-filter .24s ease;
-    border-bottom:1px solid transparent;
-  }
-
-  .site-header.is-scrolled,
-  .site-header.menu-open{
-    background:rgba(24,24,21,.94);
-    border-bottom-color:rgba(255,255,255,.06);
-    -webkit-backdrop-filter:blur(10px);
-    backdrop-filter:blur(10px);
-  }
-
-  @media (max-width:900px){
-    .site-header{position:fixed !important;}
-  }
-</style>
-<style id="tlvs-v11-charcoal-header-always">
-  .site-header{
-    background:rgba(24,24,21,.94) !important;
-    border-bottom:1px solid rgba(255,255,255,.06) !important;
-    -webkit-backdrop-filter:blur(10px);
-    backdrop-filter:blur(10px);
-  }
-</style>
-<style id="tlvs-v12-mobile-header-trimmed">
-  @media (max-width:900px){
-    .site-header{
-      position:sticky !important;
-      top:0 !important;
-      left:0;
-      right:0;
-      padding:12px var(--pad) !important;
-      min-height:56px !important;
-      align-items:center !important;
-      justify-content:space-between !important;
-      z-index:120 !important;
-    }
-
-    .brand,
-    .menu-button{
-      line-height:1 !important;
-    }
-
-    .nav{
-      top:calc(100% + 8px) !important;
-    }
-  }
-</style>
 <style id="tlvs-v13-iphone-top-gap-fix">
   @media (max-width:900px){
     html, body{
@@ -412,330 +288,13 @@ footer h2{
       padding-top:56px !important;
     }
 
-    .site-header{
-      position:fixed !important;
-      top:0 !important;
-      left:0 !important;
-      right:0 !important;
-      height:56px !important;
-      min-height:56px !important;
-      padding:0 20px !important;
-      margin:0 !important;
-      display:flex !important;
-      align-items:center !important;
-      justify-content:space-between !important;
-      background:#181815 !important;
-      border-bottom:1px solid rgba(255,255,255,.06) !important;
-      z-index:200 !important;
-      -webkit-backdrop-filter:none !important;
-      backdrop-filter:none !important;
-    }
 
-    .brand,
-    .menu-button{
-      margin:0 !important;
-      line-height:1 !important;
-    }
 
-    .menu-button{
-      padding:8px 0 !important;
-    }
 
-    .nav{
-      position:fixed !important;
-      top:56px !important;
-      left:20px !important;
-      right:20px !important;
-    }
-  }
-</style>
-<style id="tlvs-v14-header-refinement">
-  /* Desktop masthead refinement */
-  .brand{
-    font-family:var(--display);
-    font-weight:500;
-    letter-spacing:.018em;
-  }
-  .brand-desktop{display:inline;}
-  .brand-mobile{display:none;}
 
-  @media (min-width:1201px){
-    .brand{
-      font-size:clamp(17px,1.18vw,21px) !important;
-      line-height:1 !important;
-    }
-    .nav{
-      font-size:clamp(11px,.72vw,13px) !important;
-      font-weight:400 !important;
-      letter-spacing:.12em !important;
-    }
-  }
 
-  /* iPad / tablet: header is its own charcoal band, hero starts below it. */
-  @media (min-width:901px) and (max-width:1200px){
-    body{
-      padding-top:64px !important;
-    }
 
-    .site-header{
-      position:fixed !important;
-      top:0 !important;
-      left:0 !important;
-      right:0 !important;
-      height:64px !important;
-      min-height:64px !important;
-      padding:0 var(--pad) !important;
-      margin:0 !important;
-      align-items:center !important;
-      background:#181815 !important;
-      border-bottom:1px solid rgba(255,255,255,.06) !important;
-      -webkit-backdrop-filter:none !important;
-      backdrop-filter:none !important;
-      z-index:200 !important;
-    }
 
-    .brand{
-      font-size:18px !important;
-      line-height:1 !important;
-    }
-
-    .nav{
-      font-size:11px !important;
-      letter-spacing:.12em !important;
-      gap:clamp(15px,1.7vw,24px) !important;
-    }
-
-    .hero{
-      margin-top:0 !important;
-    }
-  }
-
-  /* Keep the already-approved mobile brand appearance. */
-  @media (max-width:900px){
-    .brand-desktop{display:none;}
-    .brand-mobile{display:inline;}
-  }
-</style>
-<style id="tlvs-v15-desktop-header-refinement">
-  /* Desktop: opaque header occupies its own band; hero begins below it. */
-  @media (min-width:1201px){
-    body{
-      padding-top:68px !important;
-    }
-
-    .site-header{
-      position:fixed !important;
-      top:0 !important;
-      left:0 !important;
-      right:0 !important;
-      height:68px !important;
-      min-height:68px !important;
-      padding:0 var(--pad) !important;
-      margin:0 !important;
-      display:flex !important;
-      align-items:center !important;
-      justify-content:space-between !important;
-      background:#181815 !important;
-      border-bottom:1px solid rgba(255,255,255,.055) !important;
-      -webkit-backdrop-filter:none !important;
-      backdrop-filter:none !important;
-      z-index:200 !important;
-    }
-
-    .hero{
-      margin-top:0 !important;
-    }
-
-    /* Quiet wordmark: less tracking, lighter presence, more breathing room. */
-    .brand{
-      font-family:var(--display) !important;
-      font-size:18px !important;
-      font-weight:400 !important;
-      line-height:1 !important;
-      letter-spacing:0 !important;
-      white-space:nowrap !important;
-      margin-right:48px !important;
-    }
-
-    /* Navigation remains neutral sans, but clearly readable. */
-    .nav{
-      font-family:var(--sans) !important;
-      font-size:12px !important;
-      font-weight:450 !important;
-      line-height:1 !important;
-      letter-spacing:.105em !important;
-      gap:clamp(22px,1.8vw,32px) !important;
-    }
-  }
-</style>
-<style id="tlvs-v16-champagne-nav">
-  /* Desktop only: restrained champagne navigation; brand stays off-white. */
-  @media (min-width:1201px){
-    .brand{
-      color:#F1EEE7 !important;
-    }
-    .nav a{
-      color:#CDBF9D !important;
-      transition:color .18s ease, opacity .18s ease;
-    }
-    .nav a:hover,
-    .nav a:focus-visible{
-      color:#EEE5D2 !important;
-    }
-  }
-</style>
-<style id="tlvs-v17-wordmark02">
-  /* Desktop wordmark version 02:
-     two-line, sign-inspired, refined rather than logo-heavy. */
-  @media (min-width:1201px){
-    .brand{
-      display:inline-flex !important;
-      align-items:center !important;
-      color:#F1EEE7 !important;
-      margin-right:52px !important;
-    }
-
-    .brand-desktop.brand-wordmark{
-      display:inline-flex !important;
-      flex-direction:column !important;
-      align-items:flex-start !important;
-      justify-content:center !important;
-      gap:2px !important;
-      line-height:1 !important;
-      white-space:nowrap !important;
-    }
-
-    .brand-desktop .wm-top{
-      display:block !important;
-      font-family:var(--display) !important;
-      font-weight:500 !important;
-      font-size:19px !important;
-      letter-spacing:.12em !important;
-      text-transform:uppercase !important;
-    }
-
-    .brand-desktop .wm-bottom{
-      display:block !important;
-      font-family:var(--display) !important;
-      font-weight:400 !important;
-      font-size:14px !important;
-      letter-spacing:.18em !important;
-      text-transform:uppercase !important;
-      opacity:.96 !important;
-    }
-  }
-
-  /* Keep tablets and mobiles on the approved simple brand treatment for now. */
-  @media (max-width:1200px){
-    .brand-wordmark{display:none !important;}
-  }
-</style>
-<style id="tlvs-v18-wordmark-tuning">
-  @media (min-width:1201px){
-    .brand{
-      color:#DED2B6 !important;
-    }
-
-    .brand-desktop.brand-wordmark{
-      gap:5px !important;
-    }
-
-    .brand-desktop .wm-top{
-      color:#E4D8BE !important;
-    }
-
-    .brand-desktop .wm-bottom{
-      color:#D8C9A8 !important;
-    }
-  }
-</style>
-<style id="tlvs-v19-wordmark-all-responsive">
-  /* Use the approved two-line wordmark across desktop, iPad and mobile.
-     Scale it down progressively without changing the locked desktop treatment. */
-
-  @media (max-width:1200px){
-    .brand-mobile{
-      display:none !important;
-    }
-
-    .brand-wordmark{
-      display:inline-flex !important;
-      flex-direction:column !important;
-      align-items:flex-start !important;
-      justify-content:center !important;
-      gap:4px !important;
-      line-height:1 !important;
-      white-space:nowrap !important;
-    }
-
-    .brand-wordmark .wm-top{
-      display:block !important;
-      font-family:var(--display) !important;
-      font-weight:500 !important;
-      letter-spacing:.105em !important;
-      text-transform:uppercase !important;
-      color:#E4D8BE !important;
-    }
-
-    .brand-wordmark .wm-bottom{
-      display:block !important;
-      font-family:var(--display) !important;
-      font-weight:400 !important;
-      letter-spacing:.155em !important;
-      text-transform:uppercase !important;
-      color:#D8C9A8 !important;
-    }
-  }
-
-  /* iPad landscape / large tablet */
-  @media (min-width:901px) and (max-width:1200px){
-    .brand-wordmark .wm-top{
-      font-size:17px !important;
-    }
-    .brand-wordmark .wm-bottom{
-      font-size:12.5px !important;
-    }
-  }
-
-  /* iPad portrait and larger phones */
-  @media (min-width:561px) and (max-width:900px){
-    .brand{
-      padding:0 !important;
-    }
-    .brand-wordmark .wm-top{
-      font-size:16px !important;
-    }
-    .brand-wordmark .wm-bottom{
-      font-size:11.5px !important;
-    }
-  }
-
-  /* Phones */
-  @media (max-width:560px){
-    .brand{
-      padding:0 !important;
-      margin:0 !important;
-    }
-    .brand-wordmark{
-      gap:3px !important;
-    }
-    .brand-wordmark .wm-top{
-      font-size:14px !important;
-      letter-spacing:.095em !important;
-    }
-    .brand-wordmark .wm-bottom{
-      font-size:10px !important;
-      letter-spacing:.14em !important;
-    }
-  }
-</style>
-<style id="tlvs-v20-mobile-wordmark-balance">
-  /* iPhone/mobile only: widen VILLA & SPA optically to balance LAKESIDE.
-     Desktop and iPad treatments remain unchanged. */
-  @media (max-width:560px){
-    .brand-wordmark .wm-bottom{
-      letter-spacing:.19em !important;
-    }
   }
 </style>
 <style id="tlvs-v23-rhythm-refinement">
@@ -789,32 +348,9 @@ footer h2{
     align-items:start;
   }
   .footer-signature{padding-top:2px;}
-  .footer-wordmark{
-    display:inline-flex;
-    flex-direction:column;
-    align-items:flex-start;
-    gap:7px;
-    line-height:1;
-    white-space:nowrap;
-  }
-  .footer-wm-top{
-    display:block;
-    font-family:var(--display);
-    font-weight:500;
-    font-size:25px;
-    letter-spacing:.12em;
-    text-transform:uppercase;
-    color:#E4D8BE;
-  }
-  .footer-wm-bottom{
-    display:block;
-    font-family:var(--display);
-    font-weight:400;
-    font-size:17px;
-    letter-spacing:.18em;
-    text-transform:uppercase;
-    color:#D8C9A8;
-  }
+
+
+
   .site-footer .footer-place{
     margin-top:24px;
     font-size:9px;
@@ -912,8 +448,8 @@ footer h2{
 
   @media (min-width:901px) and (max-width:1200px){
     .footer-main{grid-template-columns:minmax(210px,.65fr) minmax(450px,1.35fr);gap:60px;}
-    .footer-wm-top{font-size:22px;}
-    .footer-wm-bottom{font-size:15px;}
+
+
   }
 
   @media (max-width:900px){
@@ -927,9 +463,9 @@ footer h2{
   @media (max-width:560px){
     .site-footer{padding:68px 22px 34px !important;}
     .footer-main{gap:56px;}
-    .footer-wordmark{gap:5px;}
-    .footer-wm-top{font-size:18px;letter-spacing:.105em;}
-    .footer-wm-bottom{font-size:12.5px;letter-spacing:.19em;}
+
+
+
     .site-footer .footer-place{margin-top:18px;font-size:8px;}
     .footer-heading{font-size:30px;line-height:1.08;margin-bottom:15px;}
     .footer-intro{font-size:13.5px;line-height:1.65;}
@@ -946,92 +482,6 @@ footer h2{
 <style>
 .footer-enquiry-linkonly .footer-intro{max-width:34rem;}
 .footer-enquire-link{display:inline-flex;align-items:center;gap:.55em;text-decoration:none;width:auto;}
-</style>
-<style id="tlvs-v29-native-mobile-menu">
-  .mobile-menu-native{display:none}
-
-  @media (max-width:900px){
-    .menu-button{display:none !important}
-    .desktop-nav{display:none !important}
-
-    .mobile-menu-native{
-      display:block;
-      position:relative;
-      z-index:700;
-      margin-left:auto;
-    }
-
-    .mobile-menu-native summary{
-      list-style:none;
-      cursor:pointer;
-      user-select:none;
-      -webkit-user-select:none;
-      padding:10px 0 10px 14px;
-      color:#CDBF9D;
-      font:400 11px/1 var(--sans);
-      letter-spacing:.13em;
-      text-transform:uppercase;
-      outline:none;
-    }
-    .mobile-menu-native summary::-webkit-details-marker{display:none}
-    .mobile-menu-native summary::marker{content:""}
-
-    .menu-label-close{display:none}
-    .mobile-menu-native[open] .menu-label-open{display:none}
-    .mobile-menu-native[open] .menu-label-close{display:inline}
-
-    .mobile-menu-native[open]::before{
-      content:"";
-      position:fixed;
-      inset:56px 0 0 0;
-      background:rgba(0,0,0,.18);
-      z-index:610;
-      pointer-events:none;
-    }
-
-    .mobile-nav-panel{
-      position:fixed;
-      top:64px;
-      left:20px;
-      right:20px;
-      z-index:620;
-      display:flex;
-      flex-direction:column;
-      align-items:flex-start;
-      gap:16px;
-      max-height:calc(100svh - 84px);
-      overflow:auto;
-      -webkit-overflow-scrolling:touch;
-      padding:20px 18px 22px;
-      background:#181815;
-      border:1px solid rgba(205,191,157,.16);
-      border-radius:12px;
-      box-shadow:0 16px 40px rgba(0,0,0,.30);
-    }
-
-    .mobile-nav-panel a{
-      width:100%;
-      color:#CDBF9D;
-      font:400 10px/1.25 var(--sans);
-      letter-spacing:.13em;
-      text-transform:uppercase;
-      padding:2px 0;
-    }
-
-    .mobile-nav-panel .mobile-language-picker{
-      width:100%;
-      margin:4px 0 0 !important;
-      padding-top:13px;
-      border-top:1px solid rgba(255,255,255,.08);
-    }
-
-    .mobile-nav-panel .mobile-language-picker select{
-      width:100%;
-      border-left:0 !important;
-      padding:8px 20px 8px 0 !important;
-      font-size:11px !important;
-    }
-  }
 </style>
 <script type="application/ld+json">
 {
@@ -1114,15 +564,13 @@ footer h2{
   ]
 }
   </script>
+<link rel="stylesheet" href="../assets/site-chrome.css"/>
 </head>
 <body>
 <header class="site-header">
 <a aria-label="Lakeside Villa &amp; Spa" class="brand" href="/no/">
-<span aria-hidden="true" class="brand-desktop brand-wordmark">
-<span class="wm-top">LAKESIDE</span>
-<span class="wm-bottom">VILLA &amp; SPA</span>
-</span>
-<span class="brand-mobile">LAKESIDE VILLA &amp; SPA</span>
+<img class="tlvs-wordmark" src="../assets/lakeside-wordmark.svg" alt="Lakeside Villa &amp; Spa" width="108" height="30"/>
+
 </a>
 <nav aria-label="Primary" class="nav desktop-nav" id="nav">
 <a data-i18n="navVilla" href="/no/the-villa.html">Villaen</a><a data-i18n="navLake" href="/no/lakeside-life.html">Livet ved innsjøen</a><a data-i18n="navSpa" href="/no/spa-wellness.html">Spa &amp; velvære</a><a data-i18n="navLocation" href="/no/location.html">Beliggenhet</a><a data-i18n="navServices" href="/no/private-services.html">Private tjenester</a>
@@ -1275,10 +723,7 @@ footer h2{
 <div class="footer-shell">
 <div class="footer-main">
 <div class="footer-signature">
-<div aria-label="Lakeside Villa &amp; Spa" class="footer-wordmark">
-<span class="footer-wm-top">LAKESIDE</span>
-<span class="footer-wm-bottom">VILLA &amp; SPA</span>
-</div>
+<img class="tlvs-wordmark" src="../assets/lakeside-wordmark.svg" alt="Lakeside Villa &amp; Spa" width="108" height="30"/>
 <div class="footer-place" data-i18n="footerPlace">Tahko · Finland</div>
 </div>
 <div class="footer-enquiry footer-enquiry-linkonly">
