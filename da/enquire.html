@@ -367,31 +367,32 @@ footer h2{
 
   /* Unified enquiry composition */
   .enquire-main{padding-top:88px;padding-bottom:96px}
-  .enquire-shell{display:grid;grid-template-columns:minmax(0,42fr) minmax(0,52fr);gap:6%;align-items:center}
-  .enquire-media{margin:0}
-  .enquire-media img{width:100%;height:auto;border-radius:8px}
+  .enquire-shell{display:grid;grid-template-columns:minmax(0,42fr) minmax(0,52fr);gap:6%;align-items:stretch}
+  .enquire-media{position:relative;margin:0;min-height:620px;overflow:hidden;border-radius:8px}
+  .enquire-media picture{position:absolute;inset:0;display:block}
+  .enquire-media img{width:111.111%;max-width:none;height:100%;object-fit:cover;object-position:right center;transform:translateX(-10%)}
   .enquire-intro{max-width:none;min-width:0}
-  .enquire-intro h1{font-family:var(--serif);font-size:48px;line-height:1.06;margin-bottom:22px}
+  .enquire-intro h1{font-family:var(--serif);font-size:46px;line-height:1.06;margin-bottom:22px}
   .enquire-intro p{max-width:none;font-size:14px;line-height:1.75}
   .direct-email{margin-top:24px;padding-top:0;border-top:0}
   .direct-email a{font-family:var(--serif);font-size:21px;overflow-wrap:anywhere}
   .private-acquisition{margin-top:38px;padding-top:34px;border-top:1px solid var(--line)}
   .private-acquisition .eyebrow{margin-bottom:14px}
-  .private-acquisition h2{font:400 32px/1.12 var(--serif);letter-spacing:.01em;margin:0 0 20px;color:#f1eadc;text-wrap:balance}
+  .private-acquisition h2{font:400 30px/1.12 var(--serif);letter-spacing:.01em;margin:0 0 20px;color:#f1eadc;text-wrap:balance}
   .private-acquisition p+p{margin-top:18px}
   @media(max-width:900px){
     .enquire-main{padding-top:64px;padding-bottom:76px}
     .enquire-shell{grid-template-columns:1fr;gap:42px;max-width:720px}
-    .enquire-media{max-width:540px}
-    .enquire-intro h1{font-size:46px}
+    .enquire-media{width:100%;max-width:540px;min-height:0;aspect-ratio:1.2}
+    .enquire-intro h1{font-size:42px}
   }
   @media(max-width:560px){
     .enquire-main{padding:40px 22px 64px}
     .enquire-shell{gap:34px}
-    .enquire-intro h1{font-size:40px}
+    .enquire-intro h1{font-size:38px}
     .enquire-intro p{font-size:14px}
     .private-acquisition{margin-top:32px;padding-top:30px}
-    .private-acquisition h2{font-size:30px}
+    .private-acquisition h2{font-size:28px}
     .direct-email a{font-size:20px}
   }
 </style>
