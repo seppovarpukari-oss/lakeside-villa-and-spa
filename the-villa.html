@@ -224,7 +224,20 @@ html:not([lang="en"]) body.tlvs-p0098-villa .hero-copy p[data-i18n="heroSub"]{di
       "@id": "https://lakesidevillaandspa.com/#website",
       "url": "https://lakesidevillaandspa.com/",
       "name": "Lakeside Villa & Spa",
-      "inLanguage": "en"
+      "inLanguage": [
+        "en",
+        "fi",
+        "sv",
+        "nb",
+        "da",
+        "de",
+        "fr",
+        "es",
+        "nl",
+        "et",
+        "it",
+        "zh-CN"
+      ]
     },
     {
       "@type": "WebPage",
@@ -234,7 +247,7 @@ html:not([lang="en"]) body.tlvs-p0098-villa .hero-copy p[data-i18n="heroSub"]{di
       "isPartOf": {
         "@id": "https://lakesidevillaandspa.com/#website"
       },
-      "about": {
+      "mainEntity": {
         "@id": "https://lakesidevillaandspa.com/#villa"
       },
       "inLanguage": "en",
@@ -245,69 +258,37 @@ html:not([lang="en"]) body.tlvs-p0098-villa .hero-copy p[data-i18n="heroSub"]{di
       "@id": "https://lakesidevillaandspa.com/#villa",
       "name": "Lakeside Villa & Spa",
       "url": "https://lakesidevillaandspa.com/",
-      "accommodationCategory": "Villa",
+      "description": {
+        "@value": "A private lakeside villa in Tahko, Finland.",
+        "@language": "en"
+      },
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Tahko",
-        "addressRegion": "North Savo",
         "addressCountry": "FI"
       },
-      "image": "https://lakesidevillaandspa.com/assets/images/2808bfd1208823fb.jpg",
-      "floorSize": {
-        "@type": "QuantitativeValue",
-        "value": 301.5,
-        "unitCode": "MTK"
-      },
+      "image": "https://lakesidevillaandspa.com/assets/images/e591d26847ff373b.png",
       "numberOfBedrooms": 4,
       "occupancy": {
         "@type": "QuantitativeValue",
-        "maxValue": 12,
+        "value": 12,
         "unitText": "guests"
       },
       "amenityFeature": [
         {
           "@type": "LocationFeatureSpecification",
-          "name": "Sleeps 8 comfortably",
+          "name": {
+            "@value": "Private indoor pool",
+            "@language": "en"
+          },
           "value": true
         },
         {
           "@type": "LocationFeatureSpecification",
-          "name": "Up to 12 with sofa beds",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Billiards room",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Utility and laundry room",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Gaggenau kitchen appliances",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Indoor dining for 8",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Parking for up to 6 cars",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "2 guest garage spaces",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "EV charging in guest garage",
+          "name": {
+            "@value": "Finnish sauna",
+            "@language": "en"
+          },
           "value": true
         }
       ]

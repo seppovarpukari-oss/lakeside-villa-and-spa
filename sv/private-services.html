@@ -354,62 +354,74 @@ footer h2{
   "@graph": [
     {
       "@type": "WebSite",
-      "@id": "https://lakesidevillaandspa.com/sv/#website",
+      "@id": "https://lakesidevillaandspa.com/#website",
       "url": "https://lakesidevillaandspa.com/",
       "name": "Lakeside Villa & Spa",
-      "inLanguage": "en"
+      "inLanguage": [
+        "en",
+        "fi",
+        "sv",
+        "nb",
+        "da",
+        "de",
+        "fr",
+        "es",
+        "nl",
+        "et",
+        "it",
+        "zh-CN"
+      ]
     },
     {
       "@type": "WebPage",
       "@id": "https://lakesidevillaandspa.com/sv/private-services.html#webpage",
       "url": "https://lakesidevillaandspa.com/sv/private-services.html",
-      "name": "Private Villa Services in Finland | Lakeside Villa & Spa",
+      "name": "Privata villatjänster | Lakeside Villa & Spa",
       "isPartOf": {
-        "@id": "https://lakesidevillaandspa.com/sv/#website"
+        "@id": "https://lakesidevillaandspa.com/#website"
       },
       "about": {
         "@id": "https://lakesidevillaandspa.com/#villa"
       },
-      "inLanguage": "en",
-      "description": "Bespoke private villa services in Tahko, including arrival preparation, housekeeping, maintenance, private chef options, catering and transport."
+      "inLanguage": "sv",
+      "description": "Lakeside Villa & Spa i Tahko – privat villa vid sjön med eget spa och det finska sjölandskapet året runt."
     },
     {
       "@type": "Accommodation",
       "@id": "https://lakesidevillaandspa.com/#villa",
       "name": "Lakeside Villa & Spa",
       "url": "https://lakesidevillaandspa.com/",
-      "accommodationCategory": "Villa",
+      "description": {
+        "@value": "En privat villa vid sjön i Tahko, Finland.",
+        "@language": "sv"
+      },
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Tahko",
-        "addressRegion": "North Savo",
         "addressCountry": "FI"
       },
-      "image": "https://lakesidevillaandspa.com/assets/images/417729d46c123eab.png",
+      "image": "https://lakesidevillaandspa.com/assets/images/e591d26847ff373b.png",
+      "numberOfBedrooms": 4,
+      "occupancy": {
+        "@type": "QuantitativeValue",
+        "value": 12,
+        "unitText": "guests"
+      },
       "amenityFeature": [
         {
           "@type": "LocationFeatureSpecification",
-          "name": "Bespoke arrival preparation — available on request",
+          "name": {
+            "@value": "Privat inomhuspool",
+            "@language": "sv"
+          },
           "value": true
         },
         {
           "@type": "LocationFeatureSpecification",
-          "name": "Housekeeping and maintenance support — available on request",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Private chef and catering — available on request",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Prepared meals and groceries — available on request",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Transport — available on request",
+          "name": {
+            "@value": "Finsk bastu",
+            "@language": "sv"
+          },
           "value": true
         }
       ]

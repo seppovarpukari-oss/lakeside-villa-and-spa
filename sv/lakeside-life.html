@@ -410,62 +410,74 @@ footer h2{
   "@graph": [
     {
       "@type": "WebSite",
-      "@id": "https://lakesidevillaandspa.com/sv/#website",
+      "@id": "https://lakesidevillaandspa.com/#website",
       "url": "https://lakesidevillaandspa.com/",
       "name": "Lakeside Villa & Spa",
-      "inLanguage": "en"
+      "inLanguage": [
+        "en",
+        "fi",
+        "sv",
+        "nb",
+        "da",
+        "de",
+        "fr",
+        "es",
+        "nl",
+        "et",
+        "it",
+        "zh-CN"
+      ]
     },
     {
       "@type": "WebPage",
       "@id": "https://lakesidevillaandspa.com/sv/lakeside-life.html#webpage",
       "url": "https://lakesidevillaandspa.com/sv/lakeside-life.html",
-      "name": "Finnish Lakeland Summer & Lakeside Life | Lakeside Villa & Spa",
+      "name": "Livet vid sjön i Finland | Lakeside Villa & Spa",
       "isPartOf": {
-        "@id": "https://lakesidevillaandspa.com/sv/#website"
+        "@id": "https://lakesidevillaandspa.com/#website"
       },
       "about": {
         "@id": "https://lakesidevillaandspa.com/#villa"
       },
-      "inLanguage": "en",
-      "description": "Experience Finnish Lakeland from your own lakeside retreat in Tahko: swimming, boating, fishing and cool Nordic summer days on Lake Syväri."
+      "inLanguage": "sv",
+      "description": "Lakeside Villa & Spa i Tahko – privat villa vid sjön med eget spa och det finska sjölandskapet året runt."
     },
     {
       "@type": "Accommodation",
       "@id": "https://lakesidevillaandspa.com/#villa",
       "name": "Lakeside Villa & Spa",
       "url": "https://lakesidevillaandspa.com/",
-      "accommodationCategory": "Villa",
+      "description": {
+        "@value": "En privat villa vid sjön i Tahko, Finland.",
+        "@language": "sv"
+      },
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Tahko",
-        "addressRegion": "North Savo",
         "addressCountry": "FI"
       },
-      "image": "https://lakesidevillaandspa.com/assets/images/67485244f94bec4d.png",
+      "image": "https://lakesidevillaandspa.com/assets/images/e591d26847ff373b.png",
+      "numberOfBedrooms": 4,
+      "occupancy": {
+        "@type": "QuantitativeValue",
+        "value": 12,
+        "unitText": "guests"
+      },
       "amenityFeature": [
         {
           "@type": "LocationFeatureSpecification",
-          "name": "Ca 52 m privat strandlinje",
+          "name": {
+            "@value": "Privat inomhuspool",
+            "@language": "sv"
+          },
           "value": true
         },
         {
           "@type": "LocationFeatureSpecification",
-          "name": "Stor privat belyst brygga",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Bad direkt från fastigheten",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Illuminated route from the villa to the dock",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Seasonal outdoor living and dining",
+          "name": {
+            "@value": "Finsk bastu",
+            "@language": "sv"
+          },
           "value": true
         }
       ]

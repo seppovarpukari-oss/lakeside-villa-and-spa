@@ -162,62 +162,74 @@ footer h2{
   "@graph": [
     {
       "@type": "WebSite",
-      "@id": "https://lakesidevillaandspa.com/zh-cn/#website",
+      "@id": "https://lakesidevillaandspa.com/#website",
       "url": "https://lakesidevillaandspa.com/",
       "name": "Lakeside Villa & Spa",
-      "inLanguage": "en"
+      "inLanguage": [
+        "en",
+        "fi",
+        "sv",
+        "nb",
+        "da",
+        "de",
+        "fr",
+        "es",
+        "nl",
+        "et",
+        "it",
+        "zh-CN"
+      ]
     },
     {
       "@type": "WebPage",
       "@id": "https://lakesidevillaandspa.com/zh-cn/spa-wellness.html#webpage",
       "url": "https://lakesidevillaandspa.com/zh-cn/spa-wellness.html",
-      "name": "Private Spa Villa with Pool & Sauna in Finland | Lakeside Villa & Spa",
+      "name": "私人泳池与芬兰桑拿别墅 | Lakeside Villa & Spa",
       "isPartOf": {
-        "@id": "https://lakesidevillaandspa.com/zh-cn/#website"
+        "@id": "https://lakesidevillaandspa.com/#website"
       },
       "about": {
         "@id": "https://lakesidevillaandspa.com/#villa"
       },
-      "inLanguage": "en",
-      "description": "A private spa villa in Tahko, Finland, with indoor pool, 芬兰桑拿 and year-round wellness spaces for a quiet Nordic retreat by the lake."
+      "inLanguage": "zh-CN",
+      "description": "Lakeside Villa & Spa 位于芬兰 Tahko：拥有私人湖岸与独立水疗空间的高端湖畔别墅。"
     },
     {
       "@type": "Accommodation",
       "@id": "https://lakesidevillaandspa.com/#villa",
       "name": "Lakeside Villa & Spa",
       "url": "https://lakesidevillaandspa.com/",
-      "accommodationCategory": "Villa",
+      "description": {
+        "@value": "位于芬兰塔赫科的私人湖畔别墅。",
+        "@language": "zh-CN"
+      },
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Tahko",
-        "addressRegion": "North Savo",
         "addressCountry": "FI"
       },
-      "image": "https://lakesidevillaandspa.com/assets/images/706eb947cff417a5.jpg",
+      "image": "https://lakesidevillaandspa.com/assets/images/e591d26847ff373b.png",
+      "numberOfBedrooms": 4,
+      "occupancy": {
+        "@type": "QuantitativeValue",
+        "value": 12,
+        "unitText": "guests"
+      },
       "amenityFeature": [
         {
           "@type": "LocationFeatureSpecification",
-          "name": "私人室内泳池",
+          "name": {
+            "@value": "私人室内泳池",
+            "@language": "zh-CN"
+          },
           "value": true
         },
         {
           "@type": "LocationFeatureSpecification",
-          "name": "芬兰桑拿",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "蒸汽桑拿",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "泳池内水疗按摩喷头",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Private year-round spa and wellness area",
+          "name": {
+            "@value": "芬兰桑拿",
+            "@language": "zh-CN"
+          },
           "value": true
         }
       ]

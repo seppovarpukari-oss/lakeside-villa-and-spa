@@ -182,38 +182,77 @@ footer h2{
   "@graph": [
     {
       "@type": "WebSite",
-      "@id": "https://lakesidevillaandspa.com/fr/#website",
+      "@id": "https://lakesidevillaandspa.com/#website",
       "url": "https://lakesidevillaandspa.com/",
       "name": "Lakeside Villa & Spa",
-      "inLanguage": "en"
+      "inLanguage": [
+        "en",
+        "fi",
+        "sv",
+        "nb",
+        "da",
+        "de",
+        "fr",
+        "es",
+        "nl",
+        "et",
+        "it",
+        "zh-CN"
+      ]
     },
     {
       "@type": "WebPage",
       "@id": "https://lakesidevillaandspa.com/fr/location.html#webpage",
       "url": "https://lakesidevillaandspa.com/fr/location.html",
-      "name": "Tahko, Finland – Lakeside Villa Location | Lakeside Villa & Spa",
+      "name": "Tahko, Finlande – localisation | Lakeside Villa & Spa",
       "isPartOf": {
-        "@id": "https://lakesidevillaandspa.com/fr/#website"
+        "@id": "https://lakesidevillaandspa.com/#website"
       },
       "about": {
         "@id": "https://lakesidevillaandspa.com/#villa"
       },
-      "inLanguage": "en",
-      "description": "Lakeside Villa & Spa is set on Lake Syväri in Tahko, Finnish Lakeland, close to ski lifts, golf and year-round outdoor experiences."
+      "inLanguage": "fr",
+      "description": "Lakeside Villa & Spa à Tahko – villa privée au bord du lac avec spa, au cœur de la région des lacs finlandais."
     },
     {
       "@type": "Accommodation",
       "@id": "https://lakesidevillaandspa.com/#villa",
       "name": "Lakeside Villa & Spa",
       "url": "https://lakesidevillaandspa.com/",
-      "accommodationCategory": "Villa",
+      "description": {
+        "@value": "Une villa privée au bord du lac à Tahko, en Finlande.",
+        "@language": "fr"
+      },
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Tahko",
-        "addressRegion": "North Savo",
         "addressCountry": "FI"
       },
-      "image": "https://lakesidevillaandspa.com/assets/images/fe497e6a381acdf8.jpg"
+      "image": "https://lakesidevillaandspa.com/assets/images/e591d26847ff373b.png",
+      "numberOfBedrooms": 4,
+      "occupancy": {
+        "@type": "QuantitativeValue",
+        "value": 12,
+        "unitText": "guests"
+      },
+      "amenityFeature": [
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": {
+            "@value": "Piscine intérieure privée",
+            "@language": "fr"
+          },
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": {
+            "@value": "Sauna finlandais",
+            "@language": "fr"
+          },
+          "value": true
+        }
+      ]
     }
   ]
 }

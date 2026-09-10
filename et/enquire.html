@@ -371,38 +371,77 @@ footer h2{
   "@graph": [
     {
       "@type": "WebSite",
-      "@id": "https://lakesidevillaandspa.com/et/#website",
+      "@id": "https://lakesidevillaandspa.com/#website",
       "url": "https://lakesidevillaandspa.com/",
       "name": "Lakeside Villa & Spa",
-      "inLanguage": "en"
+      "inLanguage": [
+        "en",
+        "fi",
+        "sv",
+        "nb",
+        "da",
+        "de",
+        "fr",
+        "es",
+        "nl",
+        "et",
+        "it",
+        "zh-CN"
+      ]
     },
     {
       "@type": "WebPage",
       "@id": "https://lakesidevillaandspa.com/et/enquire.html#webpage",
       "url": "https://lakesidevillaandspa.com/et/enquire.html",
-      "name": "Enquire | Lakeside Villa & Spa, Tahko, Finland",
+      "name": "Päring | Lakeside Villa & Spa",
       "isPartOf": {
-        "@id": "https://lakesidevillaandspa.com/et/#website"
+        "@id": "https://lakesidevillaandspa.com/#website"
       },
       "about": {
         "@id": "https://lakesidevillaandspa.com/#villa"
       },
-      "inLanguage": "en",
-      "description": "Enquire about a stay, private event or tailored experience at Lakeside Villa & Spa, a private lakeside villa in Tahko, Finland."
+      "inLanguage": "et",
+      "description": "Lakeside Villa & Spa Tahkol – privaatne järveäärne villa oma spaaga Soome järvemaal."
     },
     {
       "@type": "Accommodation",
       "@id": "https://lakesidevillaandspa.com/#villa",
       "name": "Lakeside Villa & Spa",
       "url": "https://lakesidevillaandspa.com/",
-      "accommodationCategory": "Villa",
+      "description": {
+        "@value": "Privaatne järveäärne villa Tahkol, Soomes.",
+        "@language": "et"
+      },
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Tahko",
-        "addressRegion": "North Savo",
         "addressCountry": "FI"
       },
-      "image": "https://lakesidevillaandspa.com/assets/images/e591d26847ff373b.png"
+      "image": "https://lakesidevillaandspa.com/assets/images/e591d26847ff373b.png",
+      "numberOfBedrooms": 4,
+      "occupancy": {
+        "@type": "QuantitativeValue",
+        "value": 12,
+        "unitText": "guests"
+      },
+      "amenityFeature": [
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": {
+            "@value": "Privaatne sisebassein",
+            "@language": "et"
+          },
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": {
+            "@value": "Soome saun",
+            "@language": "et"
+          },
+          "value": true
+        }
+      ]
     }
   ]
 }
