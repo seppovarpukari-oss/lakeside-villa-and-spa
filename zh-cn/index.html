@@ -1039,73 +1039,74 @@ footer h2{
   "@graph": [
     {
       "@type": "WebSite",
-      "@id": "https://lakesidevillaandspa.com/zh-cn/#website",
-      "url": "https://lakesidevillaandspa.com/zh-cn/",
+      "@id": "https://lakesidevillaandspa.com/#website",
+      "url": "https://lakesidevillaandspa.com/",
       "name": "Lakeside Villa & Spa",
-      "inLanguage": "en"
+      "inLanguage": [
+        "en",
+        "fi",
+        "sv",
+        "nb",
+        "da",
+        "de",
+        "fr",
+        "es",
+        "nl",
+        "et",
+        "it",
+        "zh-CN"
+      ]
     },
     {
       "@type": "WebPage",
       "@id": "https://lakesidevillaandspa.com/zh-cn/#webpage",
       "url": "https://lakesidevillaandspa.com/zh-cn/",
-      "name": "Luxury Lakeside Villa in Tahko, Finland | Lakeside Villa & Spa",
+      "name": "芬兰 Tahko 湖畔豪华别墅 | Lakeside Villa & Spa",
       "isPartOf": {
-        "@id": "https://lakesidevillaandspa.com/zh-cn/#website"
+        "@id": "https://lakesidevillaandspa.com/#website"
       },
-      "about": {
-        "@id": "https://lakesidevillaandspa.com/zh-cn/#villa"
+      "mainEntity": {
+        "@id": "https://lakesidevillaandspa.com/#villa"
       },
-      "inLanguage": "en",
-      "description": "A private luxury lakeside villa in Tahko, Finnish Lakeland, with year-round lake living, private spa and easy access to Tahko experiences."
+      "inLanguage": "zh-CN",
+      "description": "Lakeside Villa & Spa 位于芬兰 Tahko：拥有私人湖岸与独立水疗空间的高端湖畔别墅。"
     },
     {
       "@type": "Accommodation",
-      "@id": "https://lakesidevillaandspa.com/zh-cn/#villa",
+      "@id": "https://lakesidevillaandspa.com/#villa",
       "name": "Lakeside Villa & Spa",
-      "url": "https://lakesidevillaandspa.com/zh-cn/",
-      "accommodationCategory": "Villa",
+      "url": "https://lakesidevillaandspa.com/",
+      "description": {
+        "@value": "位于芬兰塔赫科的私人湖畔别墅。",
+        "@language": "zh-CN"
+      },
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Tahko",
-        "addressRegion": "North Savo",
         "addressCountry": "FI"
       },
-      "image": "https://lakesidevillaandspa.com/zh-cn/assets/images/e591d26847ff373b.png",
-      "floorSize": {
-        "@type": "QuantitativeValue",
-        "value": 301.5,
-        "unitCode": "MTK"
-      },
+      "image": "https://lakesidevillaandspa.com/assets/images/e591d26847ff373b.png",
       "numberOfBedrooms": 4,
       "occupancy": {
         "@type": "QuantitativeValue",
-        "maxValue": 12,
+        "value": 12,
         "unitText": "guests"
       },
       "amenityFeature": [
         {
           "@type": "LocationFeatureSpecification",
-          "name": "舒适入住 8 人",
+          "name": {
+            "@value": "私人室内泳池",
+            "@language": "zh-CN"
+          },
           "value": true
         },
         {
           "@type": "LocationFeatureSpecification",
-          "name": "使用沙发床最多可住 12 人",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "私人室内泳池",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "芬兰桑拿",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "约 52 米私人湖岸线",
+          "name": {
+            "@value": "芬兰桑拿",
+            "@language": "zh-CN"
+          },
           "value": true
         }
       ]

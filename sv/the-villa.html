@@ -219,93 +219,74 @@ html:not([lang="en"]) body.tlvs-p0098-villa .hero-copy p[data-i18n="heroSub"]{di
   "@graph": [
     {
       "@type": "WebSite",
-      "@id": "https://lakesidevillaandspa.com/sv/#website",
+      "@id": "https://lakesidevillaandspa.com/#website",
       "url": "https://lakesidevillaandspa.com/",
       "name": "Lakeside Villa & Spa",
-      "inLanguage": "en"
+      "inLanguage": [
+        "en",
+        "fi",
+        "sv",
+        "nb",
+        "da",
+        "de",
+        "fr",
+        "es",
+        "nl",
+        "et",
+        "it",
+        "zh-CN"
+      ]
     },
     {
       "@type": "WebPage",
       "@id": "https://lakesidevillaandspa.com/sv/the-villa.html#webpage",
       "url": "https://lakesidevillaandspa.com/sv/the-villa.html",
-      "name": "Private Luxury Villa in Tahko, Finland | Lakeside Villa & Spa",
+      "name": "Privat villa i Tahko | Lakeside Villa & Spa",
       "isPartOf": {
-        "@id": "https://lakesidevillaandspa.com/sv/#website"
+        "@id": "https://lakesidevillaandspa.com/#website"
       },
-      "about": {
+      "mainEntity": {
         "@id": "https://lakesidevillaandspa.com/#villa"
       },
-      "inLanguage": "en",
-      "description": "Discover a private lakeside villa in Tahko, Finland: generous living spaces, lake views, private rooms and a setting designed for time together."
+      "inLanguage": "sv",
+      "description": "Lakeside Villa & Spa i Tahko – privat villa vid sjön med eget spa och det finska sjölandskapet året runt."
     },
     {
       "@type": "Accommodation",
       "@id": "https://lakesidevillaandspa.com/#villa",
       "name": "Lakeside Villa & Spa",
       "url": "https://lakesidevillaandspa.com/",
-      "accommodationCategory": "Villa",
+      "description": {
+        "@value": "En privat villa vid sjön i Tahko, Finland.",
+        "@language": "sv"
+      },
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Tahko",
-        "addressRegion": "North Savo",
         "addressCountry": "FI"
       },
-      "image": "https://lakesidevillaandspa.com/assets/images/2808bfd1208823fb.jpg",
-      "floorSize": {
-        "@type": "QuantitativeValue",
-        "value": 301.5,
-        "unitCode": "MTK"
-      },
+      "image": "https://lakesidevillaandspa.com/assets/images/e591d26847ff373b.png",
       "numberOfBedrooms": 4,
       "occupancy": {
         "@type": "QuantitativeValue",
-        "maxValue": 12,
+        "value": 12,
         "unitText": "guests"
       },
       "amenityFeature": [
         {
           "@type": "LocationFeatureSpecification",
-          "name": "Bekvämt för 8 gäster",
+          "name": {
+            "@value": "Privat inomhuspool",
+            "@language": "sv"
+          },
           "value": true
         },
         {
           "@type": "LocationFeatureSpecification",
-          "name": "Upp till 12 med bäddsoffor",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Billiards room",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Utility and laundry room",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Gaggenau kitchen appliances",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Indoor dining for 8",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Parkering för upp till 6 bilar",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "2 guest garage spaces",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "EV charging in guest garage",
+          "name": {
+            "@value": "Finsk bastu",
+            "@language": "sv"
+          },
           "value": true
         }
       ]

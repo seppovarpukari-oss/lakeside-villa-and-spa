@@ -219,93 +219,74 @@ html:not([lang="en"]) body.tlvs-p0098-villa .hero-copy p[data-i18n="heroSub"]{di
   "@graph": [
     {
       "@type": "WebSite",
-      "@id": "https://lakesidevillaandspa.com/es/#website",
+      "@id": "https://lakesidevillaandspa.com/#website",
       "url": "https://lakesidevillaandspa.com/",
       "name": "Lakeside Villa & Spa",
-      "inLanguage": "en"
+      "inLanguage": [
+        "en",
+        "fi",
+        "sv",
+        "nb",
+        "da",
+        "de",
+        "fr",
+        "es",
+        "nl",
+        "et",
+        "it",
+        "zh-CN"
+      ]
     },
     {
       "@type": "WebPage",
       "@id": "https://lakesidevillaandspa.com/es/the-villa.html#webpage",
       "url": "https://lakesidevillaandspa.com/es/the-villa.html",
-      "name": "Private Luxury Villa in Tahko, Finland | Lakeside Villa & Spa",
+      "name": "Villa privada en Tahko | Lakeside Villa & Spa",
       "isPartOf": {
-        "@id": "https://lakesidevillaandspa.com/es/#website"
+        "@id": "https://lakesidevillaandspa.com/#website"
       },
-      "about": {
+      "mainEntity": {
         "@id": "https://lakesidevillaandspa.com/#villa"
       },
-      "inLanguage": "en",
-      "description": "Discover a private lakeside villa in Tahko, Finland: generous living spaces, lake views, private rooms and a setting designed for time together."
+      "inLanguage": "es",
+      "description": "Lakeside Villa & Spa en Tahko – villa privada junto al lago con spa propio en la región de los lagos de Finlandia."
     },
     {
       "@type": "Accommodation",
       "@id": "https://lakesidevillaandspa.com/#villa",
       "name": "Lakeside Villa & Spa",
       "url": "https://lakesidevillaandspa.com/",
-      "accommodationCategory": "Villa",
+      "description": {
+        "@value": "Una villa privada junto al lago en Tahko, Finlandia.",
+        "@language": "es"
+      },
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Tahko",
-        "addressRegion": "North Savo",
         "addressCountry": "FI"
       },
-      "image": "https://lakesidevillaandspa.com/assets/images/2808bfd1208823fb.jpg",
-      "floorSize": {
-        "@type": "QuantitativeValue",
-        "value": 301.5,
-        "unitCode": "MTK"
-      },
+      "image": "https://lakesidevillaandspa.com/assets/images/e591d26847ff373b.png",
       "numberOfBedrooms": 4,
       "occupancy": {
         "@type": "QuantitativeValue",
-        "maxValue": 12,
+        "value": 12,
         "unitText": "guests"
       },
       "amenityFeature": [
         {
           "@type": "LocationFeatureSpecification",
-          "name": "Cómoda para 8 huéspedes",
+          "name": {
+            "@value": "Piscina interior privada",
+            "@language": "es"
+          },
           "value": true
         },
         {
           "@type": "LocationFeatureSpecification",
-          "name": "Hasta 12 con sofás cama",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Billiards room",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Utility and laundry room",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Gaggenau kitchen appliances",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Indoor dining for 8",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Aparcamiento para hasta 6 coches",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "2 guest garage spaces",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "EV charging in guest garage",
+          "name": {
+            "@value": "Sauna finlandesa",
+            "@language": "es"
+          },
           "value": true
         }
       ]

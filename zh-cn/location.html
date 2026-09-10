@@ -182,38 +182,77 @@ footer h2{
   "@graph": [
     {
       "@type": "WebSite",
-      "@id": "https://lakesidevillaandspa.com/zh-cn/#website",
+      "@id": "https://lakesidevillaandspa.com/#website",
       "url": "https://lakesidevillaandspa.com/",
       "name": "Lakeside Villa & Spa",
-      "inLanguage": "en"
+      "inLanguage": [
+        "en",
+        "fi",
+        "sv",
+        "nb",
+        "da",
+        "de",
+        "fr",
+        "es",
+        "nl",
+        "et",
+        "it",
+        "zh-CN"
+      ]
     },
     {
       "@type": "WebPage",
       "@id": "https://lakesidevillaandspa.com/zh-cn/location.html#webpage",
       "url": "https://lakesidevillaandspa.com/zh-cn/location.html",
-      "name": "Tahko, Finland – Lakeside Villa Location | Lakeside Villa & Spa",
+      "name": "Tahko 芬兰 – 位置 | Lakeside Villa & Spa",
       "isPartOf": {
-        "@id": "https://lakesidevillaandspa.com/zh-cn/#website"
+        "@id": "https://lakesidevillaandspa.com/#website"
       },
       "about": {
         "@id": "https://lakesidevillaandspa.com/#villa"
       },
-      "inLanguage": "en",
-      "description": "Lakeside Villa & Spa is set on Lake Syväri in Tahko, Finnish Lakeland, close to ski lifts, golf and year-round outdoor experiences."
+      "inLanguage": "zh-CN",
+      "description": "Lakeside Villa & Spa 位于芬兰 Tahko：拥有私人湖岸与独立水疗空间的高端湖畔别墅。"
     },
     {
       "@type": "Accommodation",
       "@id": "https://lakesidevillaandspa.com/#villa",
       "name": "Lakeside Villa & Spa",
       "url": "https://lakesidevillaandspa.com/",
-      "accommodationCategory": "Villa",
+      "description": {
+        "@value": "位于芬兰塔赫科的私人湖畔别墅。",
+        "@language": "zh-CN"
+      },
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Tahko",
-        "addressRegion": "North Savo",
         "addressCountry": "FI"
       },
-      "image": "https://lakesidevillaandspa.com/assets/images/fe497e6a381acdf8.jpg"
+      "image": "https://lakesidevillaandspa.com/assets/images/e591d26847ff373b.png",
+      "numberOfBedrooms": 4,
+      "occupancy": {
+        "@type": "QuantitativeValue",
+        "value": 12,
+        "unitText": "guests"
+      },
+      "amenityFeature": [
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": {
+            "@value": "私人室内泳池",
+            "@language": "zh-CN"
+          },
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": {
+            "@value": "芬兰桑拿",
+            "@language": "zh-CN"
+          },
+          "value": true
+        }
+      ]
     }
   ]
 }

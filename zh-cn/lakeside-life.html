@@ -410,62 +410,74 @@ footer h2{
   "@graph": [
     {
       "@type": "WebSite",
-      "@id": "https://lakesidevillaandspa.com/zh-cn/#website",
+      "@id": "https://lakesidevillaandspa.com/#website",
       "url": "https://lakesidevillaandspa.com/",
       "name": "Lakeside Villa & Spa",
-      "inLanguage": "en"
+      "inLanguage": [
+        "en",
+        "fi",
+        "sv",
+        "nb",
+        "da",
+        "de",
+        "fr",
+        "es",
+        "nl",
+        "et",
+        "it",
+        "zh-CN"
+      ]
     },
     {
       "@type": "WebPage",
       "@id": "https://lakesidevillaandspa.com/zh-cn/lakeside-life.html#webpage",
       "url": "https://lakesidevillaandspa.com/zh-cn/lakeside-life.html",
-      "name": "Finnish Lakeland Summer & Lakeside Life | Lakeside Villa & Spa",
+      "name": "芬兰湖区湖畔生活 | Lakeside Villa & Spa",
       "isPartOf": {
-        "@id": "https://lakesidevillaandspa.com/zh-cn/#website"
+        "@id": "https://lakesidevillaandspa.com/#website"
       },
       "about": {
         "@id": "https://lakesidevillaandspa.com/#villa"
       },
-      "inLanguage": "en",
-      "description": "Experience Finnish Lakeland from your own lakeside retreat in Tahko: swimming, boating, fishing and cool Nordic summer days on Lake Syväri."
+      "inLanguage": "zh-CN",
+      "description": "Lakeside Villa & Spa 位于芬兰 Tahko：拥有私人湖岸与独立水疗空间的高端湖畔别墅。"
     },
     {
       "@type": "Accommodation",
       "@id": "https://lakesidevillaandspa.com/#villa",
       "name": "Lakeside Villa & Spa",
       "url": "https://lakesidevillaandspa.com/",
-      "accommodationCategory": "Villa",
+      "description": {
+        "@value": "位于芬兰塔赫科的私人湖畔别墅。",
+        "@language": "zh-CN"
+      },
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Tahko",
-        "addressRegion": "North Savo",
         "addressCountry": "FI"
       },
-      "image": "https://lakesidevillaandspa.com/assets/images/67485244f94bec4d.png",
+      "image": "https://lakesidevillaandspa.com/assets/images/e591d26847ff373b.png",
+      "numberOfBedrooms": 4,
+      "occupancy": {
+        "@type": "QuantitativeValue",
+        "value": 12,
+        "unitText": "guests"
+      },
       "amenityFeature": [
         {
           "@type": "LocationFeatureSpecification",
-          "name": "约 52 米私人湖岸线",
+          "name": {
+            "@value": "私人室内泳池",
+            "@language": "zh-CN"
+          },
           "value": true
         },
         {
           "@type": "LocationFeatureSpecification",
-          "name": "大型私人照明码头",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "可从物业直接下水游泳",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Illuminated route from the villa to the dock",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Seasonal outdoor living and dining",
+          "name": {
+            "@value": "芬兰桑拿",
+            "@language": "zh-CN"
+          },
           "value": true
         }
       ]

@@ -1039,73 +1039,74 @@ footer h2{
   "@graph": [
     {
       "@type": "WebSite",
-      "@id": "https://lakesidevillaandspa.com/fr/#website",
-      "url": "https://lakesidevillaandspa.com/fr/",
+      "@id": "https://lakesidevillaandspa.com/#website",
+      "url": "https://lakesidevillaandspa.com/",
       "name": "Lakeside Villa & Spa",
-      "inLanguage": "en"
+      "inLanguage": [
+        "en",
+        "fi",
+        "sv",
+        "nb",
+        "da",
+        "de",
+        "fr",
+        "es",
+        "nl",
+        "et",
+        "it",
+        "zh-CN"
+      ]
     },
     {
       "@type": "WebPage",
       "@id": "https://lakesidevillaandspa.com/fr/#webpage",
       "url": "https://lakesidevillaandspa.com/fr/",
-      "name": "Luxury Lakeside Villa in Tahko, Finland | Lakeside Villa & Spa",
+      "name": "Villa de luxe au bord du lac à Tahko | Lakeside Villa & Spa",
       "isPartOf": {
-        "@id": "https://lakesidevillaandspa.com/fr/#website"
+        "@id": "https://lakesidevillaandspa.com/#website"
       },
-      "about": {
-        "@id": "https://lakesidevillaandspa.com/fr/#villa"
+      "mainEntity": {
+        "@id": "https://lakesidevillaandspa.com/#villa"
       },
-      "inLanguage": "en",
-      "description": "A private luxury lakeside villa in Tahko, Finnish Lakeland, with year-round lake living, private spa and easy access to Tahko experiences."
+      "inLanguage": "fr",
+      "description": "Lakeside Villa & Spa à Tahko – villa privée au bord du lac avec spa, au cœur de la région des lacs finlandais."
     },
     {
       "@type": "Accommodation",
-      "@id": "https://lakesidevillaandspa.com/fr/#villa",
+      "@id": "https://lakesidevillaandspa.com/#villa",
       "name": "Lakeside Villa & Spa",
-      "url": "https://lakesidevillaandspa.com/fr/",
-      "accommodationCategory": "Villa",
+      "url": "https://lakesidevillaandspa.com/",
+      "description": {
+        "@value": "Une villa privée au bord du lac à Tahko, en Finlande.",
+        "@language": "fr"
+      },
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Tahko",
-        "addressRegion": "North Savo",
         "addressCountry": "FI"
       },
-      "image": "https://lakesidevillaandspa.com/fr/assets/images/e591d26847ff373b.png",
-      "floorSize": {
-        "@type": "QuantitativeValue",
-        "value": 301.5,
-        "unitCode": "MTK"
-      },
+      "image": "https://lakesidevillaandspa.com/assets/images/e591d26847ff373b.png",
       "numberOfBedrooms": 4,
       "occupancy": {
         "@type": "QuantitativeValue",
-        "maxValue": 12,
+        "value": 12,
         "unitText": "guests"
       },
       "amenityFeature": [
         {
           "@type": "LocationFeatureSpecification",
-          "name": "Confortable pour 8 personnes",
+          "name": {
+            "@value": "Piscine intérieure privée",
+            "@language": "fr"
+          },
           "value": true
         },
         {
           "@type": "LocationFeatureSpecification",
-          "name": "Jusqu’à 12 avec canapés-lits",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Piscine intérieure privée",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Sauna finlandais",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Environ 52 m de rive privée",
+          "name": {
+            "@value": "Sauna finlandais",
+            "@language": "fr"
+          },
           "value": true
         }
       ]

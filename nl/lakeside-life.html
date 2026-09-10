@@ -410,62 +410,74 @@ footer h2{
   "@graph": [
     {
       "@type": "WebSite",
-      "@id": "https://lakesidevillaandspa.com/nl/#website",
+      "@id": "https://lakesidevillaandspa.com/#website",
       "url": "https://lakesidevillaandspa.com/",
       "name": "Lakeside Villa & Spa",
-      "inLanguage": "en"
+      "inLanguage": [
+        "en",
+        "fi",
+        "sv",
+        "nb",
+        "da",
+        "de",
+        "fr",
+        "es",
+        "nl",
+        "et",
+        "it",
+        "zh-CN"
+      ]
     },
     {
       "@type": "WebPage",
       "@id": "https://lakesidevillaandspa.com/nl/lakeside-life.html#webpage",
       "url": "https://lakesidevillaandspa.com/nl/lakeside-life.html",
-      "name": "Finnish Lakeland Summer & Lakeside Life | Lakeside Villa & Spa",
+      "name": "Leven aan het meer in Finland | Lakeside Villa & Spa",
       "isPartOf": {
-        "@id": "https://lakesidevillaandspa.com/nl/#website"
+        "@id": "https://lakesidevillaandspa.com/#website"
       },
       "about": {
         "@id": "https://lakesidevillaandspa.com/#villa"
       },
-      "inLanguage": "en",
-      "description": "Experience Finnish Lakeland from your own lakeside retreat in Tahko: swimming, boating, fishing and cool Nordic summer days on Lake Syväri."
+      "inLanguage": "nl",
+      "description": "Lakeside Villa & Spa in Tahko – privévilla aan het meer met eigen spa in het Finse merengebied."
     },
     {
       "@type": "Accommodation",
       "@id": "https://lakesidevillaandspa.com/#villa",
       "name": "Lakeside Villa & Spa",
       "url": "https://lakesidevillaandspa.com/",
-      "accommodationCategory": "Villa",
+      "description": {
+        "@value": "Een privévilla aan het meer in Tahko, Finland.",
+        "@language": "nl"
+      },
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Tahko",
-        "addressRegion": "North Savo",
         "addressCountry": "FI"
       },
-      "image": "https://lakesidevillaandspa.com/assets/images/67485244f94bec4d.png",
+      "image": "https://lakesidevillaandspa.com/assets/images/e591d26847ff373b.png",
+      "numberOfBedrooms": 4,
+      "occupancy": {
+        "@type": "QuantitativeValue",
+        "value": 12,
+        "unitText": "guests"
+      },
       "amenityFeature": [
         {
           "@type": "LocationFeatureSpecification",
-          "name": "Ca. 52 m privé-oever",
+          "name": {
+            "@value": "Privé binnenzwembad",
+            "@language": "nl"
+          },
           "value": true
         },
         {
           "@type": "LocationFeatureSpecification",
-          "name": "Grote privé verlichte steiger",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Directe zwemtoegang vanaf het terrein",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Illuminated route from the villa to the dock",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Seasonal outdoor living and dining",
+          "name": {
+            "@value": "Finse sauna",
+            "@language": "nl"
+          },
           "value": true
         }
       ]

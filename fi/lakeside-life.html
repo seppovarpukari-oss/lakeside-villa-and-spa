@@ -410,62 +410,74 @@ footer h2{
   "@graph": [
     {
       "@type": "WebSite",
-      "@id": "https://lakesidevillaandspa.com/fi/#website",
+      "@id": "https://lakesidevillaandspa.com/#website",
       "url": "https://lakesidevillaandspa.com/",
       "name": "Lakeside Villa & Spa",
-      "inLanguage": "en"
+      "inLanguage": [
+        "en",
+        "fi",
+        "sv",
+        "nb",
+        "da",
+        "de",
+        "fr",
+        "es",
+        "nl",
+        "et",
+        "it",
+        "zh-CN"
+      ]
     },
     {
       "@type": "WebPage",
       "@id": "https://lakesidevillaandspa.com/fi/lakeside-life.html#webpage",
       "url": "https://lakesidevillaandspa.com/fi/lakeside-life.html",
-      "name": "Finnish Lakeland Summer & Lakeside Life | Lakeside Villa & Spa",
+      "name": "Järvielämää Suomen järvialueella | Lakeside Villa & Spa",
       "isPartOf": {
-        "@id": "https://lakesidevillaandspa.com/fi/#website"
+        "@id": "https://lakesidevillaandspa.com/#website"
       },
       "about": {
         "@id": "https://lakesidevillaandspa.com/#villa"
       },
-      "inLanguage": "en",
-      "description": "Experience Finnish Lakeland from your own lakeside retreat in Tahko: swimming, boating, fishing and cool Nordic summer days on Lake Syväri."
+      "inLanguage": "fi",
+      "description": "Lakeside Villa & Spa Tahkolla – yksityinen järvihuvila, oma spa ja ympärivuotinen suomalainen järviluonto."
     },
     {
       "@type": "Accommodation",
       "@id": "https://lakesidevillaandspa.com/#villa",
       "name": "Lakeside Villa & Spa",
       "url": "https://lakesidevillaandspa.com/",
-      "accommodationCategory": "Villa",
+      "description": {
+        "@value": "Yksityinen järvihuvila Tahkolla, Suomessa.",
+        "@language": "fi"
+      },
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Tahko",
-        "addressRegion": "North Savo",
         "addressCountry": "FI"
       },
-      "image": "https://lakesidevillaandspa.com/assets/images/67485244f94bec4d.png",
+      "image": "https://lakesidevillaandspa.com/assets/images/e591d26847ff373b.png",
+      "numberOfBedrooms": 4,
+      "occupancy": {
+        "@type": "QuantitativeValue",
+        "value": 12,
+        "unitText": "guests"
+      },
       "amenityFeature": [
         {
           "@type": "LocationFeatureSpecification",
-          "name": "Noin 52 m omaa rantaviivaa",
+          "name": {
+            "@value": "Yksityinen sisäuima-allas",
+            "@language": "fi"
+          },
           "value": true
         },
         {
           "@type": "LocationFeatureSpecification",
-          "name": "Suuri oma valaistu laituri",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Uimaan suoraan kiinteistöltä",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Illuminated route from the villa to the dock",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Seasonal outdoor living and dining",
+          "name": {
+            "@value": "Suomalainen sauna",
+            "@language": "fi"
+          },
           "value": true
         }
       ]

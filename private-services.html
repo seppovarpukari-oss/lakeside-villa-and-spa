@@ -359,7 +359,20 @@ footer h2{
       "@id": "https://lakesidevillaandspa.com/#website",
       "url": "https://lakesidevillaandspa.com/",
       "name": "Lakeside Villa & Spa",
-      "inLanguage": "en"
+      "inLanguage": [
+        "en",
+        "fi",
+        "sv",
+        "nb",
+        "da",
+        "de",
+        "fr",
+        "es",
+        "nl",
+        "et",
+        "it",
+        "zh-CN"
+      ]
     },
     {
       "@type": "WebPage",
@@ -380,38 +393,37 @@ footer h2{
       "@id": "https://lakesidevillaandspa.com/#villa",
       "name": "Lakeside Villa & Spa",
       "url": "https://lakesidevillaandspa.com/",
-      "accommodationCategory": "Villa",
+      "description": {
+        "@value": "A private lakeside villa in Tahko, Finland.",
+        "@language": "en"
+      },
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Tahko",
-        "addressRegion": "North Savo",
         "addressCountry": "FI"
       },
-      "image": "https://lakesidevillaandspa.com/assets/images/417729d46c123eab.png",
+      "image": "https://lakesidevillaandspa.com/assets/images/e591d26847ff373b.png",
+      "numberOfBedrooms": 4,
+      "occupancy": {
+        "@type": "QuantitativeValue",
+        "value": 12,
+        "unitText": "guests"
+      },
       "amenityFeature": [
         {
           "@type": "LocationFeatureSpecification",
-          "name": "Bespoke arrival preparation — available on request",
+          "name": {
+            "@value": "Private indoor pool",
+            "@language": "en"
+          },
           "value": true
         },
         {
           "@type": "LocationFeatureSpecification",
-          "name": "Housekeeping and maintenance support — available on request",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Private chef and catering — available on request",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Prepared meals and groceries — available on request",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Transport — available on request",
+          "name": {
+            "@value": "Finnish sauna",
+            "@language": "en"
+          },
           "value": true
         }
       ]
