@@ -4,8 +4,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
-<title>咨询 | Lakeside Villa &amp; Spa</title>
-<meta content="Lakeside Villa &amp; Spa 位于芬兰 Tahko：拥有私人湖岸与独立水疗空间的高端湖畔别墅。" name="description"/>
+<title>住宿咨询与私人购置 | Lakeside Villa &amp; Spa</title>
+<meta content="咨询芬兰塔赫科豪华湖畔别墅 Lakeside Villa &amp; Spa 的住宿、服务或私人购置事宜。业主可考虑通过非公开交易出售物业。" name="description"/>
 <link href="https://lakesidevillaandspa.com/zh-cn/enquire.html" rel="canonical"/>
 <link href="https://lakesidevillaandspa.com/enquire.html" hreflang="en" rel="alternate"/>
 <link href="https://lakesidevillaandspa.com/fi/enquire.html" hreflang="fi" rel="alternate"/>
@@ -24,13 +24,13 @@
 <meta content="#11110f" name="theme-color"/>
 <meta content="website" property="og:type"/>
 <meta content="Lakeside Villa &amp; Spa" property="og:site_name"/>
-<meta content="咨询 | Lakeside Villa &amp; Spa" property="og:title"/>
-<meta content="Lakeside Villa &amp; Spa 位于芬兰 Tahko：拥有私人湖岸与独立水疗空间的高端湖畔别墅。" property="og:description"/>
+<meta content="住宿咨询与私人购置 | Lakeside Villa &amp; Spa" property="og:title"/>
+<meta content="咨询芬兰塔赫科豪华湖畔别墅 Lakeside Villa &amp; Spa 的住宿、服务或私人购置事宜。业主可考虑通过非公开交易出售物业。" property="og:description"/>
 <meta content="https://lakesidevillaandspa.com/zh-cn/enquire.html" property="og:url"/>
 <meta content="https://lakesidevillaandspa.com/assets/images/e591d26847ff373b.png" property="og:image"/>
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="咨询 | Lakeside Villa &amp; Spa" name="twitter:title"/>
-<meta content="Lakeside Villa &amp; Spa 位于芬兰 Tahko：拥有私人湖岸与独立水疗空间的高端湖畔别墅。" name="twitter:description"/>
+<meta content="住宿咨询与私人购置 | Lakeside Villa &amp; Spa" name="twitter:title"/>
+<meta content="咨询芬兰塔赫科豪华湖畔别墅 Lakeside Villa &amp; Spa 的住宿、服务或私人购置事宜。业主可考虑通过非公开交易出售物业。" name="twitter:description"/>
 <meta content="https://lakesidevillaandspa.com/assets/images/e591d26847ff373b.png" name="twitter:image"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&amp;family=Inter:wght@300;400;500&amp;display=swap" rel="stylesheet"/><style>
 :root{--bg:#11110f;--header:#171714;--ink:#eee9de;--muted:#b9b3a8;--gold:#cdbf9d;--gold2:#e4d8be;--gold3:#d8c9a8;--line:rgba(205,191,157,.18);--pad:clamp(30px,5vw,76px);--serif:"EB Garamond",Georgia,"Times New Roman",serif;--sans:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;--header-h:68px}
@@ -364,6 +364,36 @@ footer h2{
     .direct-email a{font-size:17px;word-break:break-word}
     .enquire-footer{padding:34px 22px 40px;align-items:flex-start;flex-direction:column}
   }
+
+  /* Unified enquiry composition */
+  .enquire-main{padding-top:88px;padding-bottom:96px}
+  .enquire-shell{display:grid;grid-template-columns:minmax(0,42fr) minmax(0,52fr);gap:6%;align-items:center}
+  .enquire-media{margin:0}
+  .enquire-media img{width:100%;height:auto;border-radius:8px}
+  .enquire-intro{max-width:none;min-width:0}
+  .enquire-intro h1{font-family:var(--serif);font-size:48px;line-height:1.06;margin-bottom:22px}
+  .enquire-intro p{max-width:none;font-size:14px;line-height:1.75}
+  .direct-email{margin-top:24px;padding-top:0;border-top:0}
+  .direct-email a{font-family:var(--serif);font-size:21px;overflow-wrap:anywhere}
+  .private-acquisition{margin-top:38px;padding-top:34px;border-top:1px solid var(--line)}
+  .private-acquisition .eyebrow{margin-bottom:14px}
+  .private-acquisition h2{font:400 32px/1.12 var(--serif);letter-spacing:.01em;margin:0 0 20px;color:#f1eadc;text-wrap:balance}
+  .private-acquisition p+p{margin-top:18px}
+  @media(max-width:900px){
+    .enquire-main{padding-top:64px;padding-bottom:76px}
+    .enquire-shell{grid-template-columns:1fr;gap:42px;max-width:720px}
+    .enquire-media{max-width:540px}
+    .enquire-intro h1{font-size:46px}
+  }
+  @media(max-width:560px){
+    .enquire-main{padding:40px 22px 64px}
+    .enquire-shell{gap:34px}
+    .enquire-intro h1{font-size:40px}
+    .enquire-intro p{font-size:14px}
+    .private-acquisition{margin-top:32px;padding-top:30px}
+    .private-acquisition h2{font-size:30px}
+    .direct-email a{font-size:20px}
+  }
 </style>
 <script type="application/ld+json">
 {
@@ -393,7 +423,7 @@ footer h2{
       "@type": "WebPage",
       "@id": "https://lakesidevillaandspa.com/zh-cn/enquire.html#webpage",
       "url": "https://lakesidevillaandspa.com/zh-cn/enquire.html",
-      "name": "咨询 | Lakeside Villa & Spa",
+      "name": "住宿咨询与私人购置 | Lakeside Villa & Spa",
       "isPartOf": {
         "@id": "https://lakesidevillaandspa.com/#website"
       },
@@ -401,7 +431,7 @@ footer h2{
         "@id": "https://lakesidevillaandspa.com/#villa"
       },
       "inLanguage": "zh-CN",
-      "description": "Lakeside Villa & Spa 位于芬兰 Tahko：拥有私人湖岸与独立水疗空间的高端湖畔别墅。"
+      "description": "咨询芬兰塔赫科豪华湖畔别墅 Lakeside Villa & Spa 的住宿、服务或私人购置事宜。业主可考虑通过非公开交易出售物业。"
     },
     {
       "@type": "Accommodation",
@@ -485,7 +515,14 @@ footer h2{
 </details></nav></details></header>
 <main class="enquire-main" id="top">
 <div class="enquire-shell">
-<section class="enquire-intro">
+<figure class="enquire-media">
+<picture>
+<source srcset="../assets/images/enquire-terrace-evening.webp" type="image/webp"/>
+<img src="../assets/images/enquire-terrace-evening.jpg" alt="夜晚暖光映照下的 Lakeside Villa &amp; Spa 露台" width="1447" height="1087" decoding="async"/>
+</picture>
+</figure>
+<div class="enquire-intro">
+<section class="general-enquiry">
 <div class="eyebrow" data-i18n="eyebrow">咨询</div>
 <h1>我们能为您提供什么帮助？</h1>
 <p>如需咨询房源情况、住宿、服务或其他事项，请直接通过电子邮件联系我们。</p>
@@ -495,6 +532,14 @@ footer h2{
 <a href="mailto:info@lakesidevillaandspa.com">info@lakesidevillaandspa.com</a>
 </div>
 </section>
+<section class="private-acquisition" aria-labelledby="acquisition-heading">
+<div class="eyebrow">私人出售</div>
+<h2 id="acquisition-heading">购置咨询</h2>
+<p>Lakeside Villa &amp; Spa 可通过非公开的私人交易购买，前提是业主接受足够有吸引力的报价。该物业并未公开挂牌出售，也未设定公开售价。</p>
+<p>欢迎有诚意的买家咨询，并提出意向报价。</p>
+<div class="direct-email"><a href="mailto:info@lakesidevillaandspa.com?subject=%E7%89%A9%E4%B8%9A%E8%B4%AD%E7%BD%AE%E5%92%A8%E8%AF%A2%20%E2%80%93%20Lakeside%20Villa%20%26%20Spa">info@lakesidevillaandspa.com</a></div>
+</section>
+</div>
 
 </div>
 </main>
