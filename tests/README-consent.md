@@ -1,0 +1,11 @@
+# Site consent
+
+All 84 content pages load `assets/site-consent.js` once, beside the existing shared stylesheet. The 404 utility page is unchanged. Banner styles live in `assets/site-chrome.css`; all 12 translations are in the script. No page copy, metadata, structured data or images are changed.
+
+This implements [Google's basic consent mode](https://developers.google.com/tag-platform/security/guides/consent): four consent types default to denied before configuration; gtag.js only loads after analytics permission. Accept all enables the only optional purpose, analytics. Advertising storage, user data and personalization remain denied, and Google signals and ad personalization are disabled. The gtag.js download is hosted on googletagmanager.com; this is the Google tag, not a Tag Manager container.
+
+The versioned `tlvs-consent-v1` localStorage choice lasts 180 days and applies across all language paths on the same origin. Invalid, expired or inaccessible storage fails closed. If storage is disabled, the current page works but subsequent pages ask again. Existing footer cookie links reopen the banner; reject revokes consent immediately, sets the GA disable flag and removes accessible `_ga` cookies. Other tabs and back-forward cache restores recheck consent. Only one script and one GA configuration are created per document.
+
+Run `node tests/consent.cjs` with Playwright available and Google Chrome installed. The suite serves the repository on a temporary localhost port, validates all 84 includes, and exercises EN/FI/DE in 1440px desktop and 390px mobile viewports. It checks default denial, rejection, acceptance, no duplicate configuration, footer reopening, cross-page/language persistence, revocation, cookie cleanup, malformed/expired storage, blocked storage, viewport bounds and console/page errors. The Google script is stubbed in this local test to avoid sending test visits. Set `CONSENT_SCREENSHOTS` to an output directory to capture each initial view.
+
+Production verification must additionally check the real Google script and GA collection request after consent; a successful collection response verifies transport, not processing in Analytics reports. No Analytics or Search Console administration is needed or performed by this change.
