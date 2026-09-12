@@ -1,0 +1,34 @@
+name: Fix Documented consent separation
+
+on:
+  push:
+    branches:
+      - chatgpt/documented-production-v1
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    if: ${{ !contains(github.event.head_commit.message, '[consent-fixed]') && !contains(github.event.head_commit.message, '[qa-result]') }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: chatgpt/documented-production-v1
+          fetch-depth: 0
+      - name: Restore consent module from production main
+        run: |
+          git fetch origin main
+          git show origin/main:assets/site-consent.js > assets/site-consent.js
+          rm -f QA_RESULT.txt
+      - name: Verify Documented integration
+        run: python3 scripts/qa_documented.py
+      - name: Remove one-time workflow and commit
+        run: |
+          rm -f .github/workflows/fix-documented-consent.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Separate consent from Documented integration [consent-fixed]"
+          git push origin HEAD:chatgpt/documented-production-v1
