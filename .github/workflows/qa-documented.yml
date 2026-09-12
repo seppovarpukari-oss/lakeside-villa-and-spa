@@ -1,0 +1,19 @@
+name: QA Documented candidate
+
+on:
+  push:
+    branches:
+      - chatgpt/documented-production-v1
+
+permissions:
+  contents: read
+
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: chatgpt/documented-production-v1
+      - name: Run TLVS Documented QA
+        run: python3 scripts/qa_documented.py
