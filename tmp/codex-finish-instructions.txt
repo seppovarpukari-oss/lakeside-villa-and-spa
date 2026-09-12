@@ -1,0 +1,1 @@
+Finish PR #14 only. Use the branch TLVS_PRODUCTION_FINISH_SCOPE.md as the locked scope. Do not merge main. Do not implement Villa Assistant backend. Do not alter TLVS Master. Complete image asset integration, localized copy alignment, responsive QA and SEO regression before requesting review.
