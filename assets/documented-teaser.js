@@ -1,6 +1,20 @@
-/* TLVS Home — The Villa, Documented teaser. Keeps the existing Home HTML untouched while the new crawlable page is introduced. */
+/* TLVS Documented integration: mobile language picker on Documented pages + locked teaser on Home URLs. */
 (function(){
   'use strict';
+
+  /* The existing mobile chrome includes its own language picker on production pages.
+     The new Documented pages reuse the desktop picker and clone it into the mobile menu
+     so all 12 crawlable language equivalents remain reachable on every viewport. */
+  if(document.body && document.body.classList.contains('documented-page')){
+    const mobilePanel=document.querySelector('.mobile-nav-panel');
+    const desktopPicker=document.querySelector('.desktop-nav .tlvs-language-picker');
+    if(mobilePanel && desktopPicker && !mobilePanel.querySelector('.tlvs-language-picker')){
+      const picker=desktopPicker.cloneNode(true);
+      picker.classList.add('mobile-language-picker');
+      mobilePanel.appendChild(picker);
+    }
+  }
+
   const p=location.pathname.replace(/\/index\.html$/,'/');
   const homes=new Set(['/','/fi/','/sv/','/no/','/da/','/de/','/fr/','/es/','/nl/','/et/','/it/','/zh-cn/']);
   if(!homes.has(p) || document.querySelector('.tlvs-documented-teaser')) return;
