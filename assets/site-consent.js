@@ -40,7 +40,6 @@
   function applyChoice() {
     const accepted = !!(choice && choice.analytics);
     window['ga-disable-' + measurementId] = !accepted;
-    // No advertising is used: all three advertising consent types stay denied.
     window.gtag('consent', 'update', Object.assign({}, denied, { analytics_storage: accepted ? 'granted' : 'denied' }));
     if (!accepted) { clearAnalyticsCookies(); return; }
     if (loaded) return;
@@ -215,7 +214,6 @@
       panel.hidden = !!choice;
       close.hidden = !choice;
     });
-    // Recheck expiry / consent after restoring a page from the back-forward cache.
     window.addEventListener('pageshow', event => {
       if (!event.persisted) return;
       choice = readChoice();
@@ -226,4 +224,12 @@
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', mount, { once: true });
   else mount();
+}());
+
+/* Shared loader for the locked Home Documented teaser. The teaser module itself decides whether the current URL is a Home page. */
+(function(){
+  const s=document.createElement('script');
+  s.src='/assets/documented-teaser.js';
+  s.defer=true;
+  document.head.appendChild(s);
 }());
