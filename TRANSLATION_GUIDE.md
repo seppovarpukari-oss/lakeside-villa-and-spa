@@ -4,13 +4,17 @@
 English (`en`) is the only source language. Other languages are derived from English.
 
 ## Supported languages
-English, Finnish, Swedish, German, French, Spanish, Dutch and Simplified Chinese.
+English, Finnish, Swedish, Norwegian Bokmål, Danish, German, French, Spanish, Dutch, Estonian, Italian and Simplified Chinese.
 
 ## Quality rule
 Translate for a premium private-lakeside hospitality audience. Preserve meaning, restraint and editorial tone rather than translating word-for-word. Headings should stay concise enough to fit the approved layout.
 
+For **The Villa, Documented**, the approved English production copy is locked. Localized versions must preserve the same meaning and information hierarchy; they must not introduce extra claims, extra access levels, or device-specific wording that is not present in the approved English source.
+
 ## Locked names and terms
 Do not translate: Lakeside Villa & Spa, Tahko, Kuopio, Siilinjärvi, Syväri, Tahkolahti, Lastukoski, Old Course, Lake & Forest.
+
+The future access progression must remain exactly: `Explore → Verified Property Access → Owner Access`.
 
 ## Future automation
 When English copy changes:

@@ -9,10 +9,10 @@ const files = fs.readdirSync(root, {recursive:true}).filter(f => f.endsWith('.ht
 const key = 'tlvs-consent-v1';
 const tag = 'G-BD1V798REN';
 (async () => {
-  assert.equal(files.length, 84);
+  assert.equal(files.length, 96);
   for (const file of files) {
     const html = fs.readFileSync(path.join(root, file), 'utf8');
-    assert.equal((html.match(/<script defer src="(?:\.\.\/)?assets\/site-consent.js"><\/script>/g)||[]).length, 1, file);
+    assert.equal((html.match(/<script defer src="(?:\.\.\/|\/)?assets\/site-consent.js"><\/script>/g)||[]).length, 1, file);
     assert(!/googletagmanager|google-analytics|gtag\(/.test(html), file);
   }
   const server = http.createServer((req,res) => {
@@ -30,7 +30,7 @@ const tag = 'G-BD1V798REN';
   let browser;
   try {
     browser = await chromium.launch({channel:'chrome',headless:true});
-    for (const lang of ['', 'fi/', 'de/']) for (const mobile of [false,true]) {
+    for (const lang of ['', 'fi/', 'de/']) for (const mobile of [false,true]) for (const entry of ['index.html', 'the-villa-documented.html']) {
       const context = await browser.newContext({viewport:mobile?{width:390,height:844}:{width:1440,height:1000},isMobile:mobile,hasTouch:mobile});
       // Stub only Google's measurement script: exercise our state machine without recording test visits.
       let requests = 0;
@@ -39,7 +39,7 @@ const tag = 'G-BD1V798REN';
       const errors = [];
       page.on('pageerror',e=>errors.push(e.message));
       page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
-      await page.goto(origin+'/'+lang+'index.html', {waitUntil:'networkidle'});
+      await page.goto(origin+'/'+lang+entry, {waitUntil:'networkidle'});
       assert(await page.locator('#tlvs-consent').isVisible());
       assert.equal(requests,0);
       assert.deepEqual(await page.evaluate(()=>({...window.dataLayer[0][2]})),{analytics_storage:'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'});
@@ -49,7 +49,7 @@ const tag = 'G-BD1V798REN';
       assert(rejectBounds.y + rejectBounds.height <= (mobile ? 844 : 1000));
       if(process.env.CONSENT_SCREENSHOTS) {
         fs.mkdirSync(process.env.CONSENT_SCREENSHOTS,{recursive:true});
-        await page.screenshot({path:path.join(process.env.CONSENT_SCREENSHOTS,(lang.slice(0,-1)||'en')+'-'+(mobile?'mobile':'desktop')+'.png')});
+        await page.screenshot({path:path.join(process.env.CONSENT_SCREENSHOTS,(lang.slice(0,-1)||'en')+'-'+entry.replace('.html','')+'-'+(mobile?'mobile':'desktop')+'.png')});
       }
       await page.locator('#tlvs-consent-reject').click();
       await page.goto(origin+'/'+lang+'the-villa.html',{waitUntil:'networkidle'});
@@ -89,7 +89,7 @@ const tag = 'G-BD1V798REN';
         assert.equal(requests,2);
       }
       assert.deepEqual(errors,[]);
-      console.log('PASS',lang||'en/',mobile?'mobile':'desktop','default/reject/accept/reopen/persistence/revoke/invalid/expiry; no console errors');
+      console.log('PASS',lang||'en/',entry,mobile?'mobile':'desktop','default/reject/accept/reopen/persistence/revoke/invalid/expiry; no console errors');
       await context.close();
     }
     const syncContext = await browser.newContext({viewport:{width:320,height:568}});
@@ -121,6 +121,6 @@ const tag = 'G-BD1V798REN';
     await page.locator('#tlvs-consent-reject').click();
     assert(!await page.locator('#tlvs-consent').isVisible());
     await context.close();
-    console.log('PASS 84 includes; blocked storage remains usable');
+    console.log('PASS 96 includes; blocked storage remains usable');
   } finally {if(browser)await browser.close();server.close();}
 })().catch(e=>{console.error(e);process.exitCode=1;});
