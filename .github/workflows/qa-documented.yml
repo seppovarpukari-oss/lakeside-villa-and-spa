@@ -6,14 +6,30 @@ on:
       - chatgpt/documented-production-v1
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   qa:
+    if: ${{ !contains(github.event.head_commit.message, '[qa-result]') }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           ref: chatgpt/documented-production-v1
+          fetch-depth: 0
       - name: Run TLVS Documented QA
-        run: python3 scripts/qa_documented.py
+        shell: bash
+        run: |
+          set +e
+          python3 scripts/qa_documented.py > QA_RESULT.txt 2>&1
+          status=$?
+          cat QA_RESULT.txt
+          if [ "$status" -ne 0 ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add QA_RESULT.txt
+            git commit -m "Record Documented QA failure [qa-result]"
+            git push origin HEAD:chatgpt/documented-production-v1
+            exit "$status"
+          fi
+          rm -f QA_RESULT.txt
