@@ -67,7 +67,7 @@ for folder in folders:
 
     doc = Path(folder) / "the-villa-documented.html" if folder else Path("the-villa-documented.html")
     d = doc.read_text(encoding="utf-8")
-    if len(re.findall(r"<h1\\b", d, flags=re.I)) != 1:
+    if len(re.findall(r"<h1\b", d, flags=re.I)) != 1:
         raise SystemExit(f"{doc}: expected exactly one H1")
     for lang in langs:
         if f'hreflang="{lang}"' not in d:
