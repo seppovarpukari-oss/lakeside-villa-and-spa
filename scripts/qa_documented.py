@@ -45,15 +45,23 @@ for folder in folders:
             errors.append(f"{dp}: missing locked access level {level}")
     if '/assets/documented-teaser.js' not in text:
         errors.append(f"{dp}: mobile language-picker helper missing")
-    # Documented is intentionally not a new main-nav link.
-    nav_start = text.find('class="nav desktop-nav"')
-    nav_end = text.find('</nav>', nav_start)
-    if nav_start >= 0 and nav_end > nav_start and 'the-villa-documented.html' in text[nav_start:nav_end]:
-        errors.append(f"{dp}: Documented must not be added to main navigation")
+
+    # Documented is intentionally absent from the top-level main navigation.
+    # Language-equivalent Documented URLs inside the language picker are correct
+    # and must not be mistaken for primary navigation links.
+    nav_match = re.search(r'<nav[^>]*class="[^"]*desktop-nav[^"]*"[^>]*>(.*?)</nav>', text, flags=re.I | re.S)
+    if nav_match:
+        nav_html = nav_match.group(1)
+        nav_without_picker = re.sub(
+            r'<details[^>]*class="[^"]*language-picker[^"]*"[^>]*>.*?</details>',
+            '', nav_html, flags=re.I | re.S
+        )
+        if 'the-villa-documented.html' in nav_without_picker:
+            errors.append(f"{dp}: Documented must not be added to main navigation")
 
 consent = Path("assets/site-consent.js").read_text(encoding="utf-8")
-if 'documented-teaser.js' in consent or 'Documented teaser' in consent:
-    errors.append("assets/site-consent.js: consent code still loads Documented teaser")
+if 'documented-teaser.js' in consent or 'TEMPORARY PRODUCTION-QA LOADER' in consent:
+    errors.append("assets/site-consent.js: consent code still loads Documented helper")
 
 helper = Path("assets/documented-teaser.js").read_text(encoding="utf-8")
 if 'insertAdjacentElement' in helper or 'tlvs-documented-teaser' in helper:
