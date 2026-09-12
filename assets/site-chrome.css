@@ -86,10 +86,18 @@ footer .footer-inner, footer .footer-shell { max-width: none; width: 100%; margi
   .mobile-nav-panel .tlvs-language-picker { display: block; width: 100%; margin: 4px 0 0; padding-top: 13px; border-top: 1px solid rgba(255,255,255,.08); }
   .mobile-nav-panel .tlvs-language-picker > summary { border-left: 0; padding: 9px 0; }
   .mobile-nav-panel .tlvs-language-menu { position: static; min-width: 0; max-height: none; margin-top: 6px; box-shadow: none; }
+
+  /* Documented pages keep their existing language picker visible beside the mobile menu. */
+  .documented-page .desktop-nav { display:flex; margin-left:auto; gap:0; }
+  .documented-page .desktop-nav > a { display:none; }
+  .documented-page .desktop-nav .tlvs-language-picker { display:flex; }
+  .documented-page .mobile-menu-native { margin-left:14px; }
 }
 @media (max-width: 560px) {
   :root { --chrome-height: 56px; --chrome-pad: 20px; --chrome-logo-width: 78px; --chrome-footer-logo-width: 120px; }
   .mobile-nav-panel { left: max(14px, env(safe-area-inset-left)); right: max(14px, env(safe-area-inset-right)); }
+  .documented-page .desktop-nav .tlvs-language-picker > summary { padding-left:10px; }
+  .documented-page .mobile-menu-native { margin-left:8px; }
 }
 
 /* Shared consent banner: equal-weight choices, isolated from page button styles. */
