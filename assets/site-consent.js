@@ -227,3 +227,39 @@
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', mount, { once: true });
   else mount();
 }());
+
+/* Site-wide localized footer link to The Villa, Documented. */
+(function () {
+  'use strict';
+  const documented = {
+    en: ['The Villa, Documented', '/the-villa-documented.html'],
+    fi: ['Huvila, dokumentoituna', '/fi/the-villa-documented.html'],
+    sv: ['Villan, dokumenterad', '/sv/the-villa-documented.html'],
+    nb: ['Villaen, dokumentert', '/no/the-villa-documented.html'],
+    no: ['Villaen, dokumentert', '/no/the-villa-documented.html'],
+    da: ['Villaen, dokumenteret', '/da/the-villa-documented.html'],
+    de: ['Die Villa, dokumentiert', '/de/the-villa-documented.html'],
+    fr: ['La villa, documentée', '/fr/the-villa-documented.html'],
+    es: ['La villa, documentada', '/es/the-villa-documented.html'],
+    nl: ['De villa, gedocumenteerd', '/nl/the-villa-documented.html'],
+    et: ['Villa, dokumenteeritud', '/et/the-villa-documented.html'],
+    it: ['La villa, documentata', '/it/the-villa-documented.html'],
+    'zh-cn': ['别墅，完整记录', '/zh-cn/the-villa-documented.html']
+  };
+  function mountDocumentedFooterLink() {
+    if (document.querySelector('footer [data-tlvs-documented-footer]')) return;
+    const lang = (document.documentElement.lang || 'en').toLowerCase();
+    const item = documented[lang] || documented.en;
+    const cookieLink = document.querySelector('footer [data-i18n="cookies"], footer a[href="#cookies"], footer a[href="#tlvs-consent"]');
+    const host = cookieLink ? cookieLink.parentElement : document.querySelector('footer .footer-legal-links');
+    if (!host) return;
+    const link = document.createElement('a');
+    link.href = item[1];
+    link.textContent = item[0];
+    link.setAttribute('data-tlvs-documented-footer', '');
+    link.style.marginLeft = '18px';
+    host.appendChild(link);
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', mountDocumentedFooterLink, { once: true });
+  else mountDocumentedFooterLink();
+}());
