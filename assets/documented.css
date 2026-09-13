@@ -60,6 +60,21 @@
 
 /* Match the existing page chrome without depending on Home-only styles. */
 .documented-page a{color:inherit;text-decoration:none}
+.documented-page .site-footer .footer-place {
+  margin-top: 24px;
+  font-family: var(--doc-sans);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: .17em;
+  text-transform: uppercase;
+  color: var(--doc-gold);
+}
+@media (max-width: 560px) {
+  .documented-page .site-footer .footer-place {
+    margin-top: 18px;
+    font-size: 8px;
+  }
+}
 .documented-page .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 /* Preserve the complete approved composition at every viewport. */
 .doc-hero-media,.tlvs-documented-teaser .doc-teaser-media{min-height:0;aspect-ratio:3/2;background-size:contain}
