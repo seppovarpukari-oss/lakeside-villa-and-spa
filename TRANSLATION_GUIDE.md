@@ -14,8 +14,6 @@ For **The Villa, Documented**, the approved English production copy is locked. L
 ## Locked names and terms
 Do not translate: Lakeside Villa & Spa, Tahko, Kuopio, Siilinjärvi, Syväri, Tahkolahti, Lastukoski, Old Course, Lake & Forest.
 
-The future access progression must remain exactly: `Explore → Verified Property Access → Owner Access`.
-
 ## Future automation
 When English copy changes:
 1. Detect only changed source keys.
