@@ -1,0 +1,11 @@
+name: Fact grid translations
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  translations:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 tests/fact_languages.py
+      - run: python3 -m unittest discover -s tests -p 'test_fact_languages.py'
