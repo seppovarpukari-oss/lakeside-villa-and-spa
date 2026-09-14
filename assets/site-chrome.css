@@ -120,3 +120,69 @@ footer .footer-inner, footer .footer-shell { max-width: none; width: 100%; margi
   .tlvs-consent { right: 12px; bottom: max(12px, env(safe-area-inset-bottom)); width: calc(100% - 24px); padding: 18px; }
   .tlvs-consent button { flex-basis: 100%; }
 }
+
+/* Shared fact typography across all twelve languages (2026-09-14).
+   Use explicit families: Home calls its display font --display, not --serif. */
+.p0098-facts h2,
+.glance .section-title h2 {
+  font: 400 clamp(34px, 3.2vw, 52px)/1.04 "EB Garamond", Georgia, "Times New Roman", serif;
+  letter-spacing: .018em;
+}
+.p0098-facts .p0098-intro,
+.glance .section-title p {
+  font: 400 16px/1.65 Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+}
+.p0098-item strong,
+.glance .stat strong {
+  font: 400 clamp(23px, 2vw, 31px)/1.08 "EB Garamond", Georgia, "Times New Roman", serif;
+  overflow-wrap: anywhere;
+}
+.p0098-facts .p0098-kicker,
+.glance .section-title .eyebrow,
+.p0098-item span,
+.glance .stat span {
+  font: 500 11px/1.35 Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  letter-spacing: .13em;
+}
+.p0098-item small,
+.glance .stat small {
+  display: block;
+  font: 400 14px/1.5 Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  overflow-wrap: anywhere;
+}
+
+/* Home uses the same heading scale as the main editorial pages. */
+.hero-kicker {
+  font-size: clamp(48px, 5.2vw, 82px);
+  line-height: .98;
+  text-wrap: balance;
+}
+.hero-promise {
+  font-size: clamp(24px, 2.1vw, 32px);
+  line-height: 1.25;
+}
+.hero-sub { font-size: 16px; }
+.editorial .copy h2 {
+  font-size: clamp(38px, 3.45vw, 57px);
+  line-height: 1.03;
+  letter-spacing: .018em;
+  text-wrap: balance;
+}
+.editorial .copy p {
+  font-size: clamp(16px, 1.05vw, 17px);
+  font-weight: 400;
+  line-height: 1.7;
+}
+.editorial .eyebrow { font-size: 11px; }
+.editorial .cta { font-size: 11px; line-height: 1.5; }
+@media (max-width: 900px) {
+  .hero-kicker { font-size: clamp(42px, 6.4vw, 62px); }
+}
+@media (max-width: 560px) {
+  .hero-kicker { font-size: 42px; line-height: 1.01; }
+  .hero-promise { font-size: 24px; }
+  .editorial .copy h2 { font-size: 37px; line-height: 1.04; }
+  .editorial .copy p { font-size: 16px; line-height: 1.66; }
+  .p0098-facts h2,
+  .glance .section-title h2 { font-size: 36px; }
+}
