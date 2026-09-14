@@ -121,3 +121,8 @@
   .documented-page .site-footer .footer-shell>div:last-child{margin-top:36px;text-align:left !important}
   .documented-page .site-footer .tlvs-wordmark{width:120px}
 }
+
+/* General ownership benefit; technical operating guidance stays private. */
+.doc-energy{padding:clamp(66px,7vw,110px) 0;background:#1b1d16;border-bottom:1px solid var(--doc-line);text-align:center}
+.doc-energy h2{font-size:clamp(32px,3.4vw,54px);line-height:1.08;max-width:950px;margin:0 auto}
+.doc-energy .doc-copy{max-width:850px;margin:24px auto 0}
