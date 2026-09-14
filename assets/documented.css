@@ -82,3 +82,42 @@
 .doc-heading{overflow-wrap:anywhere;hyphens:auto}
 .doc-hero-grid>div,.doc-use-grid>div{min-width:0}
 @media(max-width:1200px) and (min-width:901px){.doc-use-grid{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}}
+
+/* Documented footer — use the same restrained spacing, rule and CTA treatment as the editorial pages. */
+.documented-page .site-footer{
+  display:block !important;
+  background:#121210 !important;
+  border-top:1px solid rgba(205,191,157,.18) !important;
+  padding:78px max(var(--chrome-pad),env(safe-area-inset-right)) 34px max(var(--chrome-pad),env(safe-area-inset-left)) !important;
+}
+.documented-page .site-footer .footer-shell{
+  max-width:1440px !important;
+  width:100%;
+  margin:0 auto !important;
+  align-items:flex-end !important;
+  gap:80px !important;
+}
+.documented-page .site-footer .tlvs-wordmark{width:148px}
+.documented-page .site-footer a[href*="enquire" i]{
+  color:var(--doc-gold) !important;
+  font:500 11px/1.4 var(--doc-sans) !important;
+  letter-spacing:.14em !important;
+  text-transform:uppercase;
+}
+.documented-page .site-footer [data-i18n="cookies"],
+.documented-page .site-footer a[href="#cookies"]{
+  color:#7f7a72 !important;
+  font:400 11px/1.4 var(--doc-sans) !important;
+  letter-spacing:normal !important;
+  text-transform:none !important;
+}
+@media(max-width:900px){
+  .documented-page .site-footer{padding-top:66px !important}
+  .documented-page .site-footer .footer-shell{gap:52px !important}
+}
+@media(max-width:560px){
+  .documented-page .site-footer{padding:60px 20px 28px !important}
+  .documented-page .site-footer .footer-shell{display:block !important}
+  .documented-page .site-footer .footer-shell>div:last-child{margin-top:36px;text-align:left !important}
+  .documented-page .site-footer .tlvs-wordmark{width:120px}
+}
