@@ -1,128 +1,128 @@
-/* Phase 2: English fact sections and footer only. Other languages follow in phase 3. */
-html[lang="en"] .p0098-facts {
+/* Approved fact sections and footer. Finnish added in phase 3; other locales retain their existing styles. */
+html:is([lang="en"], [lang="fi"]) .p0098-facts {
   padding-top: clamp(36px, 4vw, 56px);
   padding-bottom: clamp(44px, 4vw, 56px);
   margin-bottom: clamp(24px, 3vw, 40px);
   border-color: rgba(205,191,157,.12);
 }
-html[lang="en"] .p0098-facts .p0098-head { margin-bottom: 22px; }
-html[lang="en"] .p0098-facts h2,
-html[lang="en"] .glance .section-title h2 {
+html:is([lang="en"], [lang="fi"]) .p0098-facts .p0098-head { margin-bottom: 22px; }
+html:is([lang="en"], [lang="fi"]) .p0098-facts h2,
+html:is([lang="en"], [lang="fi"]) .glance .section-title h2 {
   font-size: clamp(24px, 2.1vw, 30px);
   line-height: 1.12;
   margin-bottom: 12px;
 }
-html[lang="en"] .p0098-facts .p0098-kicker { margin-bottom: 9px; }
-html[lang="en"] .p0098-facts .p0098-intro,
-html[lang="en"] .glance .section-title p { font-size: 14px; line-height: 1.6; }
-html[lang="en"] .p0098-facts .p0098-grid {
+html:is([lang="en"], [lang="fi"]) .p0098-facts .p0098-kicker { margin-bottom: 9px; }
+html:is([lang="en"], [lang="fi"]) .p0098-facts .p0098-intro,
+html:is([lang="en"], [lang="fi"]) .glance .section-title p { font-size: 14px; line-height: 1.6; }
+html:is([lang="en"], [lang="fi"]) .p0098-facts .p0098-grid {
   border: 0;
   column-gap: 24px;
 }
-html[lang="en"] .p0098-facts .p0098-item {
+html:is([lang="en"], [lang="fi"]) .p0098-facts .p0098-item {
   min-height: 0;
   padding: 16px 0;
   border: 0;
   border-top: 1px solid rgba(205,191,157,.16);
   background: transparent;
 }
-html[lang="en"] .p0098-item strong,
-html[lang="en"] .glance .stat strong {
+html:is([lang="en"], [lang="fi"]) .p0098-item strong,
+html:is([lang="en"], [lang="fi"]) .glance .stat strong {
   font-size: clamp(20px, 1.6vw, 23px);
   line-height: 1.14;
   margin-bottom: 6px;
 }
-html[lang="en"] .p0098-item span,
-html[lang="en"] .glance .stat span { font-size: 10px; margin-bottom: 4px; }
-html[lang="en"] .p0098-item small,
-html[lang="en"] .glance .stat small { font-size: 13px; line-height: 1.5; }
+html:is([lang="en"], [lang="fi"]) .p0098-item span,
+html:is([lang="en"], [lang="fi"]) .glance .stat span { font-size: 10px; margin-bottom: 4px; }
+html:is([lang="en"], [lang="fi"]) .p0098-item small,
+html:is([lang="en"], [lang="fi"]) .glance .stat small { font-size: 13px; line-height: 1.5; }
 /* Home: a compact bordered grid, with all existing facts retained. */
-html[lang="en"] #at-a-glance { padding-top: 26px; padding-bottom: 40px; }
-html[lang="en"] #at-a-glance .p0098-head {
-  display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 16px;
+html:is([lang="en"], [lang="fi"]) #at-a-glance { padding-top: 26px; padding-bottom: 40px; }
+html:is([lang="en"], [lang="fi"]) #at-a-glance .p0098-head {
+  display: flex; flex-direction: column; flex-wrap: wrap; align-items: baseline; gap: 8px 16px;
   max-width: none; margin-bottom: 16px;
 }
-html[lang="en"] #at-a-glance .p0098-kicker { margin: 0; font-size: 9px; }
-html[lang="en"] #at-a-glance h2 { margin: 0; font-size: 21px; }
-html[lang="en"] #at-a-glance .p0098-intro { margin: 0; font-size: 13px; line-height: 1.5; }
-html[lang="en"] #at-a-glance .p0098-grid {
+html:is([lang="en"], [lang="fi"]) #at-a-glance .p0098-kicker { margin: 0; font-size: 9px; }
+html:is([lang="en"], [lang="fi"]) #at-a-glance h2 { margin: 0; font-size: 21px; }
+html:is([lang="en"], [lang="fi"]) #at-a-glance .p0098-intro { margin: 0; font-size: 13px; line-height: 1.5; }
+html:is([lang="en"], [lang="fi"]) #at-a-glance .p0098-grid {
   gap: 0;
   border-top: 1px solid rgba(205,191,157,.18);
   border-left: 1px solid rgba(205,191,157,.18);
 }
-html[lang="en"] #at-a-glance .p0098-item {
+html:is([lang="en"], [lang="fi"]) #at-a-glance .p0098-item {
   display: block; min-width: 0; padding: 14px;
   border: 0;
   border-right: 1px solid rgba(205,191,157,.18);
   border-bottom: 1px solid rgba(205,191,157,.18);
 }
-html[lang="en"] #at-a-glance .p0098-item:last-child { grid-column: span 2; }
-html[lang="en"] #at-a-glance .p0098-item strong {
+html:is([lang="en"], [lang="fi"]) #at-a-glance .p0098-item:last-child { grid-column: span 2; }
+html:is([lang="en"], [lang="fi"]) #at-a-glance .p0098-item strong {
   margin: 0 0 4px; font-size: 18px; line-height: 1.25; color: #ded7ca;
 }
-html[lang="en"] #at-a-glance .p0098-item span {
+html:is([lang="en"], [lang="fi"]) #at-a-glance .p0098-item span {
   margin: 0 0 3px; font-size: 9px; line-height: 1.5; letter-spacing: .08em;
 }
-html[lang="en"] #at-a-glance .p0098-item small {
+html:is([lang="en"], [lang="fi"]) #at-a-glance .p0098-item small {
   flex-basis: 100%; font-size: 12px; line-height: 1.5;
 }
 @media (max-width: 560px) {
-  html[lang="en"] #at-a-glance .p0098-intro { flex-basis: 100%; }
-  html[lang="en"] #at-a-glance .p0098-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  html[lang="en"] #at-a-glance .p0098-item { padding: 12px 10px; }
-  html[lang="en"] #at-a-glance .p0098-item strong { font-size: 17px; }
+  html:is([lang="en"], [lang="fi"]) #at-a-glance .p0098-intro { flex-basis: 100%; }
+  html:is([lang="en"], [lang="fi"]) #at-a-glance .p0098-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  html:is([lang="en"], [lang="fi"]) #at-a-glance .p0098-item { padding: 12px 10px; }
+  html:is([lang="en"], [lang="fi"]) #at-a-glance .p0098-item strong { font-size: 17px; }
 }
 /* First three Villa facts establish scale and capacity without hiding other details. */
-html[lang="en"] #villa-facts .p0098-item:nth-child(-n+3) strong { color: #e5d4b1; }
-html[lang="en"] #service-facts .p0098-item strong { font-size: 21px; }
-html[lang="en"] .glance { padding-top: 36px; padding-bottom: 56px; }
-html[lang="en"] .glance .section-title { margin-bottom: 24px; }
-html[lang="en"] .glance .stat { padding: 16px 18px; border-color: rgba(205,191,157,.12); }
+html:is([lang="en"], [lang="fi"]) #villa-facts .p0098-item:nth-child(-n+3) strong { color: #e5d4b1; }
+html:is([lang="en"], [lang="fi"]) #service-facts .p0098-item strong { font-size: 21px; }
+html:is([lang="en"], [lang="fi"]) .glance { padding-top: 36px; padding-bottom: 56px; }
+html:is([lang="en"], [lang="fi"]) .glance .section-title { margin-bottom: 24px; }
+html:is([lang="en"], [lang="fi"]) .glance .stat { padding: 16px 18px; border-color: rgba(205,191,157,.12); }
 
 /* Apply the approved compact bordered treatment to the remaining English facts. */
-html[lang="en"] .p0098-facts:not(#at-a-glance) h2,
-html[lang="en"] .glance .section-title h2 { font-size: 21px; }
-html[lang="en"] .p0098-facts:not(#at-a-glance) .p0098-intro,
-html[lang="en"] .glance .section-title p { font-size: 13px; }
-html[lang="en"] .p0098-facts:not(#at-a-glance) .p0098-grid,
-html[lang="en"] .glance .glance-grid {
+html:is([lang="en"], [lang="fi"]) .p0098-facts:not(#at-a-glance) h2,
+html:is([lang="en"], [lang="fi"]) .glance .section-title h2 { font-size: 21px; }
+html:is([lang="en"], [lang="fi"]) .p0098-facts:not(#at-a-glance) .p0098-intro,
+html:is([lang="en"], [lang="fi"]) .glance .section-title p { font-size: 13px; }
+html:is([lang="en"], [lang="fi"]) .p0098-facts:not(#at-a-glance) .p0098-grid,
+html:is([lang="en"], [lang="fi"]) .glance .glance-grid {
   grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0;
   border-top: 1px solid rgba(205,191,157,.18);
   border-left: 1px solid rgba(205,191,157,.18);
 }
-html[lang="en"] .p0098-facts:not(#at-a-glance) .p0098-item,
-html[lang="en"] .glance .glance-grid .stat {
+html:is([lang="en"], [lang="fi"]) .p0098-facts:not(#at-a-glance) .p0098-item,
+html:is([lang="en"], [lang="fi"]) .glance .glance-grid .stat {
   grid-column: auto; width: auto; min-width: 0; justify-self: stretch;
   padding: 14px; border: 0;
   border-right: 1px solid rgba(205,191,157,.18) !important;
   border-bottom: 1px solid rgba(205,191,157,.18) !important;
 }
-html[lang="en"] .p0098-facts:not(#at-a-glance) .p0098-item strong,
-html[lang="en"] .glance .stat strong { font-size: 18px; line-height: 1.25; margin-bottom: 4px; }
-html[lang="en"] .p0098-facts:not(#at-a-glance) .p0098-item span,
-html[lang="en"] .glance .stat span { font-size: 9px; line-height: 1.5; letter-spacing: .08em; margin-bottom: 3px; }
-html[lang="en"] .p0098-facts:not(#at-a-glance) .p0098-item small,
-html[lang="en"] .glance .stat small { font-size: 12px; line-height: 1.5; }
-html[lang="en"] .glance { padding-bottom: 56px; }
+html:is([lang="en"], [lang="fi"]) .p0098-facts:not(#at-a-glance) .p0098-item strong,
+html:is([lang="en"], [lang="fi"]) .glance .stat strong { font-size: 18px; line-height: 1.25; margin-bottom: 4px; }
+html:is([lang="en"], [lang="fi"]) .p0098-facts:not(#at-a-glance) .p0098-item span,
+html:is([lang="en"], [lang="fi"]) .glance .stat span { font-size: 9px; line-height: 1.5; letter-spacing: .08em; margin-bottom: 3px; }
+html:is([lang="en"], [lang="fi"]) .p0098-facts:not(#at-a-glance) .p0098-item small,
+html:is([lang="en"], [lang="fi"]) .glance .stat small { font-size: 12px; line-height: 1.5; }
+html:is([lang="en"], [lang="fi"]) .glance { padding-bottom: 56px; }
 @media (min-width: 901px) {
-  html[lang="en"] .p0098-facts:not(#at-a-glance) .p0098-item:last-child:nth-child(4n+1) { grid-column: 1 / -1; }
-  html[lang="en"] .glance .glance-grid .stat:last-child { grid-column: span 2; }
+  html:is([lang="en"], [lang="fi"]) .p0098-facts:not(#at-a-glance) .p0098-item:last-child:nth-child(4n+1) { grid-column: 1 / -1; }
+  html:is([lang="en"], [lang="fi"]) .glance .glance-grid .stat:last-child { grid-column: span 2; }
 }
 @media (max-width: 900px) {
-  html[lang="en"] .p0098-facts:not(#at-a-glance) .p0098-grid,
-  html[lang="en"] .glance .glance-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  html[lang="en"] .p0098-facts:not(#at-a-glance) .p0098-item:last-child:nth-child(odd),
-  html[lang="en"] .glance .glance-grid .stat:last-child:nth-child(odd) { grid-column: 1 / -1; }
+  html:is([lang="en"], [lang="fi"]) .p0098-facts:not(#at-a-glance) .p0098-grid,
+  html:is([lang="en"], [lang="fi"]) .glance .glance-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  html:is([lang="en"], [lang="fi"]) .p0098-facts:not(#at-a-glance) .p0098-item:last-child:nth-child(odd),
+  html:is([lang="en"], [lang="fi"]) .glance .glance-grid .stat:last-child:nth-child(odd) { grid-column: 1 / -1; }
 }
 @media (max-width: 560px) {
-  html[lang="en"] .p0098-facts:not(#at-a-glance) .p0098-item,
-  html[lang="en"] .glance .glance-grid .stat { padding: 12px 10px; }
-  html[lang="en"] .p0098-facts:not(#at-a-glance) .p0098-item strong,
-  html[lang="en"] .glance .stat strong { font-size: 17px; }
+  html:is([lang="en"], [lang="fi"]) .p0098-facts:not(#at-a-glance) .p0098-item,
+  html:is([lang="en"], [lang="fi"]) .glance .glance-grid .stat { padding: 12px 10px; }
+  html:is([lang="en"], [lang="fi"]) .p0098-facts:not(#at-a-glance) .p0098-item strong,
+  html:is([lang="en"], [lang="fi"]) .glance .stat strong { font-size: 17px; }
 }
 
 /* Static HTML keeps both primary paths available without JavaScript. */
-html[lang="en"] footer.tlvs-polish-footer {
+html:is([lang="en"], [lang="fi"]) footer.tlvs-polish-footer {
   display: block;
   padding: clamp(44px, 5vw, 72px) max(var(--chrome-pad), env(safe-area-inset-right)) 24px max(var(--chrome-pad), env(safe-area-inset-left));
   background: #151612;
@@ -140,7 +140,7 @@ html[lang="en"] footer.tlvs-polish-footer {
 .tlvs-polish-footer .tlvs-footer-place { margin-top: 14px; color: #cdbf9d; font-size: 10px; line-height: 1.5; letter-spacing: .15em; text-transform: uppercase; }
 .tlvs-polish-footer .tlvs-footer-path { min-width: 0; }
 /* Existing pages use !important on footer headings; override only this new footer. */
-html[lang="en"] .tlvs-polish-footer h2 {
+html:is([lang="en"], [lang="fi"]) .tlvs-polish-footer h2 {
   margin: 0 0 14px;
   font: 400 30px/1.12 "EB Garamond", Georgia, "Times New Roman", serif;
   font-size: 30px !important;
@@ -150,7 +150,7 @@ html[lang="en"] .tlvs-polish-footer h2 {
   color: #eee5d2;
 }
 .tlvs-polish-footer .tlvs-footer-path p { max-width: 38ch; margin: 0; color: #c0baaf; font-size: 14px; line-height: 1.65; letter-spacing: normal; text-transform: none; }
-html[lang="en"] .tlvs-polish-footer h2 a {
+html:is([lang="en"], [lang="fi"]) .tlvs-polish-footer h2 a {
   display: inline-block;
   margin: 0;
   padding: 0 0 8px;
@@ -163,7 +163,7 @@ html[lang="en"] .tlvs-polish-footer h2 a {
   text-decoration: none;
   color: inherit;
 }
-html[lang="en"] .tlvs-polish-footer .tlvs-footer-enquire h2 a { border-color: #cdbf9d; }
+html:is([lang="en"], [lang="fi"]) .tlvs-polish-footer .tlvs-footer-enquire h2 a { border-color: #cdbf9d; }
 .tlvs-polish-footer .tlvs-footer-ask {
   display: inline-block; margin-top: 12px; padding: 10px 0;
   color: #e5d4b1; font-size: 13px; line-height: 1.5;
@@ -183,10 +183,10 @@ html[lang="en"] .tlvs-polish-footer .tlvs-footer-enquire h2 a { border-color: #c
   .tlvs-polish-footer .tlvs-footer-brand { grid-column: 1 / -1; }
 }
 @media (max-width: 560px) {
-  html[lang="en"] .p0098-facts .p0098-item { padding-top: 13px; padding-bottom: 13px; }
-  html[lang="en"] .glance .stat { padding: 14px 12px; }
+  html:is([lang="en"], [lang="fi"]) .p0098-facts .p0098-item { padding-top: 13px; padding-bottom: 13px; }
+  html:is([lang="en"], [lang="fi"]) .glance .stat { padding: 14px 12px; }
   .tlvs-polish-footer .tlvs-footer-main { grid-template-columns: 1fr; gap: 32px; }
-  html[lang="en"] .tlvs-polish-footer h2 { font-size: 28px !important; }
+  html:is([lang="en"], [lang="fi"]) .tlvs-polish-footer h2 { font-size: 28px !important; }
   .tlvs-polish-footer .tlvs-footer-legal { margin-top: 32px; }
-  html[lang="en"] footer.tlvs-polish-footer { padding-bottom: 88px; }
+  html:is([lang="en"], [lang="fi"]) footer.tlvs-polish-footer { padding-bottom: 88px; }
 }

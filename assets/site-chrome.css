@@ -186,3 +186,6 @@ footer .footer-inner, footer .footer-shell { max-width: none; width: 100%; margi
   .p0098-facts h2,
   .glance .section-title h2 { font-size: 36px; }
 }
+
+/* Keep the Home facts eyebrow, heading and introduction on separate rows in every locale. */
+#at-a-glance .p0098-head { flex-direction: column; }
