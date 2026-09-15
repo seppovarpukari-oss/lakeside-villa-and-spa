@@ -36,11 +36,32 @@ html[lang="en"] .p0098-item span,
 html[lang="en"] .glance .stat span { font-size: 10px; margin-bottom: 4px; }
 html[lang="en"] .p0098-item small,
 html[lang="en"] .glance .stat small { font-size: 13px; line-height: 1.5; }
-/* Home remains the lightest overview; retain every fact and its existing grid. */
-html[lang="en"] #at-a-glance { padding-top: 34px; padding-bottom: 48px; }
-html[lang="en"] #at-a-glance h2 { font-size: clamp(24px, 1.9vw, 28px); }
-html[lang="en"] #at-a-glance .p0098-item { padding-top: 13px; padding-bottom: 13px; border-color: rgba(205,191,157,.11); }
-html[lang="en"] #at-a-glance .p0098-item strong { font-size: 21px; }
+/* Home: a supporting information strip, with all existing facts retained. */
+html[lang="en"] #at-a-glance { padding-top: 26px; padding-bottom: 40px; }
+html[lang="en"] #at-a-glance .p0098-head {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 16px;
+  max-width: none; margin-bottom: 16px;
+}
+html[lang="en"] #at-a-glance .p0098-kicker { margin: 0; font-size: 9px; }
+html[lang="en"] #at-a-glance h2 { margin: 0; font-size: 21px; }
+html[lang="en"] #at-a-glance .p0098-intro { margin: 0; font-size: 13px; line-height: 1.5; }
+html[lang="en"] #at-a-glance .p0098-item {
+  display: flex; flex-wrap: wrap; align-items: baseline; align-content: start;
+  gap: 3px 8px; padding: 10px 0; border: 0;
+}
+html[lang="en"] #at-a-glance .p0098-item strong {
+  margin: 0; font-size: 18px; line-height: 1.25; color: #ded7ca;
+}
+html[lang="en"] #at-a-glance .p0098-item span {
+  margin: 0; font-size: 9px; line-height: 1.5; letter-spacing: .08em;
+}
+html[lang="en"] #at-a-glance .p0098-item small {
+  flex-basis: 100%; font-size: 12px; line-height: 1.5;
+}
+@media (max-width: 560px) {
+  html[lang="en"] #at-a-glance .p0098-intro { flex-basis: 100%; }
+  html[lang="en"] #at-a-glance .p0098-item { padding-top: 9px; padding-bottom: 9px; }
+}
 /* First three Villa facts establish scale and capacity without hiding other details. */
 html[lang="en"] #villa-facts .p0098-item:nth-child(-n+3) strong { color: #e5d4b1; }
 html[lang="en"] #service-facts .p0098-item strong { font-size: 21px; }
