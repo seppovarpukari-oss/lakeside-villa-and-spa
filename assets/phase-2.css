@@ -79,6 +79,48 @@ html[lang="en"] .glance { padding-top: 36px; padding-bottom: 56px; }
 html[lang="en"] .glance .section-title { margin-bottom: 24px; }
 html[lang="en"] .glance .stat { padding: 16px 18px; border-color: rgba(205,191,157,.12); }
 
+/* Apply the approved compact bordered treatment to the remaining English facts. */
+html[lang="en"] .p0098-facts:not(#at-a-glance) h2,
+html[lang="en"] .glance .section-title h2 { font-size: 21px; }
+html[lang="en"] .p0098-facts:not(#at-a-glance) .p0098-intro,
+html[lang="en"] .glance .section-title p { font-size: 13px; }
+html[lang="en"] .p0098-facts:not(#at-a-glance) .p0098-grid,
+html[lang="en"] .glance .glance-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0;
+  border-top: 1px solid rgba(205,191,157,.18);
+  border-left: 1px solid rgba(205,191,157,.18);
+}
+html[lang="en"] .p0098-facts:not(#at-a-glance) .p0098-item,
+html[lang="en"] .glance .glance-grid .stat {
+  grid-column: auto; width: auto; min-width: 0; justify-self: stretch;
+  padding: 14px; border: 0;
+  border-right: 1px solid rgba(205,191,157,.18) !important;
+  border-bottom: 1px solid rgba(205,191,157,.18) !important;
+}
+html[lang="en"] .p0098-facts:not(#at-a-glance) .p0098-item strong,
+html[lang="en"] .glance .stat strong { font-size: 18px; line-height: 1.25; margin-bottom: 4px; }
+html[lang="en"] .p0098-facts:not(#at-a-glance) .p0098-item span,
+html[lang="en"] .glance .stat span { font-size: 9px; line-height: 1.5; letter-spacing: .08em; margin-bottom: 3px; }
+html[lang="en"] .p0098-facts:not(#at-a-glance) .p0098-item small,
+html[lang="en"] .glance .stat small { font-size: 12px; line-height: 1.5; }
+html[lang="en"] .glance { padding-bottom: 56px; }
+@media (min-width: 901px) {
+  html[lang="en"] .p0098-facts:not(#at-a-glance) .p0098-item:last-child:nth-child(4n+1) { grid-column: 1 / -1; }
+  html[lang="en"] .glance .glance-grid .stat:last-child { grid-column: span 2; }
+}
+@media (max-width: 900px) {
+  html[lang="en"] .p0098-facts:not(#at-a-glance) .p0098-grid,
+  html[lang="en"] .glance .glance-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  html[lang="en"] .p0098-facts:not(#at-a-glance) .p0098-item:last-child:nth-child(odd),
+  html[lang="en"] .glance .glance-grid .stat:last-child:nth-child(odd) { grid-column: 1 / -1; }
+}
+@media (max-width: 560px) {
+  html[lang="en"] .p0098-facts:not(#at-a-glance) .p0098-item,
+  html[lang="en"] .glance .glance-grid .stat { padding: 12px 10px; }
+  html[lang="en"] .p0098-facts:not(#at-a-glance) .p0098-item strong,
+  html[lang="en"] .glance .stat strong { font-size: 17px; }
+}
+
 /* Static HTML keeps both primary paths available without JavaScript. */
 html[lang="en"] footer.tlvs-polish-footer {
   display: block;
