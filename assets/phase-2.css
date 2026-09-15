@@ -39,11 +39,9 @@ html:is([lang="en"], [lang="fi"]) .glance .stat small { font-size: 13px; line-he
 /* Home: a compact bordered grid, with all existing facts retained. */
 html:is([lang="en"], [lang="fi"]) #at-a-glance { padding-top: 26px; padding-bottom: 40px; }
 html:is([lang="en"], [lang="fi"]) #at-a-glance .p0098-head {
-  display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 16px;
+  display: flex; flex-direction: column; flex-wrap: wrap; align-items: baseline; gap: 8px 16px;
   max-width: none; margin-bottom: 16px;
 }
-/* Finnish Home heading sits below its eyebrow at every viewport width. */
-html[lang="fi"] #at-a-glance .p0098-head { flex-direction: column; }
 html:is([lang="en"], [lang="fi"]) #at-a-glance .p0098-kicker { margin: 0; font-size: 9px; }
 html:is([lang="en"], [lang="fi"]) #at-a-glance h2 { margin: 0; font-size: 21px; }
 html:is([lang="en"], [lang="fi"]) #at-a-glance .p0098-intro { margin: 0; font-size: 13px; line-height: 1.5; }
