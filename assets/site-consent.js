@@ -141,6 +141,18 @@
     "Chiudi"
   ]
 };
+  const privacyLabels = {
+    en: "Privacy", fi: "Tietosuoja", sv: "Integritet", de: "Datenschutz",
+    fr: "Confidentialité", es: "Privacidad", nl: "Privacy", "zh-cn": "隐私",
+    da: "Privatliv", nb: "Personvern", et: "Privaatsus", it: "Privacy"
+  };
+  function privacyLanguage() {
+    const raw = (document.documentElement.lang || "en").toLowerCase();
+    if (raw === "no") return "nb";
+    if (raw === "zh-cn") return "zh-cn";
+    return privacyLabels[raw] ? raw : raw.split("-")[0];
+  }
+
   function mount() {
     const t = translations[document.documentElement.lang.toLowerCase()] || translations.en;
     const panel = document.createElement('section');
@@ -192,11 +204,20 @@
     }
     const links = document.querySelectorAll('footer [data-i18n="cookies"], footer a[href="#cookies"]');
     if (links.length) {
+      const privacyLang = privacyLanguage();
       links.forEach(link => {
         link.href = '#tlvs-consent';
         link.setAttribute('aria-controls', panel.id);
         link.textContent = t[0];
         link.addEventListener('click', open);
+        const host = link.parentElement;
+        if (host && !host.querySelector('[data-tlvs-privacy]')) {
+          const privacy = document.createElement('a');
+          privacy.href = '/privacy.html?lang=' + encodeURIComponent(privacyLang);
+          privacy.textContent = privacyLabels[privacyLang] || privacyLabels.en;
+          privacy.setAttribute('data-tlvs-privacy', '');
+          host.insertBefore(privacy, link);
+        }
       });
     } else {
       const link = document.createElement('button');
