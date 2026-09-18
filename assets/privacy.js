@@ -160,7 +160,7 @@ const PRIVACY_TEXT={
 (()=>{
   const params=new URLSearchParams(location.search);
   const requested=(params.get('lang')||document.documentElement.lang||'en').toLowerCase();
-  const key=requested==='no'?'nb':requested==='zh-cn'||requested==='zh-cn'?'zh-cn':requested.split('-')[0];
+  const key=requested==='no'?'nb':requested==='zh-cn'?'zh-cn':requested.split('-')[0];
   const t=PRIVACY_TEXT[key]||PRIVACY_TEXT.en;
   document.documentElement.lang=key==='nb'?'nb':key;
   document.title=t.title+' | Lakeside Villa & Spa';
