@@ -13,6 +13,7 @@
   window.gtag('set', 'ads_data_redaction', true);
   let loaded = false;
   let choice = readChoice();
+  window.tlvsConsent.analyticsAllowed = () => !!(choice && choice.analytics);
 
   function readChoice() {
     try {
