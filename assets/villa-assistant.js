@@ -36,6 +36,16 @@ const VILLA_WORDS={"en": {"title": "Villa Assistant", "welcome": "How can I help
  }
  const sessionContext=loadSessionContext();
 
+ function track(name){
+  if(!window.tlvsConsent?.analyticsAllowed?.()||typeof window.gtag!=='function')return;
+  window.gtag('event',name,{assistant_language:lang,assistant_page:location.pathname});
+ }
+ window.addEventListener('message',event=>{
+  if(event.origin!=='https://tlvs-villa-private-pilot.onrender.com'||!event.data||typeof event.data!=='object')return;
+  if(event.data.type==='tlvs-assistant-question')track('assistant_question');
+  if(event.data.type==='tlvs-assistant-error')track('assistant_error');
+ });
+
  function frame(){
   const f=document.createElement('iframe');
   const params=new URLSearchParams({lang:Object.hasOwn(VILLA_WORDS,lang)?lang:'en',page:location.pathname,landing:sessionContext.landing||location.pathname});
@@ -63,7 +73,7 @@ const VILLA_WORDS={"en": {"title": "Villa Assistant", "welcome": "How can I help
  panel.className='villa-panel';panel.hidden=true;panel.setAttribute('aria-label',words.title);
  const close=document.createElement('button');
  close.className='villa-close';close.textContent='×';close.setAttribute('aria-label',words.close);panel.append(close);document.body.append(panel);
- button.onclick=()=>{if(!panel.querySelector('iframe'))panel.append(frame());panel.hidden=false;button.hidden=true;button.setAttribute('aria-expanded','true');close.focus();};
+ button.onclick=()=>{if(!panel.querySelector('iframe'))panel.append(frame());panel.hidden=false;button.hidden=true;button.setAttribute('aria-expanded','true');track('assistant_open');close.focus();};
  close.onclick=()=>{panel.hidden=true;button.hidden=false;button.setAttribute('aria-expanded','false');button.focus();};
  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!panel.hidden)close.click();});
 })();
