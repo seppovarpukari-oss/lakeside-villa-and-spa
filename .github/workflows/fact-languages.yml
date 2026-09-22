@@ -1,11 +1,24 @@
 name: Fact grid translations
+
 on: [push, pull_request]
+
 permissions:
   contents: read
+
+# Multilingual site updates may touch several language files in rapid succession.
+# Keep only the newest validation run so temporary intermediate states do not
+# generate failure notifications.
+concurrency:
+  group: fact-grid-translations-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   translations:
     runs-on: ubuntu-latest
     steps:
+      - name: Debounce rapid multilingual updates
+        if: github.event_name == 'push'
+        run: sleep 20
       - uses: actions/checkout@v4
       - run: python3 tests/fact_languages.py
       - run: python3 -m unittest discover -s tests -p 'test_fact_languages.py'
