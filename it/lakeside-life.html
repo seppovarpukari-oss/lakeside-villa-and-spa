@@ -308,6 +308,20 @@ footer h2{
 
 
 
+
+/* P-0182 — Lakeside Life / For Serious Boating. Page-local only. */
+.section.serious-boating{grid-template-columns:minmax(0,1.6fr) minmax(360px,.92fr);align-items:start;gap:36px clamp(54px,6.5vw,104px)}
+.serious-boating .copy{padding-top:clamp(4px,.8vw,14px)}
+.serious-proof{grid-column:1/-1;margin-top:0}
+.serious-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.serious-fact{min-width:0;padding:18px 20px 20px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.serious-fact strong{display:block;font:400 clamp(22px,1.8vw,28px)/1.08 var(--serif);color:#f0eadf;margin:0 0 7px}
+.serious-fact span{display:block;font:500 9px/1.35 var(--sans);letter-spacing:.13em;text-transform:uppercase;color:var(--gold);margin-bottom:5px}
+.serious-fact small{display:block;font:400 12px/1.5 var(--sans);color:var(--muted)}
+.serious-note{margin:12px 0 0;font:400 11px/1.55 var(--sans);color:#8f897f;max-width:92ch}
+@media(max-width:900px){.section.serious-boating{grid-template-columns:1fr;gap:32px}.serious-boating .copy{padding-top:0}.serious-proof{grid-column:auto}}
+@media(max-width:560px){.serious-facts{grid-template-columns:1fr}.serious-fact{padding:15px 14px 16px}.serious-fact strong{font-size:22px}}
+
 </style>
 <script type="application/ld+json">
 {
@@ -483,6 +497,22 @@ footer h2{
 <h2 data-i18n="hTahko">Dal pontile a Tahko</h2>
 <p data-i18n="pTahko">Tahkolahti dista circa 10 minuti in barca dalla villa. Ormeggia al porto per gli ospiti per raggiungere i ristoranti e i servizi di Tahko.</p>
 <img alt="Schema del percorso in barca da Lakeside Villa &amp; Spa al centro di Tahko" class="route-graphic" src="../assets/images/b651a5e2a5d9e76b.png"/>
+</div>
+</section>
+<section class="section serious-boating" id="serious-boating">
+<img alt="Imbarcazione a motore di maggiori dimensioni, pontile privato Marinetek e ormeggio alla boa sul lago Syväri" class="photo serious-boating-photo" src="../assets/images/tlvs-serious-boating-locked.jpg" width="1536" height="976" loading="lazy" decoding="async"/>
+<div class="copy serious-boating-copy">
+<div class="eyebrow">Per imbarcazioni importanti</div>
+<h2>Una vera infrastruttura nautica dalla propria riva privata</h2>
+<p>La riva privata della villa è pensata anche per imbarcazioni di dimensioni importanti. Il pontile privato Marinetek offre un pratico ormeggio laterale per due barche di circa 8 metri, affiancato da un ormeggio separato e rinforzato alla boa per un’imbarcazione più grande, nella classe di circa 10–12 metri.</p>
+</div>
+<div class="serious-proof">
+<div aria-label="Capacità di ormeggio" class="serious-facts">
+<div class="serious-fact"><strong>~10–12 m / 33–39 ft</strong><span>Imbarcazione più grande</span><small>Ormeggio separato e rinforzato alla boa</small></div>
+<div class="serious-fact"><strong>2 × ~8 m / 26 ft</strong><span>Lunghezza barca</span><small>Ormeggio laterale, una barca per ciascun lato del pontile</small></div>
+<div class="serious-fact"><strong>1,200 kg</strong><span>Ancora della boa</span><small>Catena zincata da 16 mm · grilli zincati da 20 mm</small></div>
+</div>
+<p class="serious-note">L’idoneità finale dipende da dislocamento, larghezza, superficie esposta al vento e condizioni locali.</p>
 </div>
 </section>
 <section class="section swim" id="swimming">
