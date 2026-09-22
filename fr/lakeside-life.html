@@ -308,6 +308,20 @@ footer h2{
 
 
 
+
+/* P-0182 — Lakeside Life / For Serious Boating. Page-local only. */
+.section.serious-boating{grid-template-columns:minmax(0,1.6fr) minmax(360px,.92fr);align-items:start;gap:36px clamp(54px,6.5vw,104px)}
+.serious-boating .copy{padding-top:clamp(4px,.8vw,14px)}
+.serious-proof{grid-column:1/-1;margin-top:0}
+.serious-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.serious-fact{min-width:0;padding:18px 20px 20px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.serious-fact strong{display:block;font:400 clamp(22px,1.8vw,28px)/1.08 var(--serif);color:#f0eadf;margin:0 0 7px}
+.serious-fact span{display:block;font:500 9px/1.35 var(--sans);letter-spacing:.13em;text-transform:uppercase;color:var(--gold);margin-bottom:5px}
+.serious-fact small{display:block;font:400 12px/1.5 var(--sans);color:var(--muted)}
+.serious-note{margin:12px 0 0;font:400 11px/1.55 var(--sans);color:#8f897f;max-width:92ch}
+@media(max-width:900px){.section.serious-boating{grid-template-columns:1fr;gap:32px}.serious-boating .copy{padding-top:0}.serious-proof{grid-column:auto}}
+@media(max-width:560px){.serious-facts{grid-template-columns:1fr}.serious-fact{padding:15px 14px 16px}.serious-fact strong{font-size:22px}}
+
 </style>
 <script type="application/ld+json">
 {
@@ -483,6 +497,22 @@ footer h2{
 <h2 data-i18n="hTahko">De votre ponton à Tahko</h2>
 <p data-i18n="pTahko">Tahkolahti se trouve à environ 10 minutes en bateau de la villa. Amarrez-vous au port de plaisance pour profiter des restaurants et des services de Tahko.</p>
 <img alt="Schéma du trajet en bateau de Lakeside Villa &amp; Spa au centre de Tahko" class="route-graphic" src="../assets/images/b651a5e2a5d9e76b.png"/>
+</div>
+</section>
+<section class="section serious-boating" id="serious-boating">
+<img alt="Grand bateau à moteur, ponton privé Marinetek et mouillage sur bouée sur le lac Syväri" class="photo serious-boating-photo" src="../assets/images/tlvs-serious-boating-locked.jpg" width="1536" height="976" loading="lazy" decoding="async"/>
+<div class="copy serious-boating-copy">
+<div class="eyebrow">Pour les plaisanciers exigeants</div>
+<h2>Une vraie capacité d’amarrage depuis votre rive privée</h2>
+<p>Le rivage privé de la villa est également conçu pour accueillir des bateaux de belle taille. Le ponton privé Marinetek permet l’amarrage à quai de deux bateaux d’environ 8 mètres, complété par un mouillage sur bouée renforcé et séparé pour un bateau plus grand, de l’ordre de 10 à 12 mètres.</p>
+</div>
+<div class="serious-proof">
+<div aria-label="Capacité d’amarrage" class="serious-facts">
+<div class="serious-fact"><strong>~10–12 m / 33–39 ft</strong><span>Bateau plus grand</span><small>Mouillage sur bouée séparé et renforcé</small></div>
+<div class="serious-fact"><strong>2 × ~8 m / 26 ft</strong><span>Longueur des bateaux</span><small>À quai, un bateau de chaque côté du ponton privé</small></div>
+<div class="serious-fact"><strong>1,200 kg</strong><span>Ancre de bouée</span><small>Chaîne galvanisée 16 mm · manilles galvanisées 20 mm</small></div>
+</div>
+<p class="serious-note">L’adéquation finale dépend du déplacement, de la largeur, de la prise au vent du bateau et des conditions locales.</p>
 </div>
 </section>
 <section class="section swim" id="swimming">
