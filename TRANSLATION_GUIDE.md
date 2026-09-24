@@ -7,7 +7,29 @@ English (`en`) is the only source language. Other languages are derived from Eng
 English, Finnish, Swedish, Norwegian Bokmål, Danish, German, French, Spanish, Dutch, Estonian, Italian and Simplified Chinese.
 
 ## Quality rule
-Translate for a premium private-lakeside hospitality audience. Preserve meaning, restraint and editorial tone rather than translating word-for-word. Headings should stay concise enough to fit the approved layout.
+The approved English (`en-GB`) production copy is the complete editorial content master. It is not a draft, a fact summary or raw material for shorter marketing copy.
+
+Every localization must preserve the full communicative content of the English source: every substantive idea, explanation, relationship, concrete observation and factual nuance. If the English copy explains how a place is used, what a guest sees or does, or why a feature matters, the localized copy must also explain it.
+
+Localize the language, not the amount of meaning. A native writer may freely change syntax, sentence boundaries, idiom, rhythm and word order so the result reads as if it was originally written in the target language. Do not copy English sentence structure when that sounds unnatural.
+
+Do **not** summarize, compress, abstract, sloganize or simplify away content merely to make it shorter, sharper or more "web-friendly". Shortness is not a quality target. Body copy may use two or three natural sentences, or more when the target language needs them to preserve the approved English meaning clearly. "One screen / one idea" does not mean "one sentence / one idea".
+
+Prefer clear, concrete, place-aware language over abstract marketing vocabulary. Describe what the place is like, how it is used and why details matter. Avoid hospitality clichés, imperative experience-language and generic luxury/premium self-praise.
+
+Headings may remain concise enough for the approved layout, but layout fit must never be solved by deleting meaning from body copy.
+
+### Mandatory paragraph back-check
+For every changed localized paragraph, compare it directly with the approved English paragraph before release:
+1. Is every meaningful English idea still present?
+2. Is every factual relationship still correct?
+3. Has any concrete explanation been replaced by an abstract phrase or slogan?
+4. Does the target text read naturally if the reader never sees the English?
+5. Was anything shortened only because shorter copy seemed preferable?
+
+If any answer indicates lost meaning or artificial compression, the localization fails QA even if the grammar is correct.
+
+Each language is localized independently from English. Finnish is not the source for other languages; Swedish is not the source for Norwegian; no localized language is a pivot language.
 
 For **The Villa, Documented**, the approved English production copy is locked. Localized versions must preserve the same meaning and information hierarchy; they must not introduce extra claims, extra access levels, or device-specific wording that is not present in the approved English source.
 
