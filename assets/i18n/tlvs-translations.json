@@ -1899,7 +1899,7 @@
         "heroTitle": "Dalla piscina al lago",
         "heroSub": "Piscina coperta, sauna finlandese, bagno di vapore e fuoco formano un insieme tranquillo al piano inferiore. Il lago è subito accanto alla casa e, in inverno, il contrasto tra caldo e freddo continua all’aperto, presso il pontile privato, come parte di Private Winter Spa.",
         "eyPool": "Piscina privata",
-        "hPool": "Una nuotata al mattino",
+        "hPool": "La prima nuotata del giorno",
         "pPool": "La luce del mattino arriva da est e raggiunge presto la piscina. La prima nuotata della giornata comincia così spesso con luce naturale.",
         "eyHydro": "Idroterapia",
         "hHydro": "Massaggio d’acqua nella piscina",
@@ -1913,7 +1913,8 @@
         "eyFire": "Sala con camino",
         "hFire": "Tra sauna e piscina",
         "pFire": "La sala con camino è un luogo tranquillo tra sauna, vapore e piscina. In questo modo il piano inferiore appare come una parte autonoma della casa, non come una semplice successione di funzioni spa.",
-        "cookies": "Preferenze cookie"
+        "cookies": "Preferenze cookie",
+        "hClosing": "Benessere alla finlandese"
       }
     },
     "location": {
@@ -2762,7 +2763,7 @@
         "navServices": "Servizi privati",
         "navEnquire": "Richiedi informazioni",
         "heroEy": "Posizione",
-        "heroTitle": "Nel cuore della regione dei laghi finlandesi",
+        "heroTitle": "Nel cuore della Finlandia dei laghi",
         "heroSub": "Qui si incontrano un luogo tranquillo sul lago e Tahko, con attività e servizi durante tutto l’anno. Piste da sci, golf, ristoranti e altri servizi sono a pochi minuti, mentre la villa conserva la sensazione di avere un luogo tutto suo sull’acqua.",
         "glanceEy": "In breve",
         "skiEy": "Sci",
