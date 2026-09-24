@@ -13,7 +13,7 @@ Every localization must preserve the full communicative content of the English s
 
 Localize the language, not the amount of meaning. A native writer may freely change syntax, sentence boundaries, idiom, rhythm and word order so the result reads as if it was originally written in the target language. Do not copy English sentence structure when that sounds unnatural.
 
-Do **not** summarize, compress, abstract, sloganize or simplify away content merely to make it shorter, sharper or more "web-friendly". Shortness is not a quality target. Body copy may use two or three natural sentences, or more when the target language needs them to preserve the approved English meaning clearly. "One screen / one idea" does not mean "one sentence / one idea".
+Do **not** summarize, compress, abstract, sloganize or simplify away content merely to make it shorter, sharper or more "web-friendly". Shortness is not a quality target. There is no target sentence count for body copy: use as many natural sentences as the target language needs to preserve the approved English meaning clearly and read well to a human. "One screen / one idea" does not mean "one sentence / one idea".
 
 Prefer clear, concrete, place-aware language over abstract marketing vocabulary. Describe what the place is like, how it is used and why details matter. Avoid hospitality clichés, imperative experience-language and generic luxury/premium self-praise.
 
