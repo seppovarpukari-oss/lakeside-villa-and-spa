@@ -26,7 +26,7 @@ class FactLanguagesTest(unittest.TestCase):
             for key, value in values:
                 self.assertEqual(value, inventory['zh' if lang == 'zh-cn' else lang][key])
             distances = re.findall(r'<strong>~([\d.,]+) (m|km)</strong>', grid)
-            self.assertEqual([('100', 'm'), ('100', 'm'), ('1.5', 'km'), ('1.7', 'km'), ('0.8', 'km'), ('40', 'km'), ('55', 'km')],
+            self.assertEqual([('100', 'm'), ('1.5', 'km'), ('1.7', 'km'), ('0.8', 'km'), ('40', 'km'), ('55', 'km')],
                              [(n.replace(',', '.'), unit) for n, unit in distances], lang)
             self.assertEqual(7, grid.count('class="stat"'), lang)
 
