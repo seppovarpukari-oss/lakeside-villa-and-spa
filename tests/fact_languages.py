@@ -18,7 +18,7 @@ SHARED = {
     'et': {'Villa', 'Transport'},
     'it': {'Villa'},
 }
-LOCKED = {'Tahko', 'Old Course', 'Siilinjärvi', 'Kuopio'}
+LOCKED = {'Tahko', 'Old Course', 'Siilinjärvi', 'Kuopio', 'Private Winter Spa'}
 for _language in LANGUAGES:
     if _language not in ('en', 'zh-cn'):
         SHARED.setdefault(_language, set()).add('Golf')
