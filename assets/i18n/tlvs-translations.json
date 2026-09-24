@@ -91,7 +91,7 @@
         "navEnquire": "Ota yhteyttä",
         "heroTitle": "Lakeside Villa & Spa",
         "heroPromise": "Neljä vuodenaikaa suomalaisessa järvimaisemassa",
-        "heroSub": "Oman Syvärin-rannan äärellä huvila yhdistää ympärivuotisen hyvinvoinnin, suoran yhteyden veteen ja Tahkon palvelut lähelle. Kun allas ja spa, terassit, laituri ja järvi ovat osa arkea, huvila on osa lomaa eikä vain tukikohta.",
+        "heroSub": "Oman Syvärin-rannan äärellä yhdistyvät ympärivuotinen hyvinvointi ja suora yhteys veteen, ja Tahkon palvelut ovat aivan lähellä. Kun allas ja spa, terassit, laituri ja järvi kuuluvat arkeen, huvila on osa lomaa eikä vain sen tukikohta.",
         "mapCaption": "TAHKO · SUOMI · POHJOISMAAT · EU",
         "eyOutdoor": "ULKOELÄMÄ",
         "hOutdoor": "Terassit veden äärellä",
@@ -167,7 +167,7 @@
         "pLocation": "Villan har lugnet och friheten i ett eget läge vid vattnet utan att kännas avskild. Tahkos skidbackar, golfbanor, restauranger och service finns nära.",
         "ctaLocation": "LÄGE >",
         "eyServices": "PRIVATA TJÄNSTER",
-        "hServices": "Ett andra hem utan ett andra arbete",
+        "hServices": "Ett andra hem utan att bli ett andra jobb",
         "pServices": "En fastighet i den här storleken har också en praktisk sida, särskilt när den används året runt. Lokal hjälp kan sköta mycket av arbetet i bakgrunden.",
         "ctaServices": "PRIVATA TJÄNSTER >",
         "cookies": "Cookieinställningar"
@@ -212,7 +212,7 @@
         "pLocation": "Die Villa bietet die Ruhe eines eigenen Seegrundstücks, ohne abgeschieden zu wirken. Tahkos Skipisten, Golfplätze, Restaurants und Services liegen in unmittelbarer Nähe.",
         "ctaLocation": "LAGE >",
         "eyServices": "PRIVATE SERVICES",
-        "hServices": "Ein Zweitwohnsitz ohne zweiten Beruf",
+        "hServices": "Ein zweites Zuhause, ohne dass es zum zweiten Job wird",
         "pServices": "Eine Immobilie dieser Größe hat auch eine praktische Seite, besonders wenn sie das ganze Jahr genutzt wird. Lokale Unterstützung kann einen großen Teil dieser Arbeit im Hintergrund übernehmen.",
         "ctaServices": "PRIVATE SERVICES >",
         "cookies": "Cookie-Einstellungen"
@@ -257,7 +257,7 @@
         "pLocation": "La villa offre l’indépendance d’un site privé au bord de l’eau sans donner le sentiment d’être isolée. Les pistes, golfs, restaurants et services de Tahko restent tout proches.",
         "ctaLocation": "SITUATION >",
         "eyServices": "SERVICES PRIVÉS",
-        "hServices": "Une résidence secondaire sans seconde charge de travail",
+        "hServices": "Une résidence secondaire sans en faire un second métier",
         "pServices": "Une propriété de cette taille a aussi son côté pratique, surtout lorsqu’elle est utilisée toute l’année. Une aide locale peut prendre en charge une grande partie de ce travail en coulisses.",
         "ctaServices": "SERVICES PRIVÉS >",
         "cookies": "Préférences des cookies"
@@ -302,7 +302,7 @@
         "pLocation": "La villa ofrece la independencia de un entorno propio junto al lago sin sentirse aislada. Las pistas de esquí, campos de golf, restaurantes y servicios de Tahko están muy cerca.",
         "ctaLocation": "UBICACIÓN >",
         "eyServices": "SERVICIOS PRIVADOS",
-        "hServices": "Una segunda casa sin un segundo trabajo",
+        "hServices": "Una segunda casa sin convertirla en otro trabajo",
         "pServices": "Una propiedad de esta escala también tiene una parte práctica, especialmente cuando se utiliza durante todo el año. El apoyo local puede ocuparse de buena parte de ese trabajo en segundo plano.",
         "ctaServices": "SERVICIOS PRIVADOS >",
         "cookies": "Preferencias de cookies"
@@ -347,7 +347,7 @@
         "pLocation": "De villa biedt de rust en vrijheid van een eigen plek aan het water zonder afgelegen te voelen. De skipistes, golfbanen, restaurants en voorzieningen van Tahko liggen allemaal dichtbij.",
         "ctaLocation": "LOCATIE >",
         "eyServices": "PRIVATE SERVICES",
-        "hServices": "Een tweede huis zonder tweede baan",
+        "hServices": "Een tweede huis zonder dat het een tweede baan wordt",
         "pServices": "Een woning van deze omvang heeft ook een praktische kant, zeker wanneer zij het hele jaar wordt gebruikt. Lokale ondersteuning kan veel van dat werk op de achtergrond overnemen.",
         "ctaServices": "PRIVATE SERVICES >",
         "cookies": "Cookievoorkeuren"
@@ -437,7 +437,7 @@
         "pLocation": "Villaen har roen og friheten ved en egen innsjøtomt uten å føles avsides. Tahkos skibakker, golfbaner, restauranter og tjenester ligger like i nærheten.",
         "ctaLocation": "BELIGGENHET >",
         "eyServices": "PRIVATE TJENESTER",
-        "hServices": "Et andre hjem uten en ekstra jobb",
+        "hServices": "Et annet hjem uten at det blir en ekstra jobb",
         "pServices": "En eiendom i denne størrelsen har også en praktisk side, særlig når den brukes hele året. Lokal hjelp kan ta hånd om mye av arbeidet i bakgrunnen.",
         "ctaServices": "PRIVATE TJENESTER >",
         "cookies": "Innstillinger for informasjonskapsler"
@@ -466,7 +466,7 @@
         "hCharacter": "Varme i detaljerne",
         "pCharacter": "Sten, ildlys og personlige genstande giver villaen sin egen karakter.",
         "eyVilla": "VILLAEN",
-        "hVilla": "Sammen, med plads til eget ro",
+        "hVilla": "Sammen, med plads til at være for sig selv",
         "pVilla": "Villaens størrelse giver en større gruppe mulighed for at fordele sig naturligt. Nogle kan være ved poolen eller i billardrummet, andre ved pejsen, på terrassen eller nede ved søen – uden at følelsen af at være samlet forsvinder.",
         "ctaVilla": "UDFORSK VILLAEN >",
         "eySpa": "SPA & WELLNESS",
@@ -482,7 +482,7 @@
         "pLocation": "Villaen har roen ved sin egen søbred uden at føles afsides. Tahkos skiløjper, golfbaner, restauranter og service ligger tæt på.",
         "ctaLocation": "BELIGGENHED >",
         "eyServices": "PRIVATE SERVICES",
-        "hServices": "Et andet hjem uden et ekstra arbejde",
+        "hServices": "Et andet hjem uden at blive et ekstra arbejde",
         "pServices": "En ejendom i denne størrelse har også en praktisk side, især når den bruges hele året. Lokal hjælp kan tage sig af meget af arbejdet i baggrunden.",
         "ctaServices": "PRIVATE SERVICES >",
         "cookies": "Cookieindstillinger"
@@ -527,7 +527,7 @@
         "pLocation": "Villal on oma järveäärse koha rahu, kuid see ei tundu eraldatud. Tahko suusanõlvad, golfiväljakud, restoranid ja teenused on kõik lähedal.",
         "ctaLocation": "ASUKOHT >",
         "eyServices": "PRIVAATSED TEENUSED",
-        "hServices": "Teine kodu ilma teise töökohata",
+        "hServices": "Teine kodu, mis ei muutu teiseks tööks",
         "pServices": "Sellise suurusega kinnistul on ka praktiline pool, eriti kui seda kasutatakse aasta läbi. Kohalik abi saab suure osa sellest tööst märkamatult enda peale võtta.",
         "ctaServices": "PRIVAATSED TEENUSED >",
         "cookies": "Küpsiste seaded"
@@ -572,7 +572,7 @@
         "pLocation": "La villa offre la tranquillità di una propria posizione sul lago senza risultare isolata. Le piste da sci, i campi da golf, i ristoranti e i servizi di Tahko sono tutti vicini.",
         "ctaLocation": "POSIZIONE >",
         "eyServices": "SERVIZI PRIVATI",
-        "hServices": "Una seconda casa senza un secondo lavoro",
+        "hServices": "Una seconda casa, senza farne un secondo lavoro",
         "pServices": "Una proprietà di queste dimensioni ha anche un lato pratico, soprattutto quando viene utilizzata tutto l’anno. Il supporto locale può occuparsi di gran parte di quel lavoro dietro le quinte.",
         "ctaServices": "SERVIZI PRIVATI >",
         "cookies": "Preferenze cookie"
