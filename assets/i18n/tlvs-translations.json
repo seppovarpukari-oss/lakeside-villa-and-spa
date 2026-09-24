@@ -1407,7 +1407,19 @@
         "hDining": "Fra innsjøen til bordet",
         "pDining": "Middagen blir ofte en naturlig fortsettelse av dagen ved innsjøen. Fra terrassen er vannet fortsatt like nær når bading, båtliv eller fiske går over i kveld.",
         "cookies": "Innstillinger for informasjonskapsler",
-        "lureSub": "Et lokalt agntips for Syväri."
+        "lureSub": "Et lokalt agntips for Syväri.",
+        "navTahko": "Tahko med båt",
+        "navSwimming": "Bading",
+        "navBoating": "Båtliv / vannveier",
+        "navFishing": "Fiske på Syväri",
+        "navEvening": "Kveld ved innsjøen",
+        "navDining": "Middag ved innsjøen",
+        "footerPlace": "Tahko · Finland",
+        "contactEyebrow": "Kontakt",
+        "footerHeading": "Kontakt oss",
+        "footerIntro": "For spørsmål om opphold eller eiendommen.",
+        "footerEnquire": "Kontakt oss →",
+        "privacy": "Personvern"
       },
       "da": {
         "navVilla": "Villaen",
@@ -1443,7 +1455,19 @@
         "hDining": "Fra søen til bordet",
         "pDining": "Middagen bliver ofte en naturlig fortsættelse af dagen ved søen. Fra terrassen er vandet stadig helt tæt på, når badning, sejlads eller fiskeri går over i aften.",
         "cookies": "Cookieindstillinger",
-        "lureSub": "Et lokalt agntip til Syväri."
+        "lureSub": "Et lokalt agntip til Syväri.",
+        "navTahko": "Tahko med båd",
+        "navSwimming": "Badning",
+        "navBoating": "Sejlads / vandveje",
+        "navFishing": "Fiskeri på Syväri",
+        "navEvening": "Aften ved søen",
+        "navDining": "Middag ved søen",
+        "footerPlace": "Tahko · Finland",
+        "contactEyebrow": "Kontakt",
+        "footerHeading": "Kontakt os",
+        "footerIntro": "For spørgsmål om ophold eller ejendommen.",
+        "footerEnquire": "Kontakt os →",
+        "privacy": "Privatliv"
       },
       "et": {
         "navVilla": "Villa",
@@ -1479,7 +1503,19 @@
         "hDining": "Järvelt lauale",
         "pDining": "Õhtusöök on sageli loomulik jätk järve ääres veedetud päevale. Terrassil jääb vesi endiselt lähedale, kui ujumine, paadisõit või kalapüük asendub õhtuga.",
         "cookies": "Küpsiste seaded",
-        "lureSub": "Kohalik landisoovitus Syvärile."
+        "lureSub": "Kohalik landisoovitus Syvärile.",
+        "navTahko": "Tahko paadiga",
+        "navSwimming": "Ujumine",
+        "navBoating": "Paadisõit / veeteed",
+        "navFishing": "Kalapüük Syväril",
+        "navEvening": "Õhtu järve ääres",
+        "navDining": "Õhtusöök järve ääres",
+        "footerPlace": "Tahko · Soome",
+        "contactEyebrow": "Kontakt",
+        "footerHeading": "Võta ühendust",
+        "footerIntro": "Küsimused peatumise või kinnisvara kohta.",
+        "footerEnquire": "Võta ühendust →",
+        "privacy": "Privaatsus"
       },
       "it": {
         "navVilla": "La Villa",
@@ -1515,7 +1551,19 @@
         "hDining": "Dal lago alla tavola",
         "pDining": "La cena è spesso il naturale proseguimento della giornata sul lago. Dalla terrazza l’acqua resta vicina mentre nuoto, navigazione o pesca lasciano spazio alla sera.",
         "cookies": "Preferenze cookie",
-        "lureSub": "Un’esca apprezzata localmente sul Syväri."
+        "lureSub": "Un’esca apprezzata localmente sul Syväri.",
+        "navTahko": "Tahko in barca",
+        "navSwimming": "Nuoto",
+        "navBoating": "Navigazione / vie d’acqua",
+        "navFishing": "Pesca sul Syväri",
+        "navEvening": "Sera sul lago",
+        "navDining": "Cena sul lago",
+        "footerPlace": "Tahko · Finlandia",
+        "contactEyebrow": "Contatti",
+        "footerHeading": "Contattaci",
+        "footerIntro": "Per domande sui soggiorni o sulla proprietà.",
+        "footerEnquire": "Contattaci →",
+        "privacy": "Privacy"
       }
     },
     "spa-wellness": {
@@ -1832,7 +1880,16 @@
         "eyFire": "Peisestue",
         "hFire": "Mellom badstue og basseng",
         "pFire": "Peisestuen er et rolig sted mellom badstue, damp og basseng. Det gjør at underetasjen oppleves som en egen del av huset, ikke bare som en samling spa-funksjoner.",
-        "cookies": "Innstillinger for informasjonskapsler"
+        "cookies": "Innstillinger for informasjonskapsler",
+        "eyClosing": "Ild · Vann · Stillhet",
+        "hClosing": "Velvære på finsk vis",
+        "pClosing": "Varmt vann og badstuvarme inne. Kjølig nordisk luft rett utenfor døren.",
+        "footerPlace": "Tahko · Finland",
+        "contactEyebrow": "Kontakt",
+        "footerHeading": "Kontakt oss",
+        "footerIntro": "For spørsmål om opphold eller eiendommen.",
+        "footerEnquire": "Kontakt oss →",
+        "privacy": "Personvern"
       },
       "da": {
         "navVilla": "Villaen",
@@ -1859,7 +1916,16 @@
         "eyFire": "Pejsestue",
         "hFire": "Mellem sauna og pool",
         "pFire": "Pejsestuen er et roligt sted mellem sauna, damp og pool. Den får underetagen til at føles som en selvstændig del af huset og ikke blot som en samling spa-funktioner.",
-        "cookies": "Cookieindstillinger"
+        "cookies": "Cookieindstillinger",
+        "eyClosing": "Ild · Vand · Stilhed",
+        "hClosing": "Velvære på finsk vis",
+        "pClosing": "Varmt vand og saunavarme indenfor. Kølig nordisk luft lige uden for døren.",
+        "footerPlace": "Tahko · Finland",
+        "contactEyebrow": "Kontakt",
+        "footerHeading": "Kontakt os",
+        "footerIntro": "For spørgsmål om ophold eller ejendommen.",
+        "footerEnquire": "Kontakt os →",
+        "privacy": "Privatliv"
       },
       "et": {
         "navVilla": "Villa",
@@ -1886,7 +1952,16 @@
         "eyFire": "Kaminatuba",
         "hFire": "Sauna ja basseini vahel",
         "pFire": "Kaminatuba on rahulik koht sauna, auru ja basseini vahel. Nii tundub alumine korrus omaette majaosana, mitte üksikute spa-funktsioonide jadana.",
-        "cookies": "Küpsiste seaded"
+        "cookies": "Küpsiste seaded",
+        "eyClosing": "Tuli · Vesi · Vaikus",
+        "hClosing": "Heaolu Soome moodi",
+        "pClosing": "Soe vesi ja saunakuumus sees. Jahe põhjamaine õhk kohe ukse taga.",
+        "footerPlace": "Tahko · Soome",
+        "contactEyebrow": "Kontakt",
+        "footerHeading": "Võta ühendust",
+        "footerIntro": "Küsimused peatumise või kinnisvara kohta.",
+        "footerEnquire": "Võta ühendust →",
+        "privacy": "Privaatsus"
       },
       "it": {
         "navVilla": "La Villa",
@@ -1914,7 +1989,15 @@
         "hFire": "Tra sauna e piscina",
         "pFire": "La sala con camino è un luogo tranquillo tra sauna, vapore e piscina. In questo modo il piano inferiore appare come una parte autonoma della casa, non come una semplice successione di funzioni spa.",
         "cookies": "Preferenze cookie",
-        "hClosing": "Benessere alla finlandese"
+        "hClosing": "Benessere alla finlandese",
+        "eyClosing": "Fuoco · Acqua · Silenzio",
+        "pClosing": "Acqua calda e calore della sauna all’interno. Aria nordica fresca appena fuori dalla porta.",
+        "footerPlace": "Tahko · Finlandia",
+        "contactEyebrow": "Contatti",
+        "footerHeading": "Contattaci",
+        "footerIntro": "Per domande sui soggiorni o sulla proprietà.",
+        "footerEnquire": "Contattaci →",
+        "privacy": "Privacy"
       }
     },
     "location": {
@@ -2594,7 +2677,13 @@
         "carPlace": "Tahko",
         "carDist": "Helårs veiforbindelse",
         "signature": "Tahko · Finland · Norden · EU",
-        "cookies": "Innstillinger for informasjonskapsler"
+        "cookies": "Innstillinger for informasjonskapsler",
+        "footerPlace": "Tahko · Finland",
+        "contactEyebrow": "Kontakt",
+        "footerHeading": "Kontakt oss",
+        "footerIntro": "For spørsmål om opphold eller eiendommen.",
+        "footerEnquire": "Kontakt oss →",
+        "privacy": "Personvern"
       },
       "da": {
         "distanceSkiAccess": "~100 m",
@@ -2664,7 +2753,13 @@
         "carPlace": "Tahko",
         "carDist": "Vejadgang hele året",
         "signature": "Tahko · Finland · Norden · EU",
-        "cookies": "Cookieindstillinger"
+        "cookies": "Cookieindstillinger",
+        "footerPlace": "Tahko · Finland",
+        "contactEyebrow": "Kontakt",
+        "footerHeading": "Kontakt os",
+        "footerIntro": "For spørgsmål om ophold eller ejendommen.",
+        "footerEnquire": "Kontakt os →",
+        "privacy": "Privatliv"
       },
       "et": {
         "distanceSkiAccess": "~100 m",
@@ -2734,7 +2829,13 @@
         "carPlace": "Tahko",
         "carDist": "Aastaringne ligipääs maanteelt",
         "signature": "Tahko · Soome · Põhjamaad · EL",
-        "cookies": "Küpsiste seaded"
+        "cookies": "Küpsiste seaded",
+        "footerPlace": "Tahko · Soome",
+        "contactEyebrow": "Kontakt",
+        "footerHeading": "Võta ühendust",
+        "footerIntro": "Küsimused peatumise või kinnisvara kohta.",
+        "footerEnquire": "Võta ühendust →",
+        "privacy": "Privaatsus"
       },
       "it": {
         "distanceSkiAccess": "~100 m",
@@ -2804,7 +2905,13 @@
         "carPlace": "Tahko",
         "carDist": "Accesso stradale tutto l’anno",
         "signature": "Tahko · Finlandia · Paesi nordici · UE",
-        "cookies": "Preferenze cookie"
+        "cookies": "Preferenze cookie",
+        "footerPlace": "Tahko · Finlandia",
+        "contactEyebrow": "Contatti",
+        "footerHeading": "Contattaci",
+        "footerIntro": "Per domande sui soggiorni o sulla proprietà.",
+        "footerEnquire": "Contattaci →",
+        "privacy": "Privacy"
       }
     },
     "private-services": {
@@ -3295,7 +3402,13 @@
         "psCloseEyebrow": "Private tjenester",
         "psCloseTitle": "Egen ro, Tahko i nærheten",
         "psCloseBody": "En privat beliggenhet trenger ikke bety lang vei til tjenester. Tahkos tilbud og lokal hjelp er nær, samtidig som villaen beholder sin egen ro ved innsjøen.",
-        "cookies": "Innstillinger for informasjonskapsler"
+        "cookies": "Innstillinger for informasjonskapsler",
+        "footerPlace": "Tahko · Finland",
+        "contactEyebrow": "Kontakt",
+        "footerHeading": "Kontakt oss",
+        "footerIntro": "For spørsmål om opphold eller eiendommen.",
+        "footerEnquire": "Kontakt oss →",
+        "privacy": "Personvern"
       },
       "da": {
         "navVilla": "Villaen",
@@ -3344,7 +3457,13 @@
         "psCloseEyebrow": "Private tjenester",
         "psCloseTitle": "Egen ro, Tahko tæt på",
         "psCloseBody": "En privat beliggenhed behøver ikke betyde langt til service. Tahkos tilbud og lokal hjælp er tæt på, mens villaen bevarer sin egen ro ved søen.",
-        "cookies": "Cookieindstillinger"
+        "cookies": "Cookieindstillinger",
+        "footerPlace": "Tahko · Finland",
+        "contactEyebrow": "Kontakt",
+        "footerHeading": "Kontakt os",
+        "footerIntro": "For spørgsmål om ophold eller ejendommen.",
+        "footerEnquire": "Kontakt os →",
+        "privacy": "Privatliv"
       },
       "et": {
         "navVilla": "Villa",
@@ -3393,7 +3512,13 @@
         "psCloseEyebrow": "Privaatsed teenused",
         "psCloseTitle": "Oma rahu, Tahko lähedal",
         "psCloseBody": "Privaatsus ei tähenda siin teenustest kaugel olemist. Tahko teenused ja kohalik abi on lähedal, samal ajal kui villa säilitab omaette rahu järve ääres.",
-        "cookies": "Küpsiste seaded"
+        "cookies": "Küpsiste seaded",
+        "footerPlace": "Tahko · Soome",
+        "contactEyebrow": "Kontakt",
+        "footerHeading": "Võta ühendust",
+        "footerIntro": "Küsimused peatumise või kinnisvara kohta.",
+        "footerEnquire": "Võta ühendust →",
+        "privacy": "Privaatsus"
       },
       "it": {
         "navVilla": "La Villa",
@@ -3442,7 +3567,13 @@
         "psCloseEyebrow": "Servizi privati",
         "psCloseTitle": "La propria quiete, Tahko vicino",
         "psCloseBody": "Una posizione riservata non significa essere lontani dai servizi. Tahko e la rete locale di assistenza restano vicini, mentre la villa conserva la propria tranquillità sul lago.",
-        "cookies": "Preferenze cookie"
+        "cookies": "Preferenze cookie",
+        "footerPlace": "Tahko · Finlandia",
+        "contactEyebrow": "Contatti",
+        "footerHeading": "Contattaci",
+        "footerIntro": "Per domande sui soggiorni o sulla proprietà.",
+        "footerEnquire": "Contattaci →",
+        "privacy": "Privacy"
       }
     }
   }
