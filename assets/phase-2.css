@@ -74,8 +74,6 @@ html[lang] #at-a-glance .p0098-item small {
   html[lang] #at-a-glance .p0098-item { padding: 12px 10px; }
   html[lang] #at-a-glance .p0098-item strong { font-size: 17px; }
 }
-/* First three Villa facts establish scale and capacity without hiding other details. */
-html[lang] #villa-facts .p0098-item:nth-child(-n+3) strong { color: #e5d4b1; }
 html[lang] #service-facts .p0098-item strong { font-size: 21px; }
 html[lang] .glance { padding-top: 36px; padding-bottom: 56px; }
 html[lang] .glance .section-title { margin-bottom: 24px; }
