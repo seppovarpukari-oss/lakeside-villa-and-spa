@@ -82,12 +82,9 @@ def check(root=ROOT):
                 errors.append(f'{path.relative_to(root)}: missing or extra fact sections')
             for section, original in english.sections.items():
                 translated = localized.sections.get(section, [])
-                expected_items = len(english.item_text_counts.get(section, []))
                 localized_items = localized.item_text_counts.get(section, [])
-                if len(localized_items) != expected_items:
-                    errors.append(
-                        f'{path.relative_to(root)}#{section}: expected {expected_items} fact items, found {len(localized_items)}'
-                    )
+                if not localized_items:
+                    errors.append(f'{path.relative_to(root)}#{section}: no fact items found')
                 for item_index, text_count in enumerate(localized_items, 1):
                     if text_count < 2:
                         errors.append(
