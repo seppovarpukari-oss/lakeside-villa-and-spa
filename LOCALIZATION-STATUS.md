@@ -14,7 +14,7 @@ The Finnish Home visible editorial copy was finalized through owner review, usin
 
 The earlier FI Home editorial naturalness sign-off is withdrawn. A manual read found translation-shaped wording, generic marketing language and phrases that were grammatically valid but not natural Finnish. FI Home has now been rewritten on this branch under `LOCALIZATION-GUIDE.md`, while preserving the approved en-GB meaning and locked facts. The translation bank and static FI Home HTML were updated together. No merge to `main` has been made from this correction.
 
-Current native-language approval scope: **FI Home owner-approved on 2026-09-25; FI The Villa owner-approved on 2026-09-25; FI Lakeside Life owner-approved on 2026-09-25**. The earlier technical completeness checks remain useful as technical checks, but they are not evidence that the other localized pages or languages meet the native-language editorial standard.
+Current native-language approval scope: **FI Home owner-approved on 2026-09-25; FI The Villa owner-approved on 2026-09-25; FI Lakeside Life owner-approved on 2026-09-25; FI Spa & Wellness owner-approved on 2026-09-25**. The earlier technical completeness checks remain useful as technical checks, but they are not evidence that the other localized pages or languages meet the native-language editorial standard.
 
 ## 2026-09-25 implementation and QA
 
