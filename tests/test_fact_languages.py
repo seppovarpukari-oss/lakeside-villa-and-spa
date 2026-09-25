@@ -37,7 +37,7 @@ class FactLanguagesTest(unittest.TestCase):
             self.assertEqual([], check(root)[1])
             path = root / 'fi/location.html'
             original = path.read_text()
-            path.write_text(original.replace('Hiihtolatu', 'XC ski trail'))
+            path.write_text(original.replace('Maastohiihtoladulle', 'XC ski trail'))
             self.assertTrue(any('untranslated English: XC ski trail' in e for e in check(root)[1]))
             path.write_text(original.replace('section-block glance', 'section-block'))
             self.assertTrue(any('missing or extra fact sections' in e for e in check(root)[1]))
