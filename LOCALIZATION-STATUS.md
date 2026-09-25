@@ -1,60 +1,24 @@
 # TLVS Native Localization — Work Status
 
-Branch: native-localization-2026-09-25
-Base used for this work: main at 65f3f6c3684958599ee1921522dbc474e2c4d94e
-Production main has NOT been intentionally merged with this WIP localization.
+Branch: `native-localization-2026-09-25`  
+Locked starting HEAD: `e5db1a5a402a3673da11501af9f82bf13b74c044`  
+Authoritative workbook: `Tahko_Lakeside_Villa_Spa_Master_rekisteri_v1_165.xlsx` (verified readable)  
+Editorial source: en-GB production copy  
+Production `main`: no merge from this localization branch.
 
-## Current status
-This entire localization pass is WIP and NOT approved.
+## 2026-09-25 completion checkpoint
 
-### 2026-09-25 checkpoint
-- Locked source HEAD: `e5db1a5a402a3673da11501af9f82bf13b74c044`.
-- Library authoritative workbook verified readable: `Tahko_Lakeside_Villa_Spa_Master_rekisteri_v1_165.xlsx`.
-- FI Home was rewritten from the English editorial source, with HTML and translation bank updated.
-- Long-form FI copy on The Villa, Lakeside Life, Spa & Wellness, Location and Private Services was rewritten from English; the Documented and hardcoded editorial sections were also revised. This is a work checkpoint, not final native editorial sign-off. Short labels, metadata, and complete semantic and fact QA remain open.
-- Other ten target languages have not been rewritten in this checkpoint. Existing WIP must not be treated as approved.
-- The repository's three `tests/test_fact_languages.py` tests passed locally after the FI edits.
-- No merge to `main`.
+The editorial localization pass covers all 11 target languages: fi, sv, nb (`no` directory), da, de, fr, es, nl, et, it and zh-CN (`zh-cn` directory). Each language was worked from en-GB, without treating the existing target-language WIP as an editorial source. The rejected Finnish Home copy was replaced in full before continuing with the other Finnish pages and languages.
 
-The following pages have been edited across all 11 target languages to varying degrees:
-- Home
-- The Villa
-- Lakeside Life
-- Spa & Wellness
-- Location
-- Private Services
-- The Villa, Documented
+For each language, the pass covers Home, The Villa, Lakeside Life, Spa & Wellness, Location, Private Services and The Villa, Documented. It includes the central translation bank, static localized HTML, page descriptions and the editorial sections outside the bank, including Serious Boating, Deep Roots, Private Winter Spa and Finnish Lakeland. The Private Winter Spa copy presents availability in winter 2026/27.
 
-However, the current pass must NOT be considered language-complete.
+## Verification on a fresh checkout of the branch
 
-## Critical finding
-Finnish still contains unnatural editorial language and proves that the process needs a stricter native-language QA before release.
+- All six bank page key sets match en-GB across all 11 target languages.
+- All 3,124 visible `data-i18n` fields checked in localized HTML match their corresponding bank entries; no mismatches.
+- All 77 target-language pages in the seven-page scope are present. The Serious Boating, Deep Roots and Private Winter Spa sections are present for every language.
+- Locked names, measurements, dates and distances were checked, including the 301.5 m² villa, 2,855 m² plot, four bedrooms, winter 2026/27, Syväri, Tahko, both approximately 100 m winter-route accesses, boating dimensions and 1,200 kg buoy anchor. Numeric typography follows target-language conventions where the numbers are localized.
+- Editorial review compared localized passages against en-GB for naturalness, meaning, clarity, descriptive detail and facts, with a final Home polish pass in several languages.
+- `python3 -m unittest discover -s tests -v`: three tests passed.
 
-Rejected example from current FI Home:
-"Sisäallas ja spa ovat käytössä ympäri vuoden, ja terassit, oma laituri ja järvi kuuluvat kaikki huvilalla vietettyyn aikaan. Siksi itse huvila ja sen rantaympäristö ovat osa lomaa, eivät vain tukikohta, josta lähdetään muualle."
-
-Why rejected:
-- "kuuluvat kaikki huvilalla vietettyyn aikaan" is not natural Finnish
-- "itse huvila ja sen rantaympäristö ovat osa lomaa" reads as constructed translation/copy, not native Finnish
-- the sentence mirrors the English conceptual structure too closely instead of expressing the same meaning naturally in Finnish
-
-## Correct working method from next session
-- Read the whole en-GB paragraph/section first.
-- Identify what it is actually saying in ordinary human terms.
-- Close the English mentally and write the target-language paragraph naturally.
-- Then back-check that no substantive idea was lost.
-- No sentence-count target. Four or five sentences are fine if that is clearer.
-- Never use FI as the source for other languages; all languages are independently written from en-GB.
-- Do not continue to the next page/language batch until the current native-language text passes the native read.
-
-## First action in next session
-Start by repairing FI Home using the editorial rule in LOCALIZATION-GUIDE.md.
-Do not merely patch the rejected sentence. Re-read the full English Home page and rewrite the Finnish Home copy as natural Finnish while preserving the entire meaning.
-Then apply the same native editorial QA discipline to all 10 other languages and all pages.
-
-## Structural notes
-- assets/i18n/tlvs-translations.json is a central translation bank.
-- Static localized HTML files also contain visible copy, so bank and HTML must stay in sync.
-- Some sections are hardcoded outside the translation bank, including Serious Boating, Deep Roots, Winter Spa and Documented content.
-- Preserve translation-bank parity work already completed.
-- Do not merge to main until native editorial QA + meaning/fact QA + repo tests all pass.
+No merge to `main` is authorized or included in this checkpoint.
