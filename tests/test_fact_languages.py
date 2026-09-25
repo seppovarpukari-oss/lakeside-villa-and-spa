@@ -1,4 +1,5 @@
 """Regression tests for the language checker and the location-grid repair."""
+import json
 import re
 import shutil
 import tempfile
@@ -14,18 +15,20 @@ class FactLanguagesTest(unittest.TestCase):
         self.assertEqual([], errors)
         self.assertGreaterEqual(count, 72)
 
-    def test_location_required_distances(self):
-        required = [('100', 'm'), ('1.5', 'km'), ('1.7', 'km'), ('0.8', 'km'), ('40', 'km'), ('55', 'km')]
+    def test_location_inventory_and_distances(self):
+        inventory = json.loads((ROOT / 'assets/i18n/tlvs-translations.json').read_text())['pages']['location']
         for lang in LANGUAGES:
             path = ROOT / ('location.html' if lang == 'en' else f'{lang}/location.html')
             html = path.read_text()
-            grid = re.search(r'<div class="glance-grid">.*?</section>', html, re.S)[0]
-            distances = [(n.replace(',', '.'), unit) for n, unit in re.findall(r'<strong[^>]*>~([\d.,]+) (m|km)</strong>', grid)]
-            remaining = list(distances)
-            for expected in required:
-                self.assertIn(expected, remaining, f'{lang}: missing distance {expected}')
-                remaining.remove(expected)
-            self.assertGreaterEqual(grid.count('class="stat"'), 7, lang)
+            grid = re.search(r'<div class="glance-grid">.*?</section>', html)[0]
+            values = re.findall(r'data-i18n="(distance[^"]+)">([^<]+)<', grid)
+            self.assertEqual(11, len(values), lang)
+            for key, value in values:
+                self.assertEqual(value, inventory['zh' if lang == 'zh-cn' else lang][key])
+            distances = re.findall(r'<strong>~([\d.,]+) (m|km)</strong>', grid)
+            self.assertEqual([('100', 'm'), ('1.5', 'km'), ('1.7', 'km'), ('0.8', 'km'), ('40', 'km'), ('55', 'km')],
+                             [(n.replace(',', '.'), unit) for n, unit in distances], lang)
+            self.assertEqual(7, grid.count('class="stat"'), lang)
 
     def test_checker_rejects_actual_regression_and_missing_content(self):
         with tempfile.TemporaryDirectory() as directory:
@@ -37,7 +40,7 @@ class FactLanguagesTest(unittest.TestCase):
             self.assertEqual([], check(root)[1])
             path = root / 'fi/location.html'
             original = path.read_text()
-            path.write_text(original.replace('Maastohiihtoladulle', 'XC ski trail'))
+            path.write_text(original.replace('Hiihtolatu', 'XC ski trail'))
             self.assertTrue(any('untranslated English: XC ski trail' in e for e in check(root)[1]))
             path.write_text(original.replace('section-block glance', 'section-block'))
             self.assertTrue(any('missing or extra fact sections' in e for e in check(root)[1]))
