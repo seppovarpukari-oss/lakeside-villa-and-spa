@@ -19,7 +19,7 @@ class FactLanguagesTest(unittest.TestCase):
         for lang in LANGUAGES:
             path = ROOT / ('location.html' if lang == 'en' else f'{lang}/location.html')
             html = path.read_text()
-            grid = re.search(r'<div class="glance-grid">.*?</section>', html)[0]
+            grid = re.search(r'<div class="glance-grid">.*?</section>', html, re.S)[0]
             distances = [(n.replace(',', '.'), unit) for n, unit in re.findall(r'<strong[^>]*>~([\d.,]+) (m|km)</strong>', grid)]
             remaining = list(distances)
             for expected in required:
