@@ -20,7 +20,7 @@ class FactLanguagesTest(unittest.TestCase):
             path = ROOT / ('location.html' if lang == 'en' else f'{lang}/location.html')
             html = path.read_text()
             grid = re.search(r'<div class="glance-grid">.*?</section>', html)[0]
-            distances = [(n.replace(',', '.'), unit) for n, unit in re.findall(r'<strong>~([\d.,]+) (m|km)</strong>', grid)]
+            distances = [(n.replace(',', '.'), unit) for n, unit in re.findall(r'<strong[^>]*>~([\d.,]+) (m|km)</strong>', grid)]
             remaining = list(distances)
             for expected in required:
                 self.assertIn(expected, remaining, f'{lang}: missing distance {expected}')
