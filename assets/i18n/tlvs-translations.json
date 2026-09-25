@@ -101,7 +101,7 @@
         "pLounge": "Illalla katetulla oleskeluterassilla voi viihtyä kuin huvilan toisessa olohuoneessa. Tulipöytä ja lämmin valaistus pääsevät oikeuksiinsa pimeän tultua; järvi näkyy edelleen terassin takana.",
         "eyDinner": "ILLALLINEN JÄRVEN ÄÄRELLÄ",
         "hDinner": "Illallinen terassilla",
-        "pDinner": "Vesillä vietetyn päivän jälkeen voi jäädä illalliselle ulos. Terassilla järvi on lähellä vielä silloinkin, kun päivän vauhti on jo hiljentynyt.",
+        "pDinner": "Vesillä vietetyn päivän jälkeen illallisen voi kattaa terassille. Siellä saa viipyä rauhassa iltaan asti, aivan järven äärellä.",
         "eyCharacter": "HUVILAN TUNNELMA",
         "hCharacter": "Luonnetta yksityiskohdissa",
         "pCharacter": "Kivipinnat, takkatuli ja vuosien varrella kertyneet esineet antavat huvilalle sen oman luonteen.",
@@ -122,7 +122,7 @@
         "pLocation": "Omalla rannalla saa olla rauhassa ja viettää päivää haluamallaan tavalla. Syrjässä huvila ei silti ole: Tahkon rinteet, golfkentät, ravintolat ja muut palvelut ovat lähellä.",
         "ctaLocation": "SIJAINTI &gt;",
         "eyServices": "YKSITYISET PALVELUT",
-        "hServices": "Toinen koti ilman toista työmaata",
+        "hServices": "Apua huvilan hoitoon",
         "pServices": "Näin suuren kiinteistön hoitamiseen kuuluu käytännön töitä, varsinkin kun huvilaa käytetään ympäri vuoden. Paikallista apua on saatavilla, jotta monet arjen tehtävät voidaan hoitaa huomaamattomasti taustalla.",
         "ctaServices": "YKSITYISET PALVELUT &gt;",
         "cookies": "Evästeasetukset"
