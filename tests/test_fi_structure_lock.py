@@ -102,9 +102,16 @@ class FinnishStructureLockTest(unittest.TestCase):
             self.assertGreater(len(items), 0, relative)
             for index, item in enumerate(items, 1):
                 inner = item.group(1)
-                self.assertRegex(inner, r"<strong\b[^>]*>\s*[^<]+\s*</strong>", f"{relative} item {index}")
-                self.assertRegex(inner, r"<span\b[^>]*>\s*[^<]+\s*</span>", f"{relative} item {index}")
-                self.assertRegex(inner, r"<small\b[^>]*>[\s\S]*?</small>", f"{relative} item {index}")
+                strong = re.search(r"<strong\b[^>]*>([\s\S]*?)</strong>", inner, re.I)
+                span = re.search(r"<span\b[^>]*>([\s\S]*?)</span>", inner, re.I)
+                small = re.search(r"<small\b[^>]*>([\s\S]*?)</small>", inner, re.I)
+                self.assertIsNotNone(strong, f"{relative} item {index}")
+                self.assertIsNotNone(span, f"{relative} item {index}")
+                self.assertIsNotNone(small, f"{relative} item {index}")
+                strong_text = re.sub(r"<[^>]+>", "", strong.group(1)).strip()
+                span_text = re.sub(r"<[^>]+>", "", span.group(1)).strip()
+                self.assertTrue(strong_text, f"{relative} item {index}: empty primary text")
+                self.assertTrue(span_text, f"{relative} item {index}: empty secondary text")
 
 if __name__ == "__main__":
     unittest.main()
