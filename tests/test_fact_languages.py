@@ -15,7 +15,7 @@ class FactLanguagesTest(unittest.TestCase):
         self.assertGreaterEqual(count, 72)
 
     def test_location_required_distances(self):
-        required = [('100', 'm'), ('100', 'm'), ('1.5', 'km'), ('1.7', 'km'), ('0.8', 'km'), ('40', 'km'), ('55', 'km')]
+        required = [('100', 'm'), ('1.5', 'km'), ('1.7', 'km'), ('0.8', 'km'), ('40', 'km'), ('55', 'km')]
         for lang in LANGUAGES:
             path = ROOT / ('location.html' if lang == 'en' else f'{lang}/location.html')
             html = path.read_text()
