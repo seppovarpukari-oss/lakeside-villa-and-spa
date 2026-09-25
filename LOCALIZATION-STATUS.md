@@ -6,6 +6,12 @@ Editorial source: en-GB production copy
 Authoritative workbook verified at project start: `Tahko_Lakeside_Villa_Spa_Master_rekisteri_v1_165.xlsx`
 No merge to `main`.
 
+## 2026-09-25 FI Home native-language correction
+
+The earlier FI Home editorial naturalness sign-off is withdrawn. A manual read found translation-shaped wording, generic marketing language and phrases that were grammatically valid but not natural Finnish. FI Home has now been rewritten on this branch under `LOCALIZATION-GUIDE.md`, while preserving the approved en-GB meaning and locked facts. The translation bank and static FI Home HTML were updated together. No merge to `main` has been made from this correction.
+
+Current native-language approval scope: **FI Home only, pending owner review**. The earlier technical completeness checks remain useful as technical checks, but they are not evidence that the other localized pages or languages meet the native-language editorial standard.
+
 ## 2026-09-25 implementation and QA
 
 The localization implementation covers fi, sv, nb/no, da, de, fr, es, nl, et, it and zh-CN. Each language was written from en-GB. Seven scoped pages per language are present: Home, The Villa, Lakeside Life, Spa & Wellness, Location, Private Services and The Villa, Documented. FI Home was replaced from the editorial source. The translation bank and localized static HTML were edited together. Serious Boating, Deep Roots, Private Winter Spa, Finnish Lakeland and Documented content outside the bank were included.
