@@ -1,9 +1,9 @@
 # TLVS Native Localization — Work Status
 
-Branch: `native-localization-2026-09-25`  
-Locked starting HEAD: `e5db1a5a402a3673da11501af9f82bf13b74c044`  
-Authoritative workbook: `Tahko_Lakeside_Villa_Spa_Master_rekisteri_v1_165.xlsx` (verified readable)  
-Editorial source: en-GB production copy  
+Branch: `native-localization-2026-09-25`
+Locked starting HEAD: `e5db1a5a402a3673da11501af9f82bf13b74c044`
+Authoritative workbook: `Tahko_Lakeside_Villa_Spa_Master_rekisteri_v1_165.xlsx` (verified readable)
+Editorial source: en-GB production copy
 Production `main`: no merge from this localization branch.
 
 ## 2026-09-25 completion checkpoint
