@@ -2,23 +2,24 @@
 
 Branch: `native-localization-2026-09-25`
 Locked starting HEAD: `e5db1a5a402a3673da11501af9f82bf13b74c044`
-Authoritative workbook: `Tahko_Lakeside_Villa_Spa_Master_rekisteri_v1_165.xlsx` (verified readable)
 Editorial source: en-GB production copy
-Production `main`: no merge from this localization branch.
+Authoritative workbook verified at project start: `Tahko_Lakeside_Villa_Spa_Master_rekisteri_v1_165.xlsx`
+No merge to `main`.
 
-## 2026-09-25 completion checkpoint
+## Current assessment — 2026-09-25
 
-The editorial localization pass covers all 11 target languages: fi, sv, nb (`no` directory), da, de, fr, es, nl, et, it and zh-CN (`zh-cn` directory). Each language was worked from en-GB, without treating the existing target-language WIP as an editorial source. The rejected Finnish Home copy was replaced in full before continuing with the other Finnish pages and languages.
+All 11 target languages (fi, sv, nb/no, da, de, fr, es, nl, et, it, zh-CN) have draft copy in the central translation bank and in the seven corresponding localized pages, including the Documented page and hardcoded editorial sections. FI Home was replaced rather than patched from the rejected WIP text.
 
-For each language, the pass covers Home, The Villa, Lakeside Life, Spa & Wellness, Location, Private Services and The Villa, Documented. It includes the central translation bank, static localized HTML, page descriptions and the editorial sections outside the bank, including Serious Boating, Deep Roots, Private Winter Spa and Finnish Lakeland. The Private Winter Spa copy presents availability in winter 2026/27.
+**Native editorial approval remains open.** The earlier completion declaration was unsupported: passing fact tests and bank/HTML comparisons proves structural consistency, not idiomatic language or full preservation of en-GB meaning. A later manual pass found and corrected additional awkward or misleading text in every language it examined. The review was concentrated on longer bank entries; it is not a documented paragraph-by-paragraph native sign-off for every text field and hardcoded section.
 
-## Verification on a fresh checkout of the branch
+The six bank pages contain 282 English keys, hence 3,102 target-language bank entries across 11 languages. In addition, each target-language set has 65 non-bank headings or paragraphs on the seven scoped pages (including repeated site elements). This scope requires a controlled full inventory, comparison with en-GB, and native-language editorial review before any release claim.
 
-- All six bank page key sets match en-GB across all 11 target languages.
-- All 3,124 visible `data-i18n` fields checked in localized HTML match their corresponding bank entries; no mismatches.
-- All 77 target-language pages in the seven-page scope are present. The Serious Boating, Deep Roots and Private Winter Spa sections are present for every language.
-- Locked names, measurements, dates and distances were checked, including the 301.5 m² villa, 2,855 m² plot, four bedrooms, winter 2026/27, Syväri, Tahko, both approximately 100 m winter-route accesses, boating dimensions and 1,200 kg buoy anchor. Numeric typography follows target-language conventions where the numbers are localized.
-- Editorial review compared localized passages against en-GB for naturalness, meaning, clarity, descriptive detail and facts, with a final Home polish pass in several languages.
-- `python3 -m unittest discover -s tests -v`: three tests passed.
+## Verified technical checks before the latest editorial changes
 
-No merge to `main` is authorized or included in this checkpoint.
+- Bank keys were identical to en-GB in every target language.
+- 3,124 visible `data-i18n` fields in localized HTML matched the bank in a fresh checkout.
+- The seven scoped pages and Serious Boating, Deep Roots and Private Winter Spa sections existed in every target language.
+- Locked facts, number formatting and route distances were checked.
+- Three repository unit tests passed.
+
+These checks must be rerun after the latest edits. Do not describe this branch as native-editorially complete or merge it into `main` on the basis of the technical checks alone.
