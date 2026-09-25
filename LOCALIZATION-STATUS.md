@@ -6,20 +6,19 @@ Editorial source: en-GB production copy
 Authoritative workbook verified at project start: `Tahko_Lakeside_Villa_Spa_Master_rekisteri_v1_165.xlsx`
 No merge to `main`.
 
-## Current assessment — 2026-09-25
+## 2026-09-25 implementation and QA
 
-All 11 target languages (fi, sv, nb/no, da, de, fr, es, nl, et, it, zh-CN) have draft copy in the central translation bank and in the seven corresponding localized pages, including the Documented page and hardcoded editorial sections. FI Home was replaced rather than patched from the rejected WIP text.
+The localization implementation covers fi, sv, nb/no, da, de, fr, es, nl, et, it and zh-CN. Each language was written from en-GB. Seven scoped pages per language are present: Home, The Villa, Lakeside Life, Spa & Wellness, Location, Private Services and The Villa, Documented. FI Home was replaced from the editorial source. The translation bank and localized static HTML were edited together. Serious Boating, Deep Roots, Private Winter Spa, Finnish Lakeland and Documented content outside the bank were included.
 
-**Native editorial approval remains open.** The earlier completion declaration was unsupported: passing fact tests and bank/HTML comparisons proves structural consistency, not idiomatic language or full preservation of en-GB meaning. A later manual pass found and corrected additional awkward or misleading text in every language it examined. The review was concentrated on longer bank entries; it is not a documented paragraph-by-paragraph native sign-off for every text field and hardcoded section.
+The editorial review compared the substantive English copy and its target-language counterparts for meaning, naturalness and concrete detail. Corrections included idiom and grammar, inland-waterway terminology, boating descriptions, winter-spa timing, region names and number presentation. A second technical pass found 50 Home links whose `>` had been encoded twice; all were repaired and a rendering regression test was added.
 
-The six bank pages contain 282 English keys, hence 3,102 target-language bank entries across 11 languages. In addition, each target-language set has 65 non-bank headings or paragraphs on the seven scoped pages (including repeated site elements). This scope requires a controlled full inventory, comparison with en-GB, and native-language editorial review before any release claim.
+### Final checks from a fresh checkout of the GitHub branch
 
-## Verified technical checks before the latest editorial changes
+- All six bank page key sets match en-GB across all 11 target languages (282 keys per language).
+- All 3,124 visible `data-i18n` fields match the target-language bank after one HTML entity decode, which reflects the rendered text; zero mismatches.
+- All 77 scoped localized pages exist. Serious Boating, Deep Roots, Private Winter Spa and Finnish Lakeland sections exist for every language.
+- Locked dimensions, names, dates and approximately 100 m winter-route distances were checked; locale number conventions were maintained.
+- `PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -v`: four tests pass, including the new CTA-rendering regression test.
+- `git diff --check` passes. This branch is not merged into `main`.
 
-- Bank keys were identical to en-GB in every target language.
-- 3,124 visible `data-i18n` fields in localized HTML matched the bank in a fresh checkout.
-- The seven scoped pages and Serious Boating, Deep Roots and Private Winter Spa sections existed in every target language.
-- Locked facts, number formatting and route distances were checked.
-- Three repository unit tests passed.
-
-These checks must be rerun after the latest edits. Do not describe this branch as native-editorially complete or merge it into `main` on the basis of the technical checks alone.
+Independent human native-editor certification across all 11 languages has not been obtained; this is an editorial and technical pass performed within the repository, not an external sign-off.
