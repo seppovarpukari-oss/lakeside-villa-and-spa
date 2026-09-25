@@ -30,7 +30,9 @@ class Facts(HTMLParser):
         super().__init__(convert_charrefs=True)
         self.lang = None
         self.sections = {}
+        self.item_text_counts = {}
         self.current = None
+        self.current_item = None
         self.feed(html)
 
     def handle_starttag(self, tag, attrs):
@@ -41,15 +43,24 @@ class Facts(HTMLParser):
             self.current = attrs.get('id')
             assert self.current and self.current not in self.sections, 'Missing or duplicate fact section ID'
             self.sections[self.current] = []
+            self.item_text_counts[self.current] = []
+        if self.current and tag == 'div' and {'p0098-item', 'stat'} & set(attrs.get('class', '').split()):
+            self.item_text_counts[self.current].append(0)
+            self.current_item = len(self.item_text_counts[self.current]) - 1
 
     def handle_endtag(self, tag):
+        if tag == 'div' and self.current_item is not None:
+            self.current_item = None
         if tag == 'section':
             self.current = None
+            self.current_item = None
 
     def handle_data(self, data):
         text = ' '.join(data.split())
         if self.current and text:
             self.sections[self.current].append(text)
+            if self.current_item is not None:
+                self.item_text_counts[self.current][self.current_item] += 1
 
 
 def check(root=ROOT):
@@ -71,8 +82,17 @@ def check(root=ROOT):
                 errors.append(f'{path.relative_to(root)}: missing or extra fact sections')
             for section, original in english.sections.items():
                 translated = localized.sections.get(section, [])
-                if len(translated) != len(original):
-                    errors.append(f'{path.relative_to(root)}#{section}: expected {len(original)} text fields, found {len(translated)}')
+                expected_items = len(english.item_text_counts.get(section, []))
+                localized_items = localized.item_text_counts.get(section, [])
+                if len(localized_items) != expected_items:
+                    errors.append(
+                        f'{path.relative_to(root)}#{section}: expected {expected_items} fact items, found {len(localized_items)}'
+                    )
+                for item_index, text_count in enumerate(localized_items, 1):
+                    if text_count < 2:
+                        errors.append(
+                            f'{path.relative_to(root)}#{section}: fact item {item_index} has too little text content'
+                        )
                 if lang != 'en':
                     for text in translated:
                         measurement = re.fullmatch(r'[~≈]?\s*[\d.,]+\s*(?:m|km|m²)', text)
