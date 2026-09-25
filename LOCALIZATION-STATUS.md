@@ -7,6 +7,15 @@ Production main has NOT been intentionally merged with this WIP localization.
 ## Current status
 This entire localization pass is WIP and NOT approved.
 
+### 2026-09-25 checkpoint
+- Locked source HEAD: `e5db1a5a402a3673da11501af9f82bf13b74c044`.
+- Library authoritative workbook verified readable: `Tahko_Lakeside_Villa_Spa_Master_rekisteri_v1_165.xlsx`.
+- FI Home was rewritten from the English editorial source, with HTML and translation bank updated.
+- Long-form FI copy on The Villa, Lakeside Life, Spa & Wellness, Location and Private Services was rewritten from English; the Documented and hardcoded editorial sections were also revised. This is a work checkpoint, not final native editorial sign-off. Short labels, metadata, and complete semantic and fact QA remain open.
+- Other ten target languages have not been rewritten in this checkpoint. Existing WIP must not be treated as approved.
+- The repository's three `tests/test_fact_languages.py` tests passed locally after the FI edits.
+- No merge to `main`.
+
 The following pages have been edited across all 11 target languages to varying degrees:
 - Home
 - The Villa
