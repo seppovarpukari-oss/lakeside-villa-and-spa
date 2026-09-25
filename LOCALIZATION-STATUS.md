@@ -1,24 +1,51 @@
 # TLVS Native Localization — Work Status
 
-Source branch: `native-localization-2026-09-25`
-Locked starting HEAD: `e5db1a5a402a3673da11501af9f82bf13b74c044`
-Editorial source: en-GB production copy
-Authoritative workbook verified at project start: `Tahko_Lakeside_Villa_Spa_Master_rekisteri_v1_165.xlsx`
-Production integration: localized content published from the source branch to `main` for GitHub Pages.
+Branch: native-localization-2026-09-25
+Base used for this work: main at 65f3f6c3684958599ee1921522dbc474e2c4d94e
+Production main has NOT been intentionally merged with this WIP localization.
 
-## 2026-09-25 implementation and QA
+## Current status
+This entire localization pass is WIP and NOT approved.
 
-The localization implementation covers fi, sv, nb/no, da, de, fr, es, nl, et, it and zh-CN. Each language was written from en-GB. Seven scoped pages per language are present: Home, The Villa, Lakeside Life, Spa & Wellness, Location, Private Services and The Villa, Documented. FI Home was replaced from the editorial source. The translation bank and localized static HTML were edited together. Serious Boating, Deep Roots, Private Winter Spa, Finnish Lakeland and Documented content outside the bank were included.
+The following pages have been edited across all 11 target languages to varying degrees:
+- Home
+- The Villa
+- Lakeside Life
+- Spa & Wellness
+- Location
+- Private Services
+- The Villa, Documented
 
-The editorial review compared the substantive English copy and its target-language counterparts for meaning, naturalness and concrete detail. Corrections included idiom and grammar, inland-waterway terminology, boating descriptions, winter-spa timing, region names and number presentation. A second technical pass found 50 Home links whose `>` had been encoded twice; all were repaired and a rendering regression test was added.
+However, the current pass must NOT be considered language-complete.
 
-### Final checks on the source branch and production integration
+## Critical finding
+Finnish still contains unnatural editorial language and proves that the process needs a stricter native-language QA before release.
 
-- All six bank page key sets match en-GB across all 11 target languages (282 keys per language).
-- All 3,124 visible `data-i18n` fields match the target-language bank after one HTML entity decode, which reflects the rendered text; zero mismatches.
-- All 77 scoped localized pages exist. Serious Boating, Deep Roots, Private Winter Spa and Finnish Lakeland sections exist for every language.
-- Locked dimensions, names, dates and approximately 100 m winter-route distances were checked; locale number conventions were maintained.
-- `PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -v`: four tests pass, including the new CTA-rendering regression test.
-- `git diff --check` passes. The production integration retains the source branch changes and existing main-only content.
+Rejected example from current FI Home:
+"Sisäallas ja spa ovat käytössä ympäri vuoden, ja terassit, oma laituri ja järvi kuuluvat kaikki huvilalla vietettyyn aikaan. Siksi itse huvila ja sen rantaympäristö ovat osa lomaa, eivät vain tukikohta, josta lähdetään muualle."
 
-Independent human native-editor certification across all 11 languages has not been obtained; this is an editorial and technical pass performed within the repository, not an external sign-off.
+Why rejected:
+- "kuuluvat kaikki huvilalla vietettyyn aikaan" is not natural Finnish
+- "itse huvila ja sen rantaympäristö ovat osa lomaa" reads as constructed translation/copy, not native Finnish
+- the sentence mirrors the English conceptual structure too closely instead of expressing the same meaning naturally in Finnish
+
+## Correct working method from next session
+- Read the whole en-GB paragraph/section first.
+- Identify what it is actually saying in ordinary human terms.
+- Close the English mentally and write the target-language paragraph naturally.
+- Then back-check that no substantive idea was lost.
+- No sentence-count target. Four or five sentences are fine if that is clearer.
+- Never use FI as the source for other languages; all languages are independently written from en-GB.
+- Do not continue to the next page/language batch until the current native-language text passes the native read.
+
+## First action in next session
+Start by repairing FI Home using the editorial rule in LOCALIZATION-GUIDE.md.
+Do not merely patch the rejected sentence. Re-read the full English Home page and rewrite the Finnish Home copy as natural Finnish while preserving the entire meaning.
+Then apply the same native editorial QA discipline to all 10 other languages and all pages.
+
+## Structural notes
+- assets/i18n/tlvs-translations.json is a central translation bank.
+- Static localized HTML files also contain visible copy, so bank and HTML must stay in sync.
+- Some sections are hardcoded outside the translation bank, including Serious Boating, Deep Roots, Winter Spa and Documented content.
+- Preserve translation-bank parity work already completed.
+- Do not merge to main until native editorial QA + meaning/fact QA + repo tests all pass.
