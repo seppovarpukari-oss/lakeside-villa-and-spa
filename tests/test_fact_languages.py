@@ -15,6 +15,16 @@ class FactLanguagesTest(unittest.TestCase):
         self.assertEqual([], errors)
         self.assertGreaterEqual(count, 72)
 
+    def test_gross_area_is_current_in_every_language(self):
+        for language in LANGUAGES:
+            for page in ('index.html', 'the-villa.html'):
+                path = ROOT / (page if language == 'en' else f'{language}/{page}')
+                html = path.read_text(encoding='utf-8')
+                self.assertIn('400', html, str(path))
+                self.assertNotIn('301.5 m²', html, str(path))
+                self.assertNotIn('301,5 m²', html, str(path))
+                self.assertNotIn('301.5 平方米', html, str(path))
+
     def test_location_inventory_and_distances(self):
         inventory = json.loads((ROOT / 'assets/i18n/tlvs-translations.json').read_text())['pages']['location']
         for lang in LANGUAGES:

@@ -38,7 +38,7 @@ Naturalness is achieved by changing syntax, sentence boundaries, idiom, rhythm a
 If any answer fails, the paragraph is rejected.
 
 ## Locked project facts relevant to localization
-- 301.5 m²
+- Approx. 400 m² for main villa gross building area (393.9 m² per approved drawings), including indoor spa, excluding separate garage/storage building. Not living area.
 - 2,855 m²
 - 4 bedrooms
 - Winter 2026/27
