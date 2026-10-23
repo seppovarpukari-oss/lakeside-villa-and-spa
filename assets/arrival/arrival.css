@@ -40,3 +40,30 @@
   .arrival { margin-top: 52px; margin-bottom: 76px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* Arrival copy follows the Home hero typography; the media remains unchanged. */
+.arrival { position: relative; display: flex; flex-direction: column; }
+.arrival-frame::after {
+  content: ""; position: absolute; inset: 0; z-index: 2; pointer-events: none;
+  background: linear-gradient(90deg, rgba(12,13,10,.62) 0%, rgba(12,13,10,.38) 30%, rgba(12,13,10,.08) 58%, transparent 76%);
+}
+.arrival-copy {
+  position: absolute; z-index: 3; left: clamp(32px,4.5vw,76px); top: 50%;
+  transform: translateY(-60%); width: 44%; max-width: 560px; pointer-events: none;
+}
+.arrival-copy h2 {
+  margin: 0; font-family: var(--display, "EB Garamond", serif); font-weight: 400;
+  font-size: clamp(34px,4vw,64px); line-height: 1.06; letter-spacing: .015em;
+  color: #f4efe6; text-shadow: 0 2px 12px rgba(0,0,0,.22);
+}
+.arrival-copy p {
+  margin: 20px 0 0; max-width: 420px; font-family: var(--sans, Inter, sans-serif);
+  font-size: clamp(14px,1.15vw,18px); font-weight: 300; line-height: 1.65;
+  letter-spacing: .01em; color: #f3eee6; text-shadow: 0 1px 8px rgba(0,0,0,.25);
+}
+@media (max-width: 760px) {
+  .arrival-copy { position: static; order: -1; transform: none; width: auto; max-width: 540px; padding: 0 0 26px; }
+  .arrival-copy h2 { font-size: clamp(30px,7vw,42px); text-shadow: none; }
+  .arrival-copy p { margin-top: 14px; font-size: 14px; text-shadow: none; color: #cbc8bf; }
+  .arrival-frame::after { content: none; }
+}
