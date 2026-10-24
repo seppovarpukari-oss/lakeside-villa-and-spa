@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,follow">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Lakeside Villa &amp; Spa | Guest guide</title>
+  <style>
+    body { margin:0; padding:2rem 1.25rem; background:#faf9f6; color:#242424; font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    main { max-width:36rem; margin:12vh auto; text-align:center; }
+    h1 { font-family:Georgia,"Times New Roman",serif; font-size:2rem; font-weight:normal; }
+    p { font-size:1rem; line-height:1.6; }
+    nav { display:flex; flex-wrap:wrap; gap:.75rem 1rem; justify-content:center; margin-top:2rem; }
+    a { color:#242424; text-underline-offset:.15rem; }
+  </style>
+  <script>
+    (function () {
+      // This page is used only by the printed guest-guide QR code.
+      // Redirect once, based on browser language preference. Do not enforce
+      // automatic language changes on any of the site's actual homepages.
+      var destinations = {
+        fi: '/fi/', en: '/', sv: '/sv/', no: '/no/', nb: '/no/', nn: '/no/',
+        da: '/da/', de: '/de/', fr: '/fr/', es: '/es/', nl: '/nl/',
+        et: '/et/', it: '/it/', zh: '/zh-cn/'
+      };
+      var preferences = (navigator.languages && navigator.languages.length)
+        ? navigator.languages : [navigator.language || 'fi'];
+      var destination = '/fi/';
+      for (var i = 0; i < preferences.length; i++) {
+        var code = String(preferences[i] || '').trim().toLowerCase().replace(/_/g, '-').split('-')[0];
+        if (Object.prototype.hasOwnProperty.call(destinations, code)) {
+          destination = destinations[code];
+          break;
+        }
+      }
+      window.location.replace(destination);
+    }());
+  </script>
+</head>
+<body>
+  <main>
+    <h1>Lakeside Villa &amp; Spa</h1>
+    <p>Avataan huvilan etusivu / Opening the villa homepage…</p>
+    <p>Jos sivu ei avaudu automaattisesti, valitse kieli.<br>
+      If the page doesn't open automatically, choose a language.</p>
+    <nav aria-label="Select language">
+      <a href="/fi/" lang="fi">Suomi</a>
+      <a href="/" lang="en">English</a>
+      <a href="/sv/" lang="sv">Svenska</a>
+      <a href="/no/" lang="nb">Norsk</a>
+      <a href="/da/" lang="da">Dansk</a>
+      <a href="/de/" lang="de">Deutsch</a>
+      <a href="/fr/" lang="fr">Français</a>
+      <a href="/es/" lang="es">Español</a>
+      <a href="/nl/" lang="nl">Nederlands</a>
+      <a href="/et/" lang="et">Eesti</a>
+      <a href="/it/" lang="it">Italiano</a>
+      <a href="/zh-cn/" lang="zh-CN">简体中文</a>
+    </nav>
+  </main>
+</body>
+</html>
