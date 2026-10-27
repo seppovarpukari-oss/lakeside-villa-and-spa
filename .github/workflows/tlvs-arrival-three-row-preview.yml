@@ -1,0 +1,42 @@
+name: Build TLVS arrival 3-row preview
+on:
+  push:
+    branches:
+      - 'tlvs/arrival-three-rows-preview-20261027'
+permissions:
+  contents: write
+jobs:
+  assemble:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify original and assemble three-shot preview
+        env:
+          RUNWAY_CLIP: 'https://dnznrvs05pmza.cloudfront.net/5ce36783-8f2d-43f8-89a5-0d5ab2811b43.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiODNmMzcwYTAwZDhjZGM1NCIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc5MzE3NDE3Nn0.W4uhObOp8erEgYFWd9iizq4zV05uM95-2i8zE0yx4Wo'
+        run: |
+          set -euo pipefail
+          test "$(sha256sum assets/arrival/media/arrival-dusk-v13-1080p.mp4 | awk '{print $1}')" = 'a3e7ba73738951271711028069fa2825241441c55fcbcf479ccd204929bb5f14'
+          curl --retry 3 --retry-delay 2 --fail --location --silent --show-error "$RUNWAY_CLIP" -o /tmp/arrival_middle_3rows.mp4
+          ffprobe -v error /tmp/arrival_middle_3rows.mp4
+          test "$(ffprobe -v error -select_streams v:0 -show_entries stream=width -of default=noprint_wrappers=1:nokey=1 /tmp/arrival_middle_3rows.mp4)" = '1920'
+          test "$(ffprobe -v error -select_streams v:0 -show_entries stream=height -of default=noprint_wrappers=1:nokey=1 /tmp/arrival_middle_3rows.mp4)" = '1080'
+          mkdir -p previews
+          ffmpeg -hide_banner -loglevel error -y -i assets/arrival/media/arrival-dusk-v13-1080p.mp4 -i /tmp/arrival_middle_3rows.mp4 \
+            -filter_complex '[0:v]fps=24,trim=start_frame=0:end_frame=84,setpts=PTS-STARTPTS,format=yuv420p[first];[1:v]fps=24,trim=start_frame=0:end_frame=48,setpts=PTS-STARTPTS,format=yuv420p[middle];[0:v]fps=24,trim=start_frame=132:end_frame=203,setpts=PTS-STARTPTS,format=yuv420p[last];[first][middle][last]concat=n=3:v=1:a=0[video]' \
+            -map '[video]' -an -r 24 -c:v libx264 -preset medium -crf 16 -movflags +faststart previews/arrival-dusk-v13-three-row-preview-1080p.mp4
+          frames="$(ffprobe -v error -select_streams v:0 -show_entries stream=nb_frames -of default=noprint_wrappers=1:nokey=1 previews/arrival-dusk-v13-three-row-preview-1080p.mp4)"
+          test "$frames" = '203' || { echo "Unexpected frame count: $frames"; exit 1; }
+          sha256sum previews/arrival-dusk-v13-three-row-preview-1080p.mp4 > previews/arrival-dusk-v13-three-row-preview-1080p.mp4.sha256
+      - name: Preserve unpublished preview on branch
+        run: |
+          set -euo pipefail
+          git config user.name 'TLVS video preview automation'
+          git config user.email 'actions@users.noreply.github.com'
+          git add previews/arrival-dusk-v13-three-row-preview-1080p.mp4*
+          git commit -m 'Build unpublished arrival 3-row curb preview from approved v13'
+          git push origin HEAD:tlvs/arrival-three-rows-preview-20261027
+      - uses: actions/upload-artifact@v4
+        with:
+          name: arrival-three-row-preview-1080p
+          path: previews/arrival-dusk-v13-three-row-preview-1080p.mp4
+          retention-days: 14
