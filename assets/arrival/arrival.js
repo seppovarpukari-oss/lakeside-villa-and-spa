@@ -9,33 +9,74 @@
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
   const saveData = Boolean(navigator.connection && navigator.connection.saveData);
   let loaded = false;
+  let loading = null;
   let ratio = 0;
   let userPaused = false;
   let complete = false;
   let requestingPlay = false;
+  let usingV3 = false;
+  let v3Url = null;
+  const legacySource = () => window.matchMedia('(max-width: 800px)').matches || saveData
+    ? video.dataset.mobile : video.dataset.desktop;
   const updateControl = () => {
     const action = complete ? 'replay' : video.paused ? 'play' : 'pause';
     label.textContent = button.dataset[action];
     button.dataset.action = action;
     button.setAttribute('aria-label', button.dataset[action]);
   };
+  // New v3 is byte-for-byte identical to the approved Full HD file. Chunks are
+  // required only by the transfer path; the browser joins them without transcoding.
+  // All v13 assets remain untouched and are used automatically if v3 cannot load.
   const load = () => {
-    if (loaded) return;
-    video.src = window.matchMedia('(max-width: 800px)').matches || saveData
-      ? video.dataset.mobile : video.dataset.desktop;
-    video.load();
-    loaded = true;
+    if (loading) return loading;
+    loading = (async () => {
+      const mobile = window.matchMedia('(max-width: 800px)').matches || saveData;
+      const filename = mobile ? 'arrival-v3-720p.mp4' : 'arrival-v3-1080p.mp4';
+      const numberOfParts = mobile ? 6 : 18;
+      const expectedBytes = mobile ? 4647090 : 13953667;
+      const parts = new Array(numberOfParts);
+      let nextPart = 0;
+      try {
+        const workers = Array.from({ length: Math.min(6, numberOfParts) }, async () => {
+          while (true) {
+            const i = nextPart++;
+            if (i >= numberOfParts) return;
+            const url = '/assets/arrival/v3-chunks/' + filename + '.part' + String(i).padStart(3, '0');
+            const response = await fetch(url);
+            if (!response.ok) throw new Error('Could not load v3 segment ' + i);
+            parts[i] = await response.arrayBuffer();
+          }
+        });
+        await Promise.all(workers);
+        if (parts.reduce((total, part) => total + (part ? part.byteLength : 0), 0) !== expectedBytes) {
+          throw new Error('Incomplete v3 video');
+        }
+        v3Url = URL.createObjectURL(new Blob(parts, { type: 'video/mp4' }));
+        video.src = v3Url;
+        usingV3 = true;
+        video.poster = '/assets/arrival/media/arrival-v3-poster.jpg';
+        endImage.src = '/assets/arrival/media/arrival-v3-end.jpg';
+      } catch (_) {
+        // Preserve the prior production video as a working recovery path.
+        video.src = legacySource();
+        usingV3 = false;
+        video.poster = '/assets/arrival/media/arrival-dusk-v13-poster.jpg';
+        endImage.src = '/assets/arrival/media/arrival-dusk-v13-end.jpg';
+      }
+      video.load();
+      loaded = true;
+    })();
+    return loading;
   };
   const play = async (manual = false) => {
     if (requestingPlay) return;
     if (!manual && (complete || userPaused || reduced.matches || saveData || document.hidden || ratio < 0.6)) return;
-    load();
     requestingPlay = true;
     try {
+      await load();
       await video.play();
       if (document.hidden || (!manual && (ratio < 0.1 || reduced.matches || userPaused))) video.pause();
     } catch (_) {
-      // Autoplay restrictions leave the poster and an explicit play control.
       userPaused = true;
     } finally {
       requestingPlay = false;
@@ -46,6 +87,8 @@
   video.loop = false;
   video.controls = false;
   button.hidden = false;
+  // Show the new video's poster from the outset, including before lazy loading.
+  video.poster = '/assets/arrival/media/arrival-v3-poster.jpg';
   ['play', 'pause'].forEach(event => video.addEventListener(event, updateControl));
   video.addEventListener('ended', () => {
     complete = true;
@@ -53,6 +96,16 @@
     updateControl();
   });
   video.addEventListener('error', () => {
+    if (usingV3) {
+      usingV3 = false;
+      if (v3Url) URL.revokeObjectURL(v3Url);
+      v3Url = null;
+      video.poster = '/assets/arrival/media/arrival-dusk-v13-poster.jpg';
+      endImage.src = '/assets/arrival/media/arrival-dusk-v13-end.jpg';
+      video.src = legacySource();
+      video.load();
+      return;
+    }
     video.controls = true;
     userPaused = true;
     updateControl();
