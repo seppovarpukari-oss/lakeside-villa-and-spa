@@ -92,7 +92,10 @@
   ['play', 'pause'].forEach(event => video.addEventListener(event, updateControl));
   video.addEventListener('ended', () => {
     complete = true;
-    endImage.hidden = false;
+    // Preserve V3's decoded final video frame instead of switching to a
+    // separately exported JPEG, which can cause a visible camera-angle snap.
+    // Keep the previous V13 fallback's end-image behavior unchanged.
+    endImage.hidden = usingV3;
     updateControl();
   });
   video.addEventListener('error', () => {
